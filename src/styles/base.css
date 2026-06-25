@@ -1,0 +1,46 @@
+:root {
+  color: #163b3a;
+  background: #edf8f6;
+  font-family:
+    "Aptos",
+    "Segoe UI",
+    "Microsoft YaHei",
+    sans-serif;
+  --el-color-primary: #0d9488;
+  --el-color-success: #0f9f6e;
+  --el-border-radius-base: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(45, 212, 191, 0.22), transparent 32rem),
+    linear-gradient(135deg, #f6fffd 0%, #eef8f5 46%, #fff7ed 100%);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+.skip-link {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  z-index: 100;
+  transform: translateY(-140%);
+  transition: transform 0.2s;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
