@@ -12,6 +12,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     CourseBreadcrumb: typeof import('./src/components/course-breadcrumb.vue')['default']
+    CourseContent: typeof import('./src/components/course-content.vue')['default']
     CourseHeader: typeof import('./src/components/course-header.vue')['default']
     CourseSidebar: typeof import('./src/components/course-sidebar.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']

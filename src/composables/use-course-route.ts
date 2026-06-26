@@ -12,17 +12,23 @@ export const useCourseRoute = () => {
 
   const moduleId = computed(() => routeParam(route.params.moduleId));
   const sectionId = computed(() => routeParam(route.params.sectionId));
+  const topicId = computed(() => routeParam(route.params.topicId));
   const module = computed(
     () => courseModules.find((item) => item.id === moduleId.value) ?? firstModule,
   );
   const section = computed(() =>
     module.value?.sections.find((item) => item.id === sectionId.value),
   );
+  const topic = computed(() =>
+    section.value?.topics.find((item) => item.id === topicId.value),
+  );
 
   return {
     moduleId,
     sectionId,
+    topicId,
     module,
     section,
+    topic,
   };
 };

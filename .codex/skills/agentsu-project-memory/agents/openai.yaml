@@ -1,0 +1,4 @@
+interface:
+  display_name: "AGENTSU Project Memory"
+  short_description: "Project rules, course knowledge, and quality gates"
+  default_prompt: "Use $agentsu-project-memory to plan and implement the next AGENTSU project iteration."

@@ -21,13 +21,11 @@ type DifficultyMeta = {
 };
 
 const progress = inject(courseProgressKey);
-
 const difficultyMap: Record<Difficulty, DifficultyMeta> = {
   beginner: { label: "入门", type: "success", className: "is-beginner" },
   intermediate: { label: "进阶", type: "warning", className: "is-intermediate" },
   advanced: { label: "高级", type: "danger", className: "is-advanced" },
 };
-
 const abilityCards = [
   "环境搭建",
   "语法基础",
@@ -36,7 +34,7 @@ const abilityCards = [
   "函数",
   "面向对象",
   "文件与异常",
-  "常用模块",
+  "网络与正则",
 ];
 
 const completedModuleIds = computed(() => progress?.completedModuleIds.value ?? []);
@@ -54,7 +52,7 @@ const topicCount = computed(() =>
 const nextModule = computed(
   () => courseModules.find((module) => !completedModuleIds.value.includes(module.id)) ?? courseModules[0],
 );
-const continuePath = computed(() => `/modules/${nextModule.value?.id ?? "overview"}`);
+const continuePath = computed(() => `/modules/${nextModule.value?.id ?? "m01"}`);
 const isCompleted = (moduleId: string) => completedModuleIds.value.includes(moduleId);
 </script>
 
@@ -65,10 +63,10 @@ const isCompleted = (moduleId: string) => completedModuleIds.value.includes(modu
         <p class="home-page__eyebrow">Python Course Studio</p>
         <h2>Python 课程学习站</h2>
         <p>
-          把课程文档拆解为清晰的知识地图、模块目录和学习进度，帮助初学者从环境搭建走到可独立编码。
+          将 Python1.0 文档整理为可浏览、可搜索、可追踪进度的学习路径，并补充完整正文、图片和表格详情。
         </p>
         <div class="home-hero__actions">
-          <router-link class="home-link-button" to="/modules/overview">
+          <router-link class="home-link-button" to="/modules/m01">
             <el-button type="primary" :icon="Promotion">开始学习</el-button>
           </router-link>
           <router-link class="home-link-button" :to="continuePath">

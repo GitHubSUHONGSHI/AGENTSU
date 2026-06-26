@@ -3,6 +3,7 @@ import HomePage from "../pages/home-page.vue";
 import ModuleOverviewPage from "../pages/module-overview-page.vue";
 import PortalPage from "../pages/portal-page.vue";
 import SectionDetailPage from "../pages/section-detail-page.vue";
+import TopicDetailPage from "../pages/topic-detail-page.vue";
 
 export const router = createRouter({
   history: createWebHashHistory('/AGENTSU/'),
@@ -26,6 +27,11 @@ export const router = createRouter({
       path: "/modules/:moduleId/sections/:sectionId",
       name: "section-detail",
       component: SectionDetailPage,
+    },
+    {
+      path: "/modules/:moduleId/sections/:sectionId/topics/:topicId",
+      name: "topic-detail",
+      component: TopicDetailPage,
     },
     {
       path: "/:pathMatch(.*)*",

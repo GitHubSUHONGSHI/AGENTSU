@@ -16,9 +16,16 @@ const emit = defineEmits<{
 }>();
 
 const defaultOpeneds = computed(() => props.modules.map((module) => module.id));
+const sectionMenuId = (moduleId: string, sectionId: string) => `${moduleId}:${sectionId}`;
 const activeMenuId = computed(() =>
-  props.isHomeActive ? "home" : props.selectedSectionId ?? props.selectedModuleId,
+  props.isHomeActive
+    ? "home"
+    : props.selectedSectionId
+      ? sectionMenuId(props.selectedModuleId, props.selectedSectionId)
+      : props.selectedModuleId,
 );
+const isActiveSection = (moduleId: string, sectionId: string) =>
+  props.selectedModuleId === moduleId && props.selectedSectionId === sectionId;
 const isCompleted = (moduleId: string) => props.completedModuleIds.includes(moduleId);
 </script>
 
@@ -68,9 +75,9 @@ const isCompleted = (moduleId: string) => props.completedModuleIds.includes(modu
         </template>
         <el-menu-item
           v-for="section in module.sections"
-          :key="section.id"
-          :index="section.id"
-          :class="{ 'is-section-active': selectedSectionId === section.id }"
+          :key="sectionMenuId(module.id, section.id)"
+          :index="sectionMenuId(module.id, section.id)"
+          :class="{ 'is-section-active': isActiveSection(module.id, section.id) }"
         >
           <router-link
             class="course-sidebar__section"

@@ -3,6 +3,8 @@ export type Difficulty = "beginner" | "intermediate" | "advanced";
 export interface CourseTopic {
   id: string;
   title: string;
+  summary: string;
+  contentBlocks: CourseContentBlock[];
 }
 
 export interface CourseSection {
@@ -23,4 +25,51 @@ export interface CourseModule {
 export interface CourseSearchResult {
   module: CourseModule;
   matchedSections: CourseSection[];
+}
+
+export type CourseContentBlock =
+  | CourseParagraphBlock
+  | CourseHeadingBlock
+  | CourseListBlock
+  | CourseCodeBlock
+  | CourseImageBlock
+  | CourseTableBlock;
+
+export interface CourseParagraphBlock {
+  kind: "paragraph";
+  text: string;
+}
+
+export interface CourseHeadingBlock {
+  kind: "heading";
+  level: number;
+  text: string;
+}
+
+export interface CourseListBlock {
+  kind: "list";
+  items: string[];
+}
+
+export interface CourseCodeBlock {
+  kind: "code";
+  code: string;
+}
+
+export interface CourseImageBlock {
+  kind: "image";
+  src: string;
+  alt: string;
+}
+
+export interface CourseTableBlock {
+  kind: "table";
+  rows: CourseTableCell[][];
+  hasHeader: boolean;
+}
+
+export interface CourseTableCell {
+  text: string;
+  colspan: number;
+  rowspan: number;
 }

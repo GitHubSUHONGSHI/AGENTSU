@@ -3,6 +3,7 @@ import { Notebook, Pointer } from "@element-plus/icons-vue";
 import type { CourseSection } from "../types/course";
 
 defineProps<{
+  moduleId: string;
   sections: CourseSection[];
   selectedSectionId?: string;
 }>();
@@ -32,8 +33,13 @@ defineProps<{
         </template>
         <ul class="section-list__topics">
           <li v-for="topic in section.topics" :key="topic.id">
-            <el-icon><Pointer /></el-icon>
-            <span>{{ topic.title }}</span>
+            <router-link
+              class="section-list__topic-link"
+              :to="`/modules/${moduleId}/sections/${section.id}/topics/${topic.id}`"
+            >
+              <el-icon><Pointer /></el-icon>
+              <span>{{ topic.title }}</span>
+            </router-link>
           </li>
         </ul>
       </el-card>

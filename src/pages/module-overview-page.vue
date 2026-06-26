@@ -19,7 +19,7 @@ const toggleCompleted = (moduleId: string) => progress?.toggleCompleted(moduleId
       :is-completed="completed"
       @toggle-completed="toggleCompleted"
     />
-    <SectionList :sections="module.sections" />
+    <SectionList :module-id="module.id" :sections="module.sections" />
   </main>
   <el-empty v-else description="未找到课程模块" />
 </template>

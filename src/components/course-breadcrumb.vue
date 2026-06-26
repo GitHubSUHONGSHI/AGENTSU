@@ -11,15 +11,21 @@ const routeParam = (value: string | string[] | undefined) =>
 const isCourseHomeRoute = computed(() => route.name === "course-home");
 const moduleId = computed(() => routeParam(route.params.moduleId));
 const sectionId = computed(() => routeParam(route.params.sectionId));
+const topicId = computed(() => routeParam(route.params.topicId));
 const currentModule = computed(() =>
   courseModules.find((module) => module.id === moduleId.value),
 );
 const currentSection = computed(() =>
   currentModule.value?.sections.find((section) => section.id === sectionId.value),
 );
+const currentTopic = computed(() =>
+  currentSection.value?.topics.find((topic) => topic.id === topicId.value),
+);
 const moduleTitle = computed(() => currentModule.value?.title ?? "未知模块");
 const sectionTitle = computed(() => currentSection.value?.title ?? "未知章节");
-const modulePath = computed(() => `/modules/${moduleId.value ?? "overview"}`);
+const topicTitle = computed(() => currentTopic.value?.title ?? "未知知识点");
+const modulePath = computed(() => `/modules/${moduleId.value ?? "m01"}`);
+const sectionPath = computed(() => `${modulePath.value}/sections/${sectionId.value ?? ""}`);
 </script>
 
 <template>
@@ -33,8 +39,14 @@ const modulePath = computed(() => `/modules/${moduleId.value ?? "overview"}`);
       <el-breadcrumb-item v-else-if="!isCourseHomeRoute">
         {{ moduleTitle }}
       </el-breadcrumb-item>
-      <el-breadcrumb-item v-if="!isCourseHomeRoute && sectionId">
+      <el-breadcrumb-item v-if="!isCourseHomeRoute && sectionId && topicId" :to="{ path: sectionPath }">
         {{ sectionTitle }}
+      </el-breadcrumb-item>
+      <el-breadcrumb-item v-else-if="!isCourseHomeRoute && sectionId">
+        {{ sectionTitle }}
+      </el-breadcrumb-item>
+      <el-breadcrumb-item v-if="!isCourseHomeRoute && topicId">
+        {{ topicTitle }}
       </el-breadcrumb-item>
     </el-breadcrumb>
   </nav>
