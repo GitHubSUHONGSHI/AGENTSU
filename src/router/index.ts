@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import HomePage from "../pages/home-page.vue";
 import ModuleOverviewPage from "../pages/module-overview-page.vue";
+import PortalPage from "../pages/portal-page.vue";
 import SectionDetailPage from "../pages/section-detail-page.vue";
 
 export const router = createRouter({
@@ -8,7 +9,12 @@ export const router = createRouter({
   routes: [
     {
       path: "/",
-      name: "home",
+      name: "portal",
+      component: PortalPage,
+    },
+    {
+      path: "/course",
+      name: "course-home",
       component: HomePage,
     },
     {

@@ -36,7 +36,7 @@ const isCompleted = (moduleId: string) => props.completedModuleIds.includes(modu
     <router-link
       class="course-sidebar__home"
       :class="{ 'is-home-active': isHomeActive }"
-      to="/"
+      to="/course"
       :aria-current="isHomeActive ? 'page' : undefined"
       @click="emit('navigate')"
     >
