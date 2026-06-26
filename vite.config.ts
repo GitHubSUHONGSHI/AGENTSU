@@ -5,6 +5,7 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 
 export default defineConfig({
+  base: '/AGENTSU/', // 格式：/仓库名/ 必须前后带斜杠
   plugins: [
     vue(),
     AutoImport({
