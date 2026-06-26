@@ -31,16 +31,3 @@ input {
 #app {
   min-height: 100vh;
 }
-
-.skip-link {
-  position: absolute;
-  top: 12px;
-  left: 16px;
-  z-index: 100;
-  transform: translateY(-140%);
-  transition: transform 0.2s;
-}
-
-.skip-link:focus {
-  transform: translateY(0);
-}

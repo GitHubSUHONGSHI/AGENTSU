@@ -45,7 +45,6 @@ watch(
 <template>
   <router-view v-if="isPortalRoute" />
   <template v-else>
-    <a class="skip-link" href="#main-content">跳过课程目录</a>
     <el-container class="app-shell">
       <el-aside class="app-shell__aside" width="320px">
         <CourseSidebar
