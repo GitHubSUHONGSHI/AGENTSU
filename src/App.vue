@@ -32,6 +32,7 @@ const closeNavigation = () => {
 };
 
 watch(
+  // 路由跳转
   () => route.fullPath,
   () => {
     closeNavigation();
