@@ -1,39 +1,32 @@
-# 工作流名称
 name: Deploy Vue to GitHub Pages
 
-# 触发条件：push到main分支时执行
 on:
   push:
     branches: [ main ]
 
-# 执行任务
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      # 1. 拉取当前仓库代码
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 2. 配置Node.js环境（根据你的项目node版本修改，推荐18）
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 22  # 升级到22，满足Vite版本要求
           cache: 'npm'
 
-      # 3. 安装依赖
-      - name: Install dependencies
-        run: npm install
+      - name: 配置淘宝镜像并安装依赖
+        run: |
+          npm config set registry https://registry.npmmirror.com
+          npm install
 
-      # 4. 打包Vue项目
-      - name: Build Vue Project
+      - name: 执行Vue项目打包
         run: npm run build
 
-      # 5. 部署dist文件夹到gh-pages分支
-      - name: Deploy to GitHub Pages
+      - name: 部署打包产物到gh-pages分支
         uses: peaceiris/actions-gh-pages@v4
         with:
-          # 打包后的文件夹
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
