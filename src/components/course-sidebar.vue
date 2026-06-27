@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
+import { useRouter } from "vue-router";
 import { Check, Document, House } from "@element-plus/icons-vue";
 import type { CourseModule } from "../types/course";
 
@@ -15,6 +16,7 @@ const emit = defineEmits<{
   navigate: [];
 }>();
 
+const router = useRouter();
 const defaultOpeneds = computed(() => props.modules.map((module) => module.id));
 const sectionMenuId = (moduleId: string, sectionId: string) => `${moduleId}:${sectionId}`;
 const activeMenuId = computed(() =>
@@ -27,17 +29,21 @@ const activeMenuId = computed(() =>
 const isActiveSection = (moduleId: string, sectionId: string) =>
   props.selectedModuleId === moduleId && props.selectedSectionId === sectionId;
 const isCompleted = (moduleId: string) => props.completedModuleIds.includes(moduleId);
+const navigateToPortal = () => {
+  emit("navigate");
+  void router.push("/");
+};
 </script>
 
 <template>
   <nav class="course-sidebar" aria-label="课程目录">
-    <div class="course-sidebar__brand">
+    <router-link class="course-sidebar__brand" to="/" @click="navigateToPortal">
       <span class="course-sidebar__mark">Py</span>
       <div>
         <strong>学习路径</strong>
         <small>{{ modules.length }} 个模块</small>
       </div>
-    </div>
+    </router-link>
 
     <el-empty v-if="modules.length === 0" description="未找到匹配课程" :image-size="96" />
     <router-link

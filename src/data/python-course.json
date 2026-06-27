@@ -2,7 +2,7 @@
   {
     "id": "m01",
     "title": "概述",
-    "summary": "计算机（computer）俗称电脑，是现代一种用于高速计算的电子计算机器，可以进行数值计算，又可以进行逻辑计算，还具有存储记忆功? 硬件（英文名Hardware），计算机硬件是指计算机系统中由?",
+    "summary": "计算机（computer）俗称电脑，是现代一种用于高速计算的电子计算机器，可以进行数值计算，又可以进行逻辑计算，还具有存储记忆功能。是能够按照程序运行，自动、高速处理海量数据的现代化智能电子设备。由硬件系统和软件系统所组成，没有安装任何软件的计算机称为裸机。--百度百科【计算机】。 硬件（英文名Hardware），计算机硬件是指计算机系统中由电子，机械和光电。",
     "difficulty": "beginner",
     "estimatedMinutes": 107,
     "sections": [
@@ -13,7 +13,7 @@
           {
             "id": "t01",
             "title": "什么是计算机",
-            "summary": "计算机（computer）俗称电脑，是现代一种用于高速计算的电子计算机器，可以进行数值计算，又可以进行逻辑计算，还具有存储记忆功?",
+            "summary": "计算机（computer）俗称电脑，是现代一种用于高速计算的电子计算机器，可以进行数值计算，又可以进行逻辑计算，还具有存储记忆功能。是能够按照程序运行，自动、高速处理海量数据的现代化智能电子设备。由硬件系统和软件系统所组成，没有安装任何软件的计算机称为裸机。--百度百科【计算机】。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -24,7 +24,7 @@
           {
             "id": "t02",
             "title": "硬件",
-            "summary": "硬件（英文名Hardware），计算机硬件是指计算机系统中由电子，机械和光电元件等组成的各种物理装置的总称。这些物理装置按系统结?",
+            "summary": "硬件（英文名Hardware），计算机硬件是指计算机系统中由电子，机械和光电元件等组成的各种物理装置的总称。这些物理装置按系统结构的要求构成一个有机整体为计算机软件运行提供物质基础。--百度百科【硬件】 计算机由运算器、控制器、存储器、输入设备和输出设备等五个逻辑部件组成 运算器。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -101,7 +101,7 @@
           {
             "id": "t03",
             "title": "软件",
-            "summary": "软件（英文：Software）是一系列按照特定顺序组织的计算机数据和指令的集合。一般来讲软件被划分为系统软件、应用软件和介于这两?",
+            "summary": "软件（英文：Software）是一系列按照特定顺序组织的计算机数据和指令的集合。一般来讲软件被划分为系统软件、应用软件和介于这两者之间的中间件。 --百度百科【软件】 系统软件 系统软件是各类操作系统，如Dos、windows、Linux、UNIX、Mac、Android、IOS。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -140,7 +140,7 @@
           {
             "id": "t01",
             "title": "程序和编程语言",
-            "summary": "当我们要让计算机帮我们解决问题时，就需要编写程序。",
+            "summary": "当我们要让计算机帮我们解决问题时，就需要编写程序。 程序是一组计算机能识别和执行的指令，这些指令由数字、字符和语法规则组成，它通常是用某种计算机编程语言编写的。 计算机编程语言，便是我们与计算机沟通的工具，就像我们交流使用的语言一样，只不过是人与计算机之间通讯的语言。 计算机只能。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -176,7 +176,7 @@
           {
             "id": "t01",
             "title": "第一代：机器语言",
-            "summary": "1946年2月14日，世界上第一台计算机ENIAC诞生，使用的是最原始的穿孔卡片。这种卡片上使用的是二进制代码表示的语言，与人类?",
+            "summary": "1946年2月14日，世界上第一台计算机ENIAC诞生，使用的是最原始的穿孔卡片。这种卡片上使用的是二进制代码表示的语言，与人类语言差别极大，这种语言就称为机器语言。比如一段典型的机器码： 0000,0000,000000010000 代表 LOAD A, 16 0000,000。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -195,7 +195,7 @@
           {
             "id": "t02",
             "title": "第二代：汇编语言",
-            "summary": "使用英文缩写的助记符来表示基本的操作，比如：LOAD、MOVE等，使人更容易使用，这些助记符构成了汇编语言的基础。因此，汇编语言?",
+            "summary": "使用英文缩写的助记符来表示基本的操作，比如：LOAD、MOVE等，使人更容易使用，这些助记符构成了汇编语言的基础。因此，汇编语言也称为符号语言。 优点：能编写高效率的程序。 缺点：汇编语言是面向机器的，不同计算机会有不同的汇编语言，程序不易移植。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -212,14 +212,14 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image1.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           },
           {
             "id": "t03",
             "title": "第三代：高级语言",
-            "summary": "高级语言，是一种接近于人类使用习惯的程序设计语言，它允许程序员使用接近日常英语的指令来编写程序，程序中的符号和算式也与日常用的数?",
+            "summary": "高级语言，是一种接近于人类使用习惯的程序设计语言，它允许程序员使用接近日常英语的指令来编写程序，程序中的符号和算式也与日常用的数学算式差不多，接近于自然语言和数学语言，容易被人们掌握。 高级语言独立于计算机硬件，有一定的通用性；计算机不能直接识别和执行用高级语言编写的程序，需要使。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -228,7 +228,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image2.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -237,7 +237,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image3.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -254,12 +254,12 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image4.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "image",
                 "src": "course-assets/images/image5.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           }
@@ -272,7 +272,7 @@
           {
             "id": "t01",
             "title": "Python起源",
-            "summary": "Python（英国发音：/ˈpaɪθən/ 美国发音：/ˈpaɪθɑːn/）,是一门优雅而健壮的编程语言。",
+            "summary": "Python（英国发音：/ˈpaɪθən/ 美国发音：/ˈpaɪθɑːn/）,是一门优雅而健壮的编程语言。 作者是荷兰人Guido van Rossum（吉多·范罗苏姆），1982年从阿姆斯特丹大学获得了数学和计算机硕士学位。然而，尽管他算得上是一位数学家，但他更加享受计算机带来。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -281,7 +281,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image6.jpeg",
-                "alt": "Python（英国发音：/ˈpaɪθən/ 美国发音：/ˈpaɪθɑːn/）,是一门优雅而健壮的编程语言。"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -312,7 +312,7 @@
           {
             "id": "t02",
             "title": "Python能做什么",
-            "summary": "作为一个实用主义的学习者，最关心的问题一定是 “我为什么要选择学 Python，学会之后我可以用来做什么？”",
+            "summary": "作为一个实用主义的学习者，最关心的问题一定是 “我为什么要选择学 Python，学会之后我可以用来做什么？” 首先，对于初学者来说，比起其他编程语言，Python 更容易上手。 Python 的设计哲学是优雅、明确、简单。在官方的 The Zen of Python（《Pytho。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -333,7 +333,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image7.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -346,7 +346,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image8.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -441,7 +441,7 @@
           {
             "id": "t03",
             "title": "Python特点",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "Python优点 易于学习：Python有相对较少的关键字，结构简单，和一个明确定义的语法，学习起来更加简单。 广泛的标准库：Python最大的优势之一就是有着丰富的库。Python拥有一个强大的标准库，Python语言的核心只包含一些常见类型和函数，而Python标准库提供了系。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -509,7 +509,7 @@
           {
             "id": "t01",
             "title": "Python版本",
-            "summary": "Python有2个版本，Python2 和 Python3。",
+            "summary": "Python有2个版本，Python2 和 Python3。 2020年1月1日，官方宣布，停止 Python 2 的更新，Python 2.7被确定为最后一个 Python 2.x 版本 Python 3.x 是现在和未来主流的版本。相对于Python的早期版本是一个比较大的升。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -546,7 +546,7 @@
           {
             "id": "t01",
             "title": "Python解释器",
-            "summary": "当我们编写Python代码时，我们得到的是一个包含Python代码的以.py为扩展名的文本文件。要运行代码，就需要Python解?",
+            "summary": "当我们编写Python代码时，我们得到的是一个包含Python代码的以.py为扩展名的文本文件。要运行代码，就需要Python解释器去执行.py文件。 由于整个Python语言从规范到解释器都是开源的，所以理论上，只要水平够高，任何人都可以编写Python解释器来执行Python。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -621,7 +621,7 @@
   {
     "id": "m02",
     "title": "快速入门",
-    "summary": "为了让计算机能够执行Python代码，我们需要Python解释器，从官网上下载的Python中内置解释器。 集成开发环境（简称：IDE；英文名：Integrated Development E?",
+    "summary": "为了让计算机能够执行Python代码，我们需要Python解释器，从官网上下载的Python中内置解释器。 Python官网地址：https://www.python.org/ 进入官网，点击Downloads，选择对应的操作系统。 选择版本，点击链接下载，我们这里的版本是3.1。 集成开发环境（简称：IDE；英文名：Integrated Developme。",
     "difficulty": "beginner",
     "estimatedMinutes": 82,
     "sections": [
@@ -632,7 +632,7 @@
           {
             "id": "t01",
             "title": "安装Python",
-            "summary": "为了让计算机能够执行Python代码，我们需要Python解释器，从官网上下载的Python中内置解释器。",
+            "summary": "为了让计算机能够执行Python代码，我们需要Python解释器，从官网上下载的Python中内置解释器。 Python官网地址：https://www.python.org/ 进入官网，点击Downloads，选择对应的操作系统。 选择版本，点击链接下载，我们这里的版本是3.1。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -650,7 +650,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image9.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -660,7 +660,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image10.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -710,7 +710,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image11.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -720,7 +720,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image12.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -730,7 +730,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image13.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -744,7 +744,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image14.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -754,7 +754,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image15.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -764,7 +764,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image16.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           }
@@ -777,7 +777,7 @@
           {
             "id": "t01",
             "title": "什么是IDE",
-            "summary": "集成开发环境（简称：IDE；英文名：Integrated Development Environment ）是用于提供程序开发环?",
+            "summary": "集成开发环境（简称：IDE；英文名：Integrated Development Environment ）是用于提供程序开发环境的应用程序，一般包括代码编辑器、编译器、调试器和图形用户界面等工具。集成了代码编写功能、分析功能、编译功能、调试功能等多种功能。 虽然我们也可以使用记。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -796,7 +796,7 @@
           {
             "id": "t02",
             "title": "PyCharm下载",
-            "summary": "PyCharm官方地址：https://www.jetbrains.com/pycharm/download",
+            "summary": "PyCharm官方地址：https://www.jetbrains.com/pycharm/download 进入官网，点击左下角下载PyCharm安装包，专业版可试用30天，社区版完全免费。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -809,14 +809,14 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image17.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           },
           {
             "id": "t03",
             "title": "PyCharm安装",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "双击安装包进入安装。 点击下一步。 修改安装目录，点击下一步。 酌情勾选安装选项，之后点击下一步。 点击安装。 安装完成。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -831,7 +831,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image18.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -841,7 +841,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image19.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -851,7 +851,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image20.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -861,7 +861,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image21.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -871,19 +871,19 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image22.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "image",
                 "src": "course-assets/images/image23.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           },
           {
             "id": "t04",
             "title": "PyCharm设置",
-            "summary": "注意：不同的pycharm版本，看到的界面会略有不同",
+            "summary": "创建新项目 点击 New Project 创建新项目。 设置项目名称，项目路径，解释器类型，Python版本。 注意：不同的pycharm版本，看到的界面会略有不同 解释器类型说明： Project venv: 当前项目的虚拟环境，python版本可以在右侧小箭头下拉选择，在当前。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -898,7 +898,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image24.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -912,7 +912,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image25.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -966,7 +966,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image26.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -981,7 +981,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image27.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -991,7 +991,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image28.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -1006,7 +1006,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image29.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -1021,7 +1021,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image30.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -1031,7 +1031,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image31.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -1046,7 +1046,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image32.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -1310,7 +1310,7 @@
           {
             "id": "t01",
             "title": "Python程序运行方式",
-            "summary": "有多种方式执行Python程序，以下是常见的三种方式：",
+            "summary": "有多种方式执行Python程序，以下是常见的三种方式： 交互式命令行模式 脚本模式 集成开发环境（IDE）模式。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -1329,7 +1329,7 @@
           {
             "id": "t02",
             "title": "交互式命令行模式",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "同时按下 Win键 和 R ，并输入 cmd ，进入命令提示符。 在命令提示符中输入python，进入Python交互模式。 输入print(“hello”)，按下回车，控制台会打印hello。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -1349,14 +1349,14 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image33.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           },
           {
             "id": "t03",
             "title": "脚本模式",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "在 E:\\Hello 路径下新建一个文件，将其重命名为 hello.py 。 双击此文件，选择使用记事本打开，在其中写入print(“hello”)，并保存。 在资源管理器上方输入 cmd 并回车，就会打开命令提示符并进入当前路径。或先打开命令提示符，再输入E: && cd He。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -1376,7 +1376,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image34.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -1386,14 +1386,14 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image35.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           },
           {
             "id": "t04",
             "title": "IDE模式",
-            "summary": "使用IDE运行Python程序，也是日后我们最常用的方式。",
+            "summary": "使用IDE运行Python程序，也是日后我们最常用的方式。 在python-2025项目下创建一个新的目录chapter02 在chapter02目录下创建一个Python程序文件，输入 print(\"hello world\") Pycharm工作区空白处右键，单击 Run‘01。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -1407,7 +1407,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image36.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -1421,12 +1421,12 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image37.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "image",
                 "src": "course-assets/images/image38.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -1436,7 +1436,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image39.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -1446,7 +1446,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image40.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           }
@@ -1457,7 +1457,7 @@
   {
     "id": "m03",
     "title": "基础知识",
-    "summary": "注释是对代码的解释说明。 提高代码的可读性。 Python中 # 后的一行内的内容会被视为注释 Python中使用三个引号开始，三个引号结束（单引号或者双引号都可以），为多行注释 变量是指在程?",
+    "summary": "注释是对代码的解释说明。 注释是给程序员看的，在代码执行的时候不起任何作用，不影响程序的结构。 提高代码的可读性。 屏蔽掉暂时不需要的代码 可以定位程序中出错的位置。 Python中 # 后的一行内的内容会被视为注释 # print(\"hello world\") print(\"hello world\") # 打印hello world 为了保持注释的整洁，P。",
     "difficulty": "beginner",
     "estimatedMinutes": 240,
     "sections": [
@@ -1468,7 +1468,7 @@
           {
             "id": "t01",
             "title": "什么是注释",
-            "summary": "注释是对代码的解释说明。",
+            "summary": "注释是对代码的解释说明。 注释是给程序员看的，在代码执行的时候不起任何作用，不影响程序的结构。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -1483,7 +1483,7 @@
           {
             "id": "t02",
             "title": "注释的作用",
-            "summary": "提高代码的可读性。",
+            "summary": "提高代码的可读性。 屏蔽掉暂时不需要的代码 可以定位程序中出错的位置。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -1502,7 +1502,7 @@
           {
             "id": "t03",
             "title": "单行注释（行注释）",
-            "summary": "Python中 # 后的一行内的内容会被视为注释",
+            "summary": "Python中 # 后的一行内的内容会被视为注释 # print(\"hello world\") print(\"hello world\") # 打印hello world 为了保持注释的整洁，Python官方建议在#和注释的内容之间加一个空格，在语句和#之间加两个空格。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -1521,7 +1521,7 @@
           {
             "id": "t04",
             "title": "多行注释（块注释）",
-            "summary": "Python中使用三个引号开始，三个引号结束（单引号或者双引号都可以），为多行注释",
+            "summary": "Python中使用三个引号开始，三个引号结束（单引号或者双引号都可以），为多行注释 多行注释在说明文字需要换行时使用，不能嵌套 \"\"\" Hello World hello world \"\"\" 但实际上它是一个多行字符串 print( \"\"\" Hello World hello w。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -1586,7 +1586,7 @@
           {
             "id": "t01",
             "title": "什么是变量",
-            "summary": "变量是指在程序执行过程中，其值可以改变的量。在内存的数据区中，会为变量分配存储空间来存放变量的值，这个内存空间的地址对应着变量名?",
+            "summary": "变量是指在程序执行过程中，其值可以改变的量。在内存的数据区中，会为变量分配存储空间来存放变量的值，这个内存空间的地址对应着变量名称，所以在程序中可以通过变量名称来区分和使用这些内存空间。它的唯一目的是在内存中标记和存储数据,这些数据可以在整个程序中使用。 可以将变量理解为一个可以。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -1601,7 +1601,7 @@
           {
             "id": "t02",
             "title": "变量的创建",
-            "summary": "Python中的变量不需要声明。每个变量在使用前都必须赋值，变量赋值以后该变量才会被创建。",
+            "summary": "变量创建方式：变量名 = 变量值 Python中的变量不需要声明。每个变量在使用前都必须赋值，变量赋值以后该变量才会被创建。 等号（=）用来给变量赋值。 等号（=）运算符左边是一个变量名,等号（=）运算符右边是存储在变量中的值。 var1 = 2 # 定义一个变量，变量名为var。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -1628,7 +1628,7 @@
           {
             "id": "t03",
             "title": "标识符命名规则",
-            "summary": "程序中可以自己命名的地方",
+            "summary": "标识符 程序中可以自己命名的地方 命名规则 只能包含字母、数字和下划线，且不能以数字开头。 区分大小写，即Name和name是两个不同的标识符。 不要和关键字重复。 应既简短又具有描述性。 注意：Python源文件不遵循命名规范不影响程序的执行，但不建议 关键字 Python 有。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -1666,7 +1666,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image41.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -1675,7 +1675,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image42.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -1699,7 +1699,7 @@
           {
             "id": "t04",
             "title": "变量的修改",
-            "summary": "在程序中可随时修改变量的值，而Python将始终记录变量的最新值。",
+            "summary": "在程序中可随时修改变量的值，而Python将始终记录变量的最新值。 message = \"hello world\" print(message) message = \"hello world hello world\" print(message) Python还支持方便的对变量相。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -1722,7 +1722,7 @@
           {
             "id": "t05",
             "title": "常量",
-            "summary": "在程序中定义后就不再修改的值为常量，Python中没有内置的常量类型。一般约定使用全大写变量名来表示常量。",
+            "summary": "在程序中定义后就不再修改的值为常量，Python中没有内置的常量类型。一般约定使用全大写变量名来表示常量。 PI = 3.1415926 E = 2.718282。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -1743,7 +1743,7 @@
           {
             "id": "t01",
             "title": "进制",
-            "summary": "计算机世界中只有二进制，所以计算机中存储和运算的所有数据都要转为二进制。包括数字、字符、图片、声音、视频等。常见的进制",
+            "summary": "计算机世界中只有二进制，所以计算机中存储和运算的所有数据都要转为二进制。包括数字、字符、图片、声音、视频等。常见的进制 二进制：0、1，满2进1。 八进制：0-7，满8进1。 十进制：0-9，满10进1。 十六进制：0 - 9及A-F，满16进1。十六进制中，除了 0 到 9 十。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -2198,7 +2198,7 @@
           {
             "id": "t02",
             "title": "不同进制表示整数",
-            "summary": "输出：",
+            "summary": "二进制：以0b或0B开头表示。 八进制：以0o开头表示 十进制：正常数字表示。 十六进制：以0x或0X开头表示，此处的A-F不区分大小写。 # 十进制 dec = 10 # 二进制 以0b开头 binary_number = 0b1010 # 八进制 以0o开头 octal_nu。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -2269,7 +2269,7 @@
           {
             "id": "t03",
             "title": "二进制转换成十进制",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "规则：从最低位开始，将每个位上的数提取出来，乘以2的（位数-1）次方，然后求和。 案例：请将二进制 1011 转成十进制的数。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -2286,7 +2286,7 @@
           {
             "id": "t04",
             "title": "十进制转换成二进制",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "规则：将该数不断除以2，直到商为0为止，然后将每步得到的余数倒过来，就是对应的二进制。 案例：请将 56 转成二进制。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -2303,7 +2303,7 @@
           {
             "id": "t05",
             "title": "十六进制转换成十进制",
-            "summary": "如果是8进制转换为10进制，就乘以8的（位数-1）次方，然后求和",
+            "summary": "规则：从最低位开始，将每个位上的数提取出来，乘以16的（位数-1）次方，然后求和。 案例：请将0x34A转成十进制的数。 如果是8进制转换为10进制，就乘以8的（位数-1）次方，然后求和。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -2324,7 +2324,7 @@
           {
             "id": "t06",
             "title": "十进制转换成十六进制",
-            "summary": "如果将十进制转换为八进制，将该数不断除以8，直到商为0为止，然后将每步得到的余数倒过来。",
+            "summary": "规则：将该数不断除以16，直到商为0为止，然后将每步得到的余数倒过来，就是对应的十六进制。 案例：请将356转成十六进制。 如果将十进制转换为八进制，将该数不断除以8，直到商为0为止，然后将每步得到的余数倒过来。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -2345,7 +2345,7 @@
           {
             "id": "t07",
             "title": "二进制转换成十六进制",
-            "summary": "因为2的4次方等于16 ，所以将二进制数从右向左每 4 位分成一组。如果二进制数的位数不是 4 的倍数，则在最左边补零，使其成为?",
+            "summary": "规则：低位开始，将二进制数每四位一组，转成对应的十六进制数即可。 因为2的4次方等于16 ，所以将二进制数从右向左每 4 位分成一组。如果二进制数的位数不是 4 的倍数，则在最左边补零，使其成为 4 的倍数 案例：请将1001011转成十六进制。 如果二进制转换为八进制，3位分一。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -2370,7 +2370,7 @@
           {
             "id": "t08",
             "title": "十六进制转换成二进制",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "规则：将十六进制数每1位，转成对应的4位的一个二进制数即可。 案例：请将0x23B转成二进制。 如果八进制转换为二进制，1位八进制转成3位二进制数。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -2399,7 +2399,7 @@
           {
             "id": "t01",
             "title": "数据类型",
-            "summary": "在 Python 中，变量就是变量，它没有类型，我们所说的\"类型\"是变量所指的内存中对象的类型。Python 3中常见的数据类型?",
+            "summary": "在 Python 中，变量就是变量，它没有类型，我们所说的\"类型\"是变量所指的内存中对象的类型。Python 3中常见的数据类型分类如下，主要类型有六种： 基本数据类型 数值 整数（int）、浮点数（float）、复数（complex）、布尔（bool） 字符串（str） 容器数。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -2459,7 +2459,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image49.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -2477,7 +2477,7 @@
           {
             "id": "t02",
             "title": "int整型",
-            "summary": "Python可以处理任意大小的整数，包括负整数。",
+            "summary": "Python可以处理任意大小的整数，包括负整数。 整数分隔符 书写很大的数时，可使用下划线将其中的数字分组，使其更清晰易读。 num1 = 1_000_000_000_000_000 print(num1) # 1000000000000000 存储这种数时，Python会忽略其。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -2551,7 +2551,7 @@
           {
             "id": "t03",
             "title": "float浮点型",
-            "summary": "Python将所有带小数点的数称为浮点数。要注意在使用浮点数进行计算时可能会存在微小误差，可以通过导入decimal解决",
+            "summary": "Python将所有带小数点的数称为浮点数。要注意在使用浮点数进行计算时可能会存在微小误差，可以通过导入decimal解决 num1 = 0.1 num2 = 0.2 print(num1 + num2) # 0.30000000000000004 from decimal imp。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -2582,7 +2582,7 @@
           {
             "id": "t04",
             "title": "bool布尔型",
-            "summary": "布尔型变量只有 True 和 False，用于真假的判断。",
+            "summary": "布尔型变量只有 True 和 False，用于真假的判断。 bool1 = True bool2 = False print(bool1, bool2) # True False Python3中，bool 是 int 的子类，True 和 False 可以和数字相加。 True。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -2637,7 +2637,7 @@
           {
             "id": "t05",
             "title": "String字符串初识",
-            "summary": "字符串就是一系列字符。在Python中，用引号括起的都是字符串，其中的引号可以是单引号，也可以是双引号。可使用反斜杠 \\ 转义特?",
+            "summary": "字符串就是一系列字符。在Python中，用引号括起的都是字符串，其中的引号可以是单引号，也可以是双引号。可使用反斜杠 \\ 转义特殊字符。 str1 = 'This is a \"string\"' str2 = \"This is a 'string' too\" print(str1)。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -2816,7 +2816,7 @@
           {
             "id": "t06",
             "title": "数据类型转换",
-            "summary": "对两种不同类型的数据进行运算，较小的数据类型（整数）就会转换为较大的数据类型（浮点数）以避免数据丢失，计算结果为浮点型：",
+            "summary": "自动类型转换（隐式转换） 对两种不同类型的数据进行运算，较小的数据类型（整数）就会转换为较大的数据类型（浮点数）以避免数据丢失，计算结果为浮点型： num1 = 2 num2 = 3.0 print(num1 + num2) # 5.0 特别的，两个整型进行除法运算结果也是浮点型。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -3067,7 +3067,7 @@
           {
             "id": "t07",
             "title": "字符的编码和解码",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "# 创建一个 字符串类型数据 str1 = '你好中国' print(str1) print(type(str1)) # 将字符串数据类型转换为字节型数据的过程成为编码 encode，需要指定编码类型 byte1 = str1.encode(encoding='utf8') #。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -3084,7 +3084,7 @@
           {
             "id": "t01",
             "title": "输入",
-            "summary": "如果接收用户在键盘上输入一些字符，Python提供了一个input()函数，可以让用户输入字符串，并存放到一个字符串变量里。",
+            "summary": "如果接收用户在键盘上输入一些字符，Python提供了一个input()函数，可以让用户输入字符串，并存放到一个字符串变量里。 语法：字符串变量 = input(“提示信息”) # Python开始等待你的输入。这时，你可以输入任意字符，然后按回车后完成输入。 input_str。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -3099,7 +3099,7 @@
           {
             "id": "t02",
             "title": "输出",
-            "summary": "多个内容之间可以使用逗号隔开。",
+            "summary": "普通输出 使用 print() 可将内容打印。 print(\"Hello Python\") 多个内容之间可以使用逗号隔开。 print(\"Hello\", \" Python\") 可以使用 end= 来控制 print() 以什么结尾。 print(\"使用\\\\n结尾\", end=\"\\。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -3285,7 +3285,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image50.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -3332,7 +3332,7 @@
           {
             "id": "t01",
             "title": "算数运算符",
-            "summary": "输出结果：",
+            "summary": "运算符 说明 实例 + 加 a + b - 减、或取负 a - b、-a * 乘 a * b / 除 a / b // 整除，除后向下取整 a // b % 模，返回除法的余数 a % b ** 幂 a ** b # -------------算术运算符-------------。",
             "contentBlocks": [
               {
                 "kind": "table",
@@ -3521,7 +3521,7 @@
           {
             "id": "t02",
             "title": "赋值运算符",
-            "summary": "输出结果：",
+            "summary": "运算符 说明 实例 = 赋值 a = 1 += 加法赋值 a += 2，等同于a = a + 2 -= 减法赋值 a -= 2，等同于a = a - 2 *= 乘法赋值 a *= 2，等同于a = a * 2 /= 除法赋值 a /= 2，等同于a = a / 2 //= 整除赋。",
             "contentBlocks": [
               {
                 "kind": "table",
@@ -3720,7 +3720,7 @@
           {
             "id": "t03",
             "title": "比较运算符",
-            "summary": "注意：除了不同数据类型的数据不能比较大小",
+            "summary": "运算符 说明 实例 == 相等，比较两者的值 a == b != 不相等 a != b > 大于 a > b < 小于 a < b >= 大于等于 a >= b <= 小于等于 a <= b 注意：除了不同数据类型的数据不能比较大小 # -------------比较运算符---。",
             "contentBlocks": [
               {
                 "kind": "table",
@@ -3860,7 +3860,7 @@
           {
             "id": "t04",
             "title": "逻辑运算符",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "运算符 说明 and 与，x and y，若x为False返回x的值，否则返回y的值 or 或，x or y，若x为True返回x的值，否则返回y的值 not 非，not x，若x为True返回False，若x为False返回True # -------------逻辑运算符--。",
             "contentBlocks": [
               {
                 "kind": "table",
@@ -3925,7 +3925,7 @@
           {
             "id": "t05",
             "title": "位运算符",
-            "summary": "一个数在计算机中的二进制表示形式，叫做这个数的机器数。机器数是带符号的，在计算机用一个数的最高位存放符号，正数为0，负数为1。",
+            "summary": "运算符 说明 实例 & 按位与 a & b | 按位或 a | b ^ 按位异或 a ^ b ~ 按位取反 ~ a << 按位左移 a << 1 >> 按位右移 a >> 1 原码反码补码 一个数在计算机中的二进制表示形式，叫做这个数的机器数。机器数是带符号的，在计算机用一个数的。",
             "contentBlocks": [
               {
                 "kind": "table",
@@ -4147,7 +4147,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image51.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -4165,7 +4165,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image52.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -4183,7 +4183,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image53.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -4198,7 +4198,7 @@
           {
             "id": "t06",
             "title": "成员运算符",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "运算符 说明 实例 in 在指定的序列中找到值返回 True，否则返回 False a in ['a', 'b', 'c'] not in 在指定的序列中没有找到值返回 True，否则返回 False a not in ['a', 'b', 'c'] # ------------。",
             "contentBlocks": [
               {
                 "kind": "table",
@@ -4266,7 +4266,7 @@
           {
             "id": "t07",
             "title": "身份运算符",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "运算符 说明 实例 is 判断两个标识符是不是引用自相同对象 a is b，类似id(a) == id(b)。如果引用的是同一个对象则返回True，否则返回False is not 判断两个标识符是不是引用自不同对象 a is not b，类似id(a) != id(b)。如果引。",
             "contentBlocks": [
               {
                 "kind": "table",
@@ -4334,12 +4334,12 @@
           {
             "id": "t08",
             "title": "运算符优先级",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "运算符优先级的课程内容。",
             "contentBlocks": [
               {
                 "kind": "image",
                 "src": "course-assets/images/image54.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           }
@@ -4352,7 +4352,7 @@
           {
             "id": "t01",
             "title": "Python编码规范",
-            "summary": "随着你编写的程序越来越长，有必要了解一些代码格式设置约定。为确保所有人编写的代码的结构都大致一致， Python 程序员都遵循一?",
+            "summary": "随着你编写的程序越来越长，有必要了解一些代码格式设置约定。为确保所有人编写的代码的结构都大致一致， Python 程序员都遵循一些格式设置约定。 PEP8（Python Enhancement Proposal ，PEP）是最古老的PEP之一，它向 Python 程序员提供了代码。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -4371,7 +4371,7 @@
           {
             "id": "t02",
             "title": "缩进",
-            "summary": "在 Python 中，代码块的结束不像其他一些编程语言（如 C、Java 等）使用大括号 {} 来明确界定，而是通过缩进来表示。?",
+            "summary": "在 Python 中，代码块的结束不像其他一些编程语言（如 C、Java 等）使用大括号 {} 来明确界定，而是通过缩进来表示。PEP 8建议每级缩进都使用四个空格，这既可提高可读性，又留下了足够的多级缩进空间。在文本处理文档中，大家常常使用制表符而不是空格来缩进。对于文本处理文。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -4386,7 +4386,7 @@
           {
             "id": "t03",
             "title": "行长",
-            "summary": "很多 Python 程序员都建议每行不超过 80 字符。最初制定这样的指南时，在大多数计算机中，终端窗口每行只能容纳 79 字符?",
+            "summary": "很多 Python 程序员都建议每行不超过 80 字符。最初制定这样的指南时，在大多数计算机中，终端窗口每行只能容纳 79 字符；当前，计算机屏幕每行可容纳的字符数多得多，为何还要使用 79 字符的标准行长呢？这里有别的原因。专业程序员通常会在同一个屏幕上打开多个文件，使用标准行。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -4401,7 +4401,7 @@
           {
             "id": "t04",
             "title": "空行",
-            "summary": "要将程序的不同部分分开，可使用空行。你应该使用空行来组织程序文件，但也不能滥用。例如，如果你有 5 行创建列表的代码，还有 3?",
+            "summary": "要将程序的不同部分分开，可使用空行。你应该使用空行来组织程序文件，但也不能滥用。例如，如果你有 5 行创建列表的代码，还有 3 行处理该列表的代码，那么用一个空行将这两部分隔开是合适的。然而，你不应使用三四个空行将它们隔开。 空行不会影响代码的运行，但会影响代码的可读性。 Pyt。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -4416,7 +4416,7 @@
           {
             "id": "t05",
             "title": "同一行显示多条语句",
-            "summary": "Python可以在某些时候同一行中可以使用多条语句，语句之间使用分号(;)分割，",
+            "summary": "Python可以在某些时候同一行中可以使用多条语句，语句之间使用分号(;)分割， 但并不是所有情况都可以，所以不推荐这种写法。以下是一个简单的实例： import sys;print(sys.path) #没有问题 ''' import sys for i in sys.path。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -4466,7 +4466,7 @@
           {
             "id": "t07",
             "title": "源文件编码",
-            "summary": "Python源码请使用 UTF-8 编码（Python2 中可以使用 ASCII 编码）。",
+            "summary": "Python源码请使用 UTF-8 编码（Python2 中可以使用 ASCII 编码）。 文件采用 ASCII(Python2) 或者 UTF-8（Python 3）。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -4481,7 +4481,7 @@
           {
             "id": "t08",
             "title": "不以空格结束一行代码",
-            "summary": "在任何地方都不要以空格结束本行代码， 因为行末的空格不可见， 这可能会闹出问题： 比如反斜杠（连字符） 如果后面接空白字符就不再?",
+            "summary": "在任何地方都不要以空格结束本行代码， 因为行末的空格不可见， 这可能会闹出问题： 比如反斜杠（连字符） 如果后面接空白字符就不再能够当连字符使用。 很多编辑器不允许以空格作为行结束符。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -4496,27 +4496,10 @@
   {
     "id": "m04",
     "title": "流程控制语句",
-    "summary": "流程控制就是用来控制计算机指令的执行顺序 按照程序正常的执行顺序，依次执行每条语句。 分支流程又叫条件控制语句或者分支语句或者选择语句，是通过条件判断来决定执行的代码。 语句 语句1 语句1?",
+    "summary": "流程控制就是用来控制计算机指令的执行顺序 按照程序正常的执行顺序，依次执行每条语句。 分支流程又叫条件控制语句或者分支语句或者选择语句，是通过条件判断来决定执行的代码。 语法 if 表达式: 语句 说明 Python程序语言指定任何非0和非空（null）值为true，0 或者 null为false。 if语句的判断条件可以用条件表达式来表示其关系，后面的:必。",
     "difficulty": "beginner",
     "estimatedMinutes": 139,
     "sections": [
-      {
-        "id": "s01",
-        "title": "?????",
-        "topics": [
-          {
-            "id": "t09",
-            "title": "?????",
-            "summary": "流程控制就是用来控制计算机指令的执行顺序",
-            "contentBlocks": [
-              {
-                "kind": "paragraph",
-                "text": "流程控制就是用来控制计算机指令的执行顺序"
-              }
-            ]
-          }
-        ]
-      },
       {
         "id": "s02",
         "title": "顺序",
@@ -4524,8 +4507,12 @@
           {
             "id": "t01",
             "title": "顺序",
-            "summary": "按照程序正常的执行顺序，依次执行每条语句。",
+            "summary": "流程控制就是用来控制计算机指令的执行顺序 按照程序正常的执行顺序，依次执行每条语句。",
             "contentBlocks": [
+              {
+                "kind": "paragraph",
+                "text": "流程控制就是用来控制计算机指令的执行顺序"
+              },
               {
                 "kind": "paragraph",
                 "text": "按照程序正常的执行顺序，依次执行每条语句。"
@@ -4533,7 +4520,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image55.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           }
@@ -4557,12 +4544,12 @@
           {
             "id": "t02",
             "title": "单分支",
-            "summary": "语句",
+            "summary": "语法 if 表达式: 语句 说明 Python程序语言指定任何非0和非空（null）值为true，0 或者 null为false。 if语句的判断条件可以用条件表达式来表示其关系，后面的:必须加。其中\"判断条件\"成立时（非零），则执行后面的语句，而执行内容可以多行，以缩进来区分表。",
             "contentBlocks": [
               {
                 "kind": "image",
                 "src": "course-assets/images/image56.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -4620,12 +4607,12 @@
           {
             "id": "t03",
             "title": "双分支",
-            "summary": "语句1",
+            "summary": "语法 if 表达式: 语句1 else: 语句2 说明 先进行条件判断，如果条件判断成立就执行语句块1， 条件不成立就执行语句块2 案例 余额随机，商品价格50。 若余额小于50则提示“余额不足，请充值”。 否则提示消费成功。 最后打印“欢迎下次光临”。 from random。",
             "contentBlocks": [
               {
                 "kind": "image",
                 "src": "course-assets/images/image57.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -4698,12 +4685,12 @@
           {
             "id": "t04",
             "title": "多分支",
-            "summary": "语句1",
+            "summary": "语法 if 表达式1: 语句1 elif 表达式2: 语句2 elif 表达式3: 语句3 else: # else如不需要可以省略 语句4 说明 if 语句后面可以跟 elif…else 语句，这种语句可以检测到多种可能的情况，所以也称之为多分支结构。 如果条件判断1成立，那么。",
             "contentBlocks": [
               {
                 "kind": "image",
                 "src": "course-assets/images/image58.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -4812,12 +4799,12 @@
           {
             "id": "t05",
             "title": "嵌套分支",
-            "summary": "语句1",
+            "summary": "语法 if 表达式1: if 表达式2: 语句1 else: 语句2 else: if 表达式3: 语句3 else: 语句4 说明 在一个if语句中，又包含另外一个if语句，这就是if语句的嵌套 案例 给定一个三位的状态码，左边第一位标识大小写状态（1-大写，0-小写），第二位。",
             "contentBlocks": [
               {
                 "kind": "image",
                 "src": "course-assets/images/image59.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -4881,7 +4868,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image60.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "list",
@@ -4895,7 +4882,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image61.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "code",
@@ -4930,7 +4917,7 @@
           {
             "id": "t06",
             "title": "match case语句",
-            "summary": "match x:",
+            "summary": "语法 match x: case a: 语句1 case b: 语句2 case _: 语句3 说明 Python3.10新增了match case的条件判断方式，match后的对象会依次与case后的内容匹配，匹配成功则执行相应语句，否则跳过。其中_可以匹配一切。 案例 给定月。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -5028,7 +5015,7 @@
           {
             "id": "t07",
             "title": "三目运算符",
-            "summary": "表达式1 if 判断条件 else 表达式2",
+            "summary": "语法 表达式1 if 判断条件 else 表达式2 案例 使用 if 来获取两个数中较大的一个。 num1 = 2 num2 = 3 if num1 > num2: max_num = num1 else: max_num = num2 print(max_num) 以上代码可以。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -5088,14 +5075,14 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image62.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           },
           {
             "id": "t02",
             "title": "while循环",
-            "summary": "语句-循环体",
+            "summary": "语法 while 表达式: 语句-循环体 说明 先判断条件是否成立，如果条件成立就执行循环体一次；然后再判断条件是否成立，如果成立，继续执行循环体，直到循环条件不成立的时候，才会结束循环，执行循环下面的其他语句。判断条件可以是任何表达式，任何非零、或非空（null）的值均为tru。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -5184,7 +5171,7 @@
           {
             "id": "t03",
             "title": "for循环",
-            "summary": "for 循环可以用来遍历可迭代对象，如列表或字符串。",
+            "summary": "语法 for 循环可以用来遍历可迭代对象，如列表或字符串。 for 临时变量 in 可迭代对象: 语句 for 循环后也可以加上 else，循环结束后会执行 else 中语句。 for 临时变量 in 可迭代对象: 语句1 else: 语句2 说明 for是关键字 临时变量是自己。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -5353,7 +5340,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image63.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "code",
@@ -5364,7 +5351,7 @@
           {
             "id": "t04",
             "title": "continue",
-            "summary": "跳过当前循环块中的剩余语句，继续进行下一轮循环。一般写在if判断中。",
+            "summary": "跳过当前循环块中的剩余语句，继续进行下一轮循环。一般写在if判断中。 案例：打印0-9，跳过偶数。 for i in range(10): if i % 2 == 0: continue print(i)。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -5373,7 +5360,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image64.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -5396,7 +5383,7 @@
           {
             "id": "t05",
             "title": "break",
-            "summary": "跳出当前for或while的循环体，一般写在if判断中。",
+            "summary": "跳出当前for或while的循环体，一般写在if判断中。 如果for 或while循环通过break终止，循环对应的else 将不执行。 案例：求0-9每个数自己幂自己的加和，如果大于10000000则循环终止。 sum = 0 for i in range(10): sum =。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -5409,7 +5396,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image65.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -5440,7 +5427,7 @@
           {
             "id": "t06",
             "title": "pass",
-            "summary": "pass是空语句，是为了保持程序结构的完整性。",
+            "summary": "pass是空语句，是为了保持程序结构的完整性。 pass不做任何事情，一般用做占位语句。 例如：在一个循环中，如果循环体为空，语法会提示报错， 这个时候我们就可以使用pass占位 for i in range(10): pass。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -5475,7 +5462,7 @@
   {
     "id": "m05",
     "title": "容器数据类型",
-    "summary": "序列（Sequence）是一种基本且核心的数据结构，它允许我们以有序的方式存储和操作数据。序列可以包含不同类型的元素，并且支持通? ????? Python1.0?",
+    "summary": "什么是序列 序列（Sequence）是一种基本且核心的数据结构，它允许我们以有序的方式存储和操作数据。序列可以包含不同类型的元素，并且支持通过索引来访问和修改这些元素。 常见的序列类型包括：列表（List）、元组（Tuple）、字符串（String）。 序列的操作 索引：sequ。 列表是一个可变的、有序的元素集合。 列表使用 [] 定义，数据之间使用。",
     "difficulty": "beginner",
     "estimatedMinutes": 240,
     "sections": [
@@ -5486,7 +5473,7 @@
           {
             "id": "t01",
             "title": "序列",
-            "summary": "序列（Sequence）是一种基本且核心的数据结构，它允许我们以有序的方式存储和操作数据。序列可以包含不同类型的元素，并且支持通?",
+            "summary": "什么是序列 序列（Sequence）是一种基本且核心的数据结构，它允许我们以有序的方式存储和操作数据。序列可以包含不同类型的元素，并且支持通过索引来访问和修改这些元素。 常见的序列类型包括：列表（List）、元组（Tuple）、字符串（String）。 序列的操作 索引：sequ。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -5529,7 +5516,7 @@
           {
             "id": "t01",
             "title": "列表List",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "列表是一个可变的、有序的元素集合。 列表使用 [] 定义，数据之间使用 , 分隔。 列表中每个元素都有对应的位置值，称为索引或下标，索引从起始从0开始向后逐个递增，并且从末尾从-1开始逐个向前递减。 列表中元素可以是不同的类型。",
             "contentBlocks": [
               {
                 "kind": "list",
@@ -5545,7 +5532,7 @@
           {
             "id": "t02",
             "title": "创建列表",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "list1 = [100, 200, 300, 400, 500]。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -5554,14 +5541,14 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image66.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           },
           {
             "id": "t03",
             "title": "访问列表",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "通过索引获取列表中元素 list1 = [100, 200, 300, 400, 500] print(list1[1]) # 200 print(list1[-2]) # 400 列表切片 list1 = [100, 200, 300, 400, 500] print(list。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -5586,7 +5573,7 @@
           {
             "id": "t04",
             "title": "向列表中添加元素",
-            "summary": "list1.append(600) # 在列表末尾追加元素",
+            "summary": "list1 = [100, 200, 300, 400, 500] list1.append(600) # 在列表末尾追加元素 list1.insert(2,700) # 在列表指定的位置追加元素 print(list1)。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -5609,7 +5596,7 @@
           {
             "id": "t05",
             "title": "列表相加",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "list1 = [100, 200, 300] list2 = [\"a\", \"b\", \"c\"] print(list1 + list2) # [100, 200, 300, 'a', 'b', 'c']。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -5620,7 +5607,7 @@
           {
             "id": "t06",
             "title": "列表乘法",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "list1 = [100, 200, 300] print(list1 * 2) # [100, 200, 300, 100, 200, 300]。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -5631,7 +5618,7 @@
           {
             "id": "t07",
             "title": "修改列表中元素",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "通过下标修改。 list1 = [100, 200, 300, 400, 500] list1[0] = -1 print(list1) 通过切片修改。 list1 = [100, 200, 300, 400, 500] list1[2:4] = [\"a\", \"b\", \"c\"]。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -5656,7 +5643,7 @@
           {
             "id": "t08",
             "title": "检查成员是否为列表中元素",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "list1 = [100, 200, 300] print(100 in list1) # True。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -5667,7 +5654,7 @@
           {
             "id": "t09",
             "title": "获取列表长度",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "list1 = [100, 200, 300] print(len(list1)) # 3。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -5678,7 +5665,7 @@
           {
             "id": "t10",
             "title": "求列表中元素的最大值、最小值、加和",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "list1 = [100, 200, 300, 400, 500] print(max(list1)) # 500 print(min(list1)) # 100 print(sum(list1)) # 1500。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -5689,7 +5676,7 @@
           {
             "id": "t11",
             "title": "遍历列表",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "直接遍历列表元素 list1 = [100, 200, 300, 400, 500] for i in list1: print(i) 通过下标遍历列表 list1 = [100, 200, 300, 400, 500] for i in range(len(list1)): p。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -5723,7 +5710,7 @@
           {
             "id": "t12",
             "title": "删除列表指定位置元素或者切片",
-            "summary": "del list1[2]",
+            "summary": "list1 = [100, 200, 300, 400, 500] del list1[2] print(list1)。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -5742,7 +5729,7 @@
           {
             "id": "t13",
             "title": "嵌套列表",
-            "summary": "列表中元素可以为列表。",
+            "summary": "列表中元素可以为列表。 list1 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]] for inner_list in list1: print(inner_list)。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -5757,7 +5744,7 @@
           {
             "id": "t14",
             "title": "列表推导式",
-            "summary": "列表推导式是 Python 中一种简洁创建列表的方式，它将一个可迭代对象（如列表、元组、集合、字符串等）的元素通过某种运算或条件?",
+            "summary": "列表推导式是 Python 中一种简洁创建列表的方式，它将一个可迭代对象（如列表、元组、集合、字符串等）的元素通过某种运算或条件筛选后生成一个新的列表。 基础的列表推导式 squares = [x**2 for x in range(5)] print(squares) # [0。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -5804,7 +5791,7 @@
           {
             "id": "t15",
             "title": "zip()函数",
-            "summary": "zip() 函数可将多个可迭代对象中对应元素打包为一个个元组。",
+            "summary": "zip() 函数可将多个可迭代对象中对应元素打包为一个个元组。 list1 = [1, 2, 3, 4, 5] list2 = [\"a\", \"b\", \"c\", \"d\", \"e\"] zipped = zip(list1, list2) print(list(zipped))。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -5819,7 +5806,7 @@
           {
             "id": "t16",
             "title": "常用函数",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "函数 说明 list.insert(index,x) 在指定位置插入x list.append(x) 在列表末尾追加x list1.extend(list2) 在列表1的末尾追加列表2的数据 del list[index] 删除指定位置的数据或切片 list.remove(x)。",
             "contentBlocks": [
               {
                 "kind": "table",
@@ -6090,7 +6077,7 @@
           {
             "id": "t01",
             "title": "字符串String",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "字符串是不可变的、有序的。 字符串中元素不可修改。 字符串使用单引号、双引号或三重引号定义。 字符串中每个值都有对应的位置值，称为索引或下标，索引从起始从0开始向后逐个递增，并且从末尾从-1开始逐个向前递减。",
             "contentBlocks": [
               {
                 "kind": "list",
@@ -6106,7 +6093,7 @@
           {
             "id": "t02",
             "title": "创建字符串",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "str1 = \"hello world\"。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -6117,7 +6104,7 @@
           {
             "id": "t03",
             "title": "访问字符串",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "str1 = \"hello world\" print(str1[0]) print(str1[-1]) print(str1[4:-3])。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -6128,7 +6115,7 @@
           {
             "id": "t04",
             "title": "字符串相加",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "str1 = \"hello world\" str2 = \"dlrow olleh\" print(str1 + str2) # hello worlddlrow olleh。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -6139,7 +6126,7 @@
           {
             "id": "t05",
             "title": "字符串乘法",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "str1 = \"hello world\" print(str1 * 2) # hello worldhello world。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -6150,7 +6137,7 @@
           {
             "id": "t06",
             "title": "检查成员是否为字符串中元素",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "str1 = \"hello world\" print(\"lo\" in str1) # True。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -6161,7 +6148,7 @@
           {
             "id": "t07",
             "title": "原始字符串",
-            "summary": "所有的字符串按照字面意思处理，没有转义字符。需在字符串前加上r / R。",
+            "summary": "所有的字符串按照字面意思处理，没有转义字符。需在字符串前加上r / R。 print(\"hello\\nworld\") print(r\"hello\\nworld\")。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -6176,7 +6163,7 @@
           {
             "id": "t08",
             "title": "常用函数",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "函数 说明 str.replace(old,new[,max]) 把将字符串中的old替换成new,如果指定max，则替换不超过max次 str.split([x][,n]) 按x分隔字符串，默认按任何空白字符串分隔并在结果中丢弃空字符串。可指定最大分隔次数 str.rsplit。",
             "contentBlocks": [
               {
                 "kind": "table",
@@ -6513,7 +6500,7 @@
           {
             "id": "t09",
             "title": "其他函数",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "函数 说明 str.center(width[,x]) 返回长度为width且居中的字符串，空白使用x填充，默认为空格 str.ljust(width[,x]) 返回长度为width且左对齐的字符串，空白使用x填充，默认为空格 str.rjust(width[,x]) 返回长度为。",
             "contentBlocks": [
               {
                 "kind": "table",
@@ -6820,7 +6807,7 @@
           {
             "id": "t01",
             "title": "元组Tuple",
-            "summary": "元组的使用方式与列表类似。",
+            "summary": "元组是一个不可变的、有序的元素集合。 不能对元组中的元素进行修改操作。 元组使用 () 定义，数据之间使用,分隔。 元组中每个元素都有对应的位置值，称为索引或下标，索引从起始从0开始向后逐个递增，并且从末尾从-1开始逐个向前递减。 元组中元素可以是不同的类型。 元组的使用方式与列。",
             "contentBlocks": [
               {
                 "kind": "list",
@@ -6841,7 +6828,7 @@
           {
             "id": "t02",
             "title": "创建元组",
-            "summary": "元组中只包含一个元素时，需要在元素后面添加逗号，否则括号会被当作运算符使用。",
+            "summary": "tuple1 = (100, 200, 300, 400, 500) 元组中只包含一个元素时，需要在元素后面添加逗号，否则括号会被当作运算符使用。 tuple1 = (100,) 也可以通过元组推导式创建元组。 tuple_generator = (x for x in rang。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -6868,7 +6855,7 @@
           {
             "id": "t03",
             "title": "访问元组",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "tuple1 = (100, 200, 300, 400, 500) print(tuple1[2]) print(tuple1[-1]) print(tuple1[2:4])。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -6879,7 +6866,7 @@
           {
             "id": "t04",
             "title": "元组相加",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "tuple1 = (100, 200, 300) tuple2 = (\"a\", \"b\", \"c\") print(tuple1 + tuple2) # (100, 200, 300, 'a', 'b', 'c')。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -6890,7 +6877,7 @@
           {
             "id": "t05",
             "title": "元组乘法",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "tuple1 = (100, 200, 300) print(tuple1 * 2) # (100, 200, 300, 100, 200, 300)。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -6901,7 +6888,7 @@
           {
             "id": "t06",
             "title": "检查成员是否为元组中元素",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "tuple1 = (100, 200, 300, 400, 500) print(300 in tuple1) # True。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -6912,7 +6899,7 @@
           {
             "id": "t07",
             "title": "获取元组长度",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "tuple1 = (100, 200, 300, 400, 500) print(len(tuple1)) # 5。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -6923,7 +6910,7 @@
           {
             "id": "t08",
             "title": "求元组中元素的最大值、最小值、加和",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "tuple1 = (100, 200, 300, 400, 500) print(max(tuple1)) # 500 print(min(tuple1)) # 100 print(sum(tuple1)) # 1500。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -6934,7 +6921,7 @@
           {
             "id": "t09",
             "title": "遍历元组",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "tuple1 = (100, 200, 300, 400, 500) for i in tuple1: print(i) for i in range(len(tuple1)): print(i, tuple1[i]) for i, val in enumerate(tuple1。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -6945,7 +6932,7 @@
           {
             "id": "t10",
             "title": "元组的不可变",
-            "summary": "元组的不可变指的是元组所指向的内存中的内容不可变，但可以重新赋值。",
+            "summary": "元组的不可变指的是元组所指向的内存中的内容不可变，但可以重新赋值。 tuple1 = (100, 200, 300) print(id(tuple1), tuple1) tuple1 = tuple1 + (1, 2, 3) print(id(tuple1), tuple1) 如。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -6982,7 +6969,7 @@
           {
             "id": "t01",
             "title": "集合Set",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "集合是无序的，且不包含重复元素。 集合使用 {} 定义，数据之间使用 , 分隔，也可以使用set()定义。 集合没有索引，所以不能通过切片方式访问集合元素。 集合中元素可以是不同的类型。 集合可以进行数学上的集合操作，如并集、交集和差集。 集合适用于需要快速成员检查、消除重复项和。",
             "contentBlocks": [
               {
                 "kind": "list",
@@ -7000,7 +6987,7 @@
           {
             "id": "t02",
             "title": "创建集合",
-            "summary": "可以通过{}或set()创建集合，但创建空集合需要使用set()而非{}，因为{}会创建空字典。",
+            "summary": "可以通过{}或set()创建集合，但创建空集合需要使用set()而非{}，因为{}会创建空字典。 set1 = {1, 2, 3} set2 = set([1, 2, 3]) # 使用set()函数从列表创建集合 set3 = set() print(set1, set2, se。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -7023,7 +7010,7 @@
           {
             "id": "t03",
             "title": "向集合中添加元素",
-            "summary": "set1.add(4)",
+            "summary": "set1 = {1, 2, 3} set1.add(4) set1.add(5) print(set1)。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -7046,7 +7033,7 @@
           {
             "id": "t04",
             "title": "从集合中删除元素",
-            "summary": "set1.remove(2)",
+            "summary": "set1 = {1, 2, 3} set1.remove(2) print(set1)。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -7065,7 +7052,7 @@
           {
             "id": "t05",
             "title": "检查成员是否为集合中元素",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "set1 = {1, 2, 3, 4, 5} print(2 in set1) # True。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -7076,7 +7063,7 @@
           {
             "id": "t06",
             "title": "获取集合长度",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "set1 = {1, 2, 3, 4, 5} print(len(set1)) # 5。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -7087,7 +7074,7 @@
           {
             "id": "t07",
             "title": "求集合中元素的最大值、最小值、加和",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "set1 = {1, 2, 3, 4, 5} print(max(set1)) # 5 print(min(set1)) # 1 print(sum(set1)) # 15。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -7098,7 +7085,7 @@
           {
             "id": "t08",
             "title": "遍历集合",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "my_set = {1, 2, 3, 4, 5} for item in my_set: print(item)。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -7109,7 +7096,7 @@
           {
             "id": "t09",
             "title": "常用函数",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "函数 说明 set.add(x) 添加元素 set.update(x) 添加元素，x可以为列表、元组、字符串、字典等可迭代对象 set.union(x) 添加元素后返回一个新的集合，x可以为列表、元组、字符串、字典等可迭代对象 set.remove(x) 从集合中移除x，x不存在。",
             "contentBlocks": [
               {
                 "kind": "table",
@@ -7428,7 +7415,7 @@
           {
             "id": "t01",
             "title": "字典Dictionary",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "一个无序的键值对集合，键是唯一的，而值可以重复。 字典使用 {} 定义，键（key）和值（value）使用 : 连接，每个键值对之间使用 , 分隔。如{key1 : value1, key2 : value2} 字典没有索引。 字典可以通过键来获取对应的值。 值可以取任何数据类型。",
             "contentBlocks": [
               {
                 "kind": "list",
@@ -7445,7 +7432,7 @@
           {
             "id": "t02",
             "title": "创建字典",
-            "summary": "可以通过{}或dict()创建字典。",
+            "summary": "可以通过{}或dict()创建字典。 dict1 = {} dict2 = dict() dict3 = {\"name\": \"Alice\", \"age\": 18, \"gender\": \"male\"} dict4 = dict(name=\"Bob\", age=20, gender=。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -7468,7 +7455,7 @@
           {
             "id": "t03",
             "title": "访问字典",
-            "summary": "可通过 [] 访问字典中的元素。key不存在时会报错。",
+            "summary": "可通过 [] 访问字典中的元素。key不存在时会报错。 dict1 = {\"name\": \"Alice\", \"age\": 18, \"gender\": \"male\"} print(dict1[\"name\"]) # Alice print(dict1[\"age\"]) # 18 pri。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -7491,7 +7478,7 @@
           {
             "id": "t04",
             "title": "向字典中添加元素",
-            "summary": "为字典指定的key赋值value，若key原本不存在则会被添加。",
+            "summary": "为字典指定的key赋值value，若key原本不存在则会被添加。 dict1 = {\"name\": \"Alice\", \"age\": 18, \"gender\": \"male\"} dict1[\"address\"] = \"earth\" print(dict1)。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -7506,7 +7493,7 @@
           {
             "id": "t05",
             "title": "修改字典中元素",
-            "summary": "通过key修改对应的value。",
+            "summary": "通过key修改对应的value。 dict1 = {\"name\": \"Alice\", \"age\": 18, \"gender\": \"male\"} dict1[\"name\"] = \"Bob\" print(dict1)。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -7521,7 +7508,7 @@
           {
             "id": "t06",
             "title": "检查成员是否为字典中的key",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "dict1 = {\"name\": \"Alice\", \"age\": 81, \"gender\": \"male\"} print(\"name\" in dict1) # 检查key是否存在 print(\"Alice\" in dict1) # 无法直接检查value是否存在。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -7532,7 +7519,7 @@
           {
             "id": "t07",
             "title": "获取字典长度",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "dict1 = {\"name\": \"Alice\", \"age\": 81, \"gender\": \"male\"} print(len(dict1)) # 3。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -7543,7 +7530,7 @@
           {
             "id": "t08",
             "title": "遍历字典",
-            "summary": "print (k)",
+            "summary": "my_dict = {'Name': 'Tom', 'Age': 17} # 遍历出所有k keys = my_dict.keys() for k in keys: print (k) print(\"-\" *20) # 遍历出所有v vals = my_dict.values()。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -7578,7 +7565,7 @@
           {
             "id": "t09",
             "title": "删除字典元素",
-            "summary": "del my_dict['Name'] # 删除键 'Name'",
+            "summary": "my_dict = {'Name': 'Tom', 'Age': 17} del my_dict['Name'] # 删除键 'Name' # my_dict.clear() # 清空字典 # del my_dict # 删除字典 print (my_dict)。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -7601,7 +7588,7 @@
           {
             "id": "t10",
             "title": "常用函数",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "函数 说明 del dict[key] 根据key删除键值对 dict.pop(key[,default]) 获取key所对应的value，同时删除该键值对，可设置默认值 dict.popitem() 取出字典中的最后插入的键值对，字典为空则报错 dict.clear() 清空字。",
             "contentBlocks": [
               {
                 "kind": "table",
@@ -7776,7 +7763,7 @@
           {
             "id": "t01",
             "title": "列表、元组、字典和集合的区别",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "数据结构 是否可变 是否重复 是否有序 定义符号 列表（List） 可变 允许 有序 []或list() 元组（Tuple） 不可变 允许 有序 ()或tuple() 字典（Dictionary） 可变 键不允许，值允许 键无序（Python 3.7+版本中保持插入顺序） {}或。",
             "contentBlocks": [
               {
                 "kind": "table",
@@ -7928,27 +7915,10 @@
   {
     "id": "m06",
     "title": "函数",
-    "summary": "????? Python1.0 ???????????????????? 函数是带名字的代码块，用于完成具体的任务，可重复使用。当需要在程序中多次执行同一项任务时，无须反复编写完成该任务的代码?",
+    "summary": "在前面几个章节中我们经常使用到print()，那么它是什么呢？ print() 是一个函数，可以向控制台打印输出内容。 函数是带名字的代码块，用于完成具体的任务，可重复使用。当需要在程序中多次执行同一项任务时，无须反复编写完成该任务的代码，只需要调用执行该任务的函数，让Pytho。 Python 定义函数使用 def 关键字，一般格式如下： def 函数名。",
     "difficulty": "intermediate",
     "estimatedMinutes": 240,
     "sections": [
-      {
-        "id": "s01",
-        "title": "?????",
-        "topics": [
-          {
-            "id": "t02",
-            "title": "?????",
-            "summary": "????? Python1.0 ????????????????????",
-            "contentBlocks": [
-              {
-                "kind": "code",
-                "code": "在前面几个章节中我们经常使用到print()，那么它是什么呢？\nprint() 是一个函数，可以向控制台打印输出内容。"
-              }
-            ]
-          }
-        ]
-      },
       {
         "id": "s02",
         "title": "函数的概念",
@@ -7956,8 +7926,12 @@
           {
             "id": "t01",
             "title": "函数的概念",
-            "summary": "函数是带名字的代码块，用于完成具体的任务，可重复使用。当需要在程序中多次执行同一项任务时，无须反复编写完成该任务的代码，只需要调?",
+            "summary": "在前面几个章节中我们经常使用到print()，那么它是什么呢？ print() 是一个函数，可以向控制台打印输出内容。 函数是带名字的代码块，用于完成具体的任务，可重复使用。当需要在程序中多次执行同一项任务时，无须反复编写完成该任务的代码，只需要调用执行该任务的函数，让Pytho。",
             "contentBlocks": [
+              {
+                "kind": "code",
+                "code": "在前面几个章节中我们经常使用到print()，那么它是什么呢？\nprint() 是一个函数，可以向控制台打印输出内容。"
+              },
               {
                 "kind": "paragraph",
                 "text": "函数是带名字的代码块，用于完成具体的任务，可重复使用。当需要在程序中多次执行同一项任务时，无须反复编写完成该任务的代码，只需要调用执行该任务的函数，让Python运行其中的代码即可。"
@@ -8005,7 +7979,7 @@
           {
             "id": "t01",
             "title": "语法",
-            "summary": "Python 定义函数使用 def 关键字，一般格式如下：",
+            "summary": "Python 定义函数使用 def 关键字，一般格式如下： def 函数名 (参数列表) : 函数体 [return]。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -8028,7 +8002,7 @@
           {
             "id": "t02",
             "title": "定义一个函数的规则",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "函数代码块以def关键词开头，后接函数标识符名称和圆括号 ()。 任何传入参数和自变量必须放在圆括号中间，圆括号之间可以用于定义参数。 函数的第一行语句可以选择性地使用文档字符串—用于存放函数说明。用三个引号括起来,单引号和双引号都可以。 函数参数后面以冒号结束。 函数体开始缩进。",
             "contentBlocks": [
               {
                 "kind": "list",
@@ -8046,7 +8020,7 @@
           {
             "id": "t03",
             "title": "函数名",
-            "summary": "函数名是程序员给这个函数起的名称，需要遵循标识符的命名规则。",
+            "summary": "函数名是程序员给这个函数起的名称，需要遵循标识符的命名规则。 函数名一般是一个动词，第一个单词小写，其他每个单词的首字母大写。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -8061,7 +8035,7 @@
           {
             "id": "t04",
             "title": "参数",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "函数在完成某个功能时，可能需要一些数据，在定义函数时指定函数参数来接收这些数据。如在屏幕上打印信息，需要把要打印的信息传递给print()函数。如果有多个参数，参数之间使用逗号分隔。函数也可以没有参数，但是小括弧不能省略。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -8100,7 +8074,7 @@
           {
             "id": "t01",
             "title": "函数的抽取以及调用",
-            "summary": "在上面打印两次2x3的*的案例中，我们的代码出现了冗余。我们分析，可以将打印2x3的*这个功能封装为一个单独的函数。",
+            "summary": "在上面打印两次2x3的*的案例中，我们的代码出现了冗余。我们分析，可以将打印2x3的*这个功能封装为一个单独的函数。 函数定义好之后，通过函数名()对函数进行调用。 案例：打印两次2x3的*。 ''' 该案例演示了函数的抽取以及调用 打印如下图形 *** *** -------。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -8207,7 +8181,7 @@
           {
             "id": "t01",
             "title": "使用函数的好处",
-            "summary": "使程序变得更简短而清晰",
+            "summary": "使程序变得更简短而清晰 可以提高程序开发的效率 提高了代码的重用性 便于程序分工协作开发 便于代码的集中管理 有利于程序维护。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -8244,7 +8218,7 @@
           {
             "id": "t01",
             "title": "参数的抽取",
-            "summary": "在上面的案例中，虽然我们抽取了函数去完成打印2x3的*功能。如果现在希望打印出如下图形，该如何实现?",
+            "summary": "在上面的案例中，虽然我们抽取了函数去完成打印2x3的*功能。如果现在希望打印出如下图形，该如何实现 第一种方式：不封装函数 ''' 该案例演示了不封装函数 向命令窗口打印输出 *** *** -------- **** ''' row = 2 while row > 0 : pr。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -8253,7 +8227,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image67.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -8388,12 +8362,12 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image68.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "image",
                 "src": "course-assets/images/image69.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -8457,7 +8431,7 @@
           {
             "id": "t02",
             "title": "形参和实参",
-            "summary": "在调用函数时，给函数传递的参数称为实际参数，简称为实参（函数的调用者）",
+            "summary": "在定义函数时，指定的参数称为形式参数，简称为形参（函数的提供者） 在调用函数时，给函数传递的参数称为实际参数，简称为实参（函数的调用者） 在定义函数时，形参没有分配存储空间，也没有值，相当于一个占位符; 在调用函数时， 会在栈区中给函数分配存储空间， 然后给形参/局部变量分配存储。",
             "contentBlocks": [
               {
                 "kind": "list",
@@ -8490,7 +8464,7 @@
           {
             "id": "t03",
             "title": "函数的参数传递",
-            "summary": "以上代码中，10是数字类型，\" helloworld \" 是 String 类型，而变量 a 是没有类型，她仅仅是一个对象的引用?",
+            "summary": "在 python 中，类型属于对象，变量是没有类型的： a=10 a=\"helloworld\" 以上代码中，10是数字类型，\" helloworld \" 是 String 类型，而变量 a 是没有类型，她仅仅是一个对象的引用（一个指针），可以是指向数字类型对象，也可以是指向 St。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -8730,7 +8704,7 @@
           {
             "id": "t04",
             "title": "函数可使用的参数形式",
-            "summary": "调用函数时，Python必须将函数调用中的每个实参都关联到函数定义中的一个形参。为此，最简单的关联方式是基于位置把每个相应位置的?",
+            "summary": "必须参数 调用函数时，Python必须将函数调用中的每个实参都关联到函数定义中的一个形参。为此，最简单的关联方式是基于位置把每个相应位置的实参和形参相关联，调用时的数量必须和声明时的一样。 ''' 该案例演示了函数位置实参 ''' def func(a, b, c): print。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -8932,7 +8906,7 @@
           {
             "id": "t05",
             "title": "解包传参",
-            "summary": "若函数的形参是定长参数，可以通过 * 和 ** 对列表、元组、字典等解包传参。",
+            "summary": "若函数的形参是定长参数，可以通过 * 和 ** 对列表、元组、字典等解包传参。 def func(a, b, c): return a + b + c tuple11 = (1, 2, 3) print(func(*tuple11)) # 字典中key的名称和参数名必须一致 di。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -8955,7 +8929,7 @@
           {
             "id": "t06",
             "title": "强制使用位置参数或关键字参数",
-            "summary": "/ 前的参数必须使用位置传参，* 后的参数必须用关键字传参。",
+            "summary": "/ 前的参数必须使用位置传参，* 后的参数必须用关键字传参。 def f(a, b, /, c, d, *, e, f): print(a, b, c, d, e, f) f(1, 2, 3, d=4, e=5, f=6)。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -8970,7 +8944,7 @@
           {
             "id": "t07",
             "title": "防止函数修改列表",
-            "summary": "有时要函数对列表进行处理，又不希望函数修改原列表，可以使用 copy.deepcopy()。",
+            "summary": "有时要函数对列表进行处理，又不希望函数修改原列表，可以使用 copy.deepcopy()。 import copy def multiply2(var1): var1[3].append(400) print(\"函数内处理后：\", var1) list1 = [1, 2, 3。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -9003,7 +8977,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image70.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           }
@@ -9016,7 +8990,7 @@
           {
             "id": "t01",
             "title": "函数说明文档",
-            "summary": "编写了函数说明文档后，可以通过 help(函数名) 获取函数说明文档。",
+            "summary": "编写了函数说明文档后，可以通过 help(函数名) 获取函数说明文档。 def adult(age=18): \"\"\"根据年龄判断是否成年\"\"\" result = \"未成年\"[age >= 18 :] return result help(adult) PyCharm中将鼠标悬停在。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -9045,7 +9019,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image71.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -9054,7 +9028,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image72.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           }
@@ -9067,7 +9041,7 @@
           {
             "id": "t01",
             "title": "返回值",
-            "summary": "在程序开发中，有时候希望一个函数执行结束后，告诉调用者一个结果，以便调用者针对具体的结果做后续的处理。返回值就是函数完成工作后，?",
+            "summary": "在程序开发中，有时候希望一个函数执行结束后，告诉调用者一个结果，以便调用者针对具体的结果做后续的处理。返回值就是函数完成工作后，给调用者的一个结果 在函数中使用 return 关键字可以返回结果 ，并结束正在执行的函数 如果return后面跟[表达式]，在结束函数的同时向调用方返。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -9180,7 +9154,7 @@
           {
             "id": "t01",
             "title": "函数嵌套调用",
-            "summary": "在一个函数中调用另一个函数，当内层函数执行完之后才会继续执行外层函数。",
+            "summary": "在一个函数中调用另一个函数，当内层函数执行完之后才会继续执行外层函数。 def function_A(): print(\"\\t函数 A 开始执行\") print(\"\\t函数 A 执行中...\") print(\"\\t函数 A 结束执行\") def function_B(): pri。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -9245,7 +9219,7 @@
           {
             "id": "t01",
             "title": "变量的作用域",
-            "summary": "Python中，程序的变量并不是在哪个位置都可以访问的，访问权限决定于这个变量是在哪里赋值的。变量的作用域决定了哪一部分程序可以?",
+            "summary": "Python中，程序的变量并不是在哪个位置都可以访问的，访问权限决定于这个变量是在哪里赋值的。变量的作用域决定了哪一部分程序可以访问哪个变量，Python的作用域一共有4种，分别是： L （Local） 局部作用域 E （Enclosing）嵌套作用域 闭包函数外的函数中 G （。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -9324,7 +9298,7 @@
           {
             "id": "t02",
             "title": "全局变量和局部变量",
-            "summary": "定义在函数内部的变量拥有一个局部作用域，定义在函数外的拥有全局作用域。局部变量只能在其被声明的函数内部访问，而全局变量可以在整个?",
+            "summary": "定义在函数内部的变量拥有一个局部作用域，定义在函数外的拥有全局作用域。局部变量只能在其被声明的函数内部访问，而全局变量可以在整个程序范围内访问。 ''' 该案例演示了全局变量和局部变量 ''' sum = 0 # 这是一个全局变量 def add(num1,num2) : sum。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -9361,14 +9335,14 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image73.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           },
           {
             "id": "t03",
             "title": "global关键字",
-            "summary": "定义了一个全局变量，如何在函数内对其进行修改？",
+            "summary": "使用global修改全局变量 定义了一个全局变量，如何在函数内对其进行修改？ 直接在函数内修改 通过var1 += 200修改。会报错 当你在函数内部对一个变量进行赋值操作时，Python 默认会把这个变量当作局部变量，即便全局作用域中已经存在同名变量。 var1 = 100 d。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -9480,7 +9454,7 @@
           {
             "id": "t04",
             "title": "nonlocal关键字",
-            "summary": "nonlocal 也用作内部作用域修改外部作用域的变量的场景，不过此时外部作用域不是全局作用域而是嵌套作用域。",
+            "summary": "nonlocal 也用作内部作用域修改外部作用域的变量的场景，不过此时外部作用域不是全局作用域而是嵌套作用域。 def function_outer(): var1 = 1 print(var1) def function_inner(): nonlocal var1 var1。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -9521,7 +9495,7 @@
           {
             "id": "t01",
             "title": "概念",
-            "summary": "递归一种是逻辑思想，将一个大工作分为逐渐减小的小工作，比如说一个和尚要搬50块石头，他想，只要先搬走49块，那剩下的一块就能搬完?",
+            "summary": "递归一种是逻辑思想，将一个大工作分为逐渐减小的小工作，比如说一个和尚要搬50块石头，他想，只要先搬走49块，那剩下的一块就能搬完了，然后考虑那49块，只要先搬走48块，那剩下的一块就能搬完了……，递归是一种思想，只不过在程序中，就是依靠函数嵌套这个特性来实现了。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -9543,7 +9517,7 @@
           {
             "id": "t03",
             "title": "在定义递归函数的时候，主要确定两点",
-            "summary": "确定它们之间的规律",
+            "summary": "确定它们之间的规律 确定递归结束的条件。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -9558,7 +9532,7 @@
           {
             "id": "t04",
             "title": "递归案例求一个整数n的阶乘！",
-            "summary": "'''",
+            "summary": "''' 该案例演示了求整数的阶乘 5! = 5 * 4 * 3 * 2 *1 ''' # 不使用递归的方式 def get_factorial(num): res = 1 # 用于存放积 for n in range(1,num+1): res *= n return res p。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -9593,12 +9567,12 @@
           {
             "id": "t05",
             "title": "递归执行流程分析",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "递归执行流程分析的课程内容。",
             "contentBlocks": [
               {
                 "kind": "image",
                 "src": "course-assets/images/image74.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           }
@@ -9611,7 +9585,7 @@
           {
             "id": "t01",
             "title": "语法",
-            "summary": "Python使用 lambda 来定义匿名函数，所谓匿名，指其不用 def 的标准形式定义函数。",
+            "summary": "Python使用 lambda 来定义匿名函数，所谓匿名，指其不用 def 的标准形式定义函数。 lambda 参数列表: 表达式 lambda 只是一个表达式，函数体比def简单很多。 lambda的主体是一个表达式，而不是一个代码块，所以仅仅能在lambda表达式中封装有限的。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -9638,7 +9612,7 @@
           {
             "id": "t02",
             "title": "使用普通函数传参",
-            "summary": "return a + b",
+            "summary": "def operator(a, b): return a + b def function(a, b, operator): return operator(a, b) print(function(1, 2, operator))。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -9657,7 +9631,7 @@
           {
             "id": "t03",
             "title": "使用匿名函数传参",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "def function(a, b, operator): return operator(a, b) print(function(1, 2, lambda x, y: x + y))。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -9668,7 +9642,7 @@
           {
             "id": "t04",
             "title": "匿名函数作为内置函数的参数",
-            "summary": "可以将匿名函数与常用的内置参数搭配使用。",
+            "summary": "可以将匿名函数与常用的内置参数搭配使用。 sorted() 有三名学生的姓名和年龄，按年龄排序。 student_list = [{\"name\": \"zhang3\", \"age\": 36}, {\"name\": \"li4\", \"age\": 14}, {\"name\": \"wang5\"。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -9741,7 +9715,7 @@
           {
             "id": "t01",
             "title": "函数的注释（了解）",
-            "summary": "Python 3.x 引入了函数注释，以增强函数的注释功能",
+            "summary": "Python 3.x 引入了函数注释，以增强函数的注释功能 # 普通的自定义函数： def dog(name, age, species): return (name, age, species) # 添加了注释的自定义函数： def dog(name:str, age:(1。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -9772,7 +9746,7 @@
   {
     "id": "m07",
     "title": "文件操作",
-    "summary": "在计算机中，文件是存储在磁盘上的数据集合。文件可以包含各种类型的数据，如文本、图像、音频、视频或程序代码。 有统一的编码，可以被看做存储在磁盘上的长字符串。 从当前位置到指定位置的路径。 使用?",
+    "summary": "在计算机中，文件是存储在磁盘上的数据集合。文件可以包含各种类型的数据，如文本、图像、音频、视频或程序代码。 文件系统通过文件名和文件路径来定位和管理文件。文件名通常包含文件的名称和扩展名，扩展名用于表示文件的类型（例如 .txt 表示文本文件，.jpg 表示图像文件）。文件路径可。 纯文本文件 有统一的编码，可以被看做存储在磁盘上的长字符串。 纯文本文件编码。",
     "difficulty": "intermediate",
     "estimatedMinutes": 71,
     "sections": [
@@ -9783,7 +9757,7 @@
           {
             "id": "t01",
             "title": "文件的基本概念",
-            "summary": "在计算机中，文件是存储在磁盘上的数据集合。文件可以包含各种类型的数据，如文本、图像、音频、视频或程序代码。",
+            "summary": "在计算机中，文件是存储在磁盘上的数据集合。文件可以包含各种类型的数据，如文本、图像、音频、视频或程序代码。 文件系统通过文件名和文件路径来定位和管理文件。文件名通常包含文件的名称和扩展名，扩展名用于表示文件的类型（例如 .txt 表示文本文件，.jpg 表示图像文件）。文件路径可。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -9802,7 +9776,7 @@
           {
             "id": "t02",
             "title": "文件的分类",
-            "summary": "有统一的编码，可以被看做存储在磁盘上的长字符串。",
+            "summary": "纯文本文件 有统一的编码，可以被看做存储在磁盘上的长字符串。 纯文本文件编码格式常见的有ASCII、ISO-8859-1、GB2312、GBK、UTF-8、UTF-16等。 二进制文件 没有统一的字符编码，直接由0与1组成。 如图片文件（jpg、png），视频文件（avi）等。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -9835,7 +9809,7 @@
           {
             "id": "t03",
             "title": "文件的路径",
-            "summary": "从当前位置到指定位置的路径。",
+            "summary": "相对路径 从当前位置到指定位置的路径。 如：./hello_world.py ./代表当前路径。../代表上一级路径。 绝对路径 从根目录到指定位置的路径。 如：E:/Hello/hello.py。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -9878,7 +9852,7 @@
           {
             "id": "t01",
             "title": "文件的打开与关闭",
-            "summary": "使用 open() 打开或创建文件，该方法执行完毕之后返回的是一个file对象。",
+            "summary": "打开文件 使用 open() 打开或创建文件，该方法执行完毕之后返回的是一个file对象。 常用形式 open(文件名, 模式) f = open(\"test.txt\", \"w\") 模式 说明 r 读写方式：只读，文件若不存在会报错。默认此模式 w 读写方式：写入，写入前清空原有。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -10045,7 +10019,7 @@
           {
             "id": "t01",
             "title": "写数据",
-            "summary": "f.write(\"hello world\\n\")",
+            "summary": "# 打开文件 f = open(\"test.txt\", \"w\") # 写入数据 f.write(\"hello world\\n\") f.write(\"nihao python\\n\") # 关闭文件 f.close()。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -10072,7 +10046,7 @@
           {
             "id": "t02",
             "title": "读数据",
-            "summary": "read([size]) 可以从文件中读取数据，size 表示要从文件中读取的数据的长度（单位是字节），如果没有传入 size?",
+            "summary": "read read([size]) 可以从文件中读取数据，size 表示要从文件中读取的数据的长度（单位是字节），如果没有传入 size 则读取文件中所有的数据。 # 打开文件 f = open(\"test.txt\", \"rt\") # 读取文件所有数据 print(f.read(。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -10144,7 +10118,7 @@
           {
             "id": "t01",
             "title": "常用函数",
-            "summary": "os.walk(",
+            "summary": "函数 说明 file.seek(offset[,from]) 移动偏移量并返回新的绝对位置。 offset：移动的字节数，如果是负数表示从倒数第几位开始。 from：从哪个位置开始移动；0为开头，1为当前位置，2为末尾。from不为0时需使用'b'二进制模式打开文件。 file.",
             "contentBlocks": [
               {
                 "kind": "table",
@@ -10554,7 +10528,7 @@
           {
             "id": "t01",
             "title": "案例：文件拷贝",
-            "summary": "dest_file.write(content)",
+            "summary": "# source_file : 源文件路径 # dest_file: 目的地文件路径 def copyFile(source_file_path,dest_file__path): # 打开源文件 source_file = open(source_file_path, 'rb'。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -10617,7 +10591,7 @@
   {
     "id": "m08",
     "title": "面向对象之类和对象",
-    "summary": "面向过程编程（Procedural Programming）和面向对象编程（OOP）是两种不同的编程范式，它们在软件开发中都有广? ????? Python1.0?",
+    "summary": "面向过程编程（Procedural Programming）和面向对象编程（OOP）是两种不同的编程范式，它们在软件开发中都有广泛的应用。 Python是一种混合型的语言，既支持面向过程的编程，也支持面向对象的编程。 面向过程的编程是一种以过程为中心的编程方式，主要关注解决问题的。 类和对象的课程内容。 类描述了所创建的对象共同的属性（是什么）和方法（能做什。",
     "difficulty": "intermediate",
     "estimatedMinutes": 202,
     "sections": [
@@ -10628,7 +10602,7 @@
           {
             "id": "t01",
             "title": "面向过程和面向对象",
-            "summary": "面向过程编程（Procedural Programming）和面向对象编程（OOP）是两种不同的编程范式，它们在软件开发中都有广?",
+            "summary": "面向过程编程（Procedural Programming）和面向对象编程（OOP）是两种不同的编程范式，它们在软件开发中都有广泛的应用。 Python是一种混合型的语言，既支持面向过程的编程，也支持面向对象的编程。 面向过程的编程是一种以过程为中心的编程方式，主要关注解决问题的。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -10752,19 +10726,19 @@
           {
             "id": "t01",
             "title": "类和对象",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "类和对象的课程内容。",
             "contentBlocks": [
               {
                 "kind": "image",
                 "src": "course-assets/images/image75.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           },
           {
             "id": "t02",
             "title": "类（Class）",
-            "summary": "类描述了所创建的对象共同的属性（是什么）和方法（能做什么），属性和方法统称为类的成员。",
+            "summary": "类描述了所创建的对象共同的属性（是什么）和方法（能做什么），属性和方法统称为类的成员。 类是对大量对象共性的抽象 类是创建对象的模板 类是客观事物在人脑中的主观反映。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -10787,7 +10761,7 @@
           {
             "id": "t03",
             "title": "对象（Object）",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "在自然界中，只要是客观存在的事物都是对象 类是抽象的，对象是类的实例（Instance），是具体的。 一个对象有自己的状态（属性）、行为（方法）和唯一的标识（本质上指内存中所创建的对象的地址）。",
             "contentBlocks": [
               {
                 "kind": "list",
@@ -10808,7 +10782,7 @@
           {
             "id": "t01",
             "title": "定义类",
-            "summary": "\"\"\"类说明文档\"\"\"",
+            "summary": "语法 class 类名: \"\"\"类说明文档\"\"\" 类体 类名一般使用大驼峰命名法。 类体中可以包含类属性（也叫类变量）、方法、实例属性（也叫实例变量）等。 案例 定义一个人的类，包含 __init__() 方法、eat() 方法和 drink() 方法。 class Person。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -10847,7 +10821,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image76.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "code",
@@ -10872,7 +10846,7 @@
           {
             "id": "t01",
             "title": "类的操作",
-            "summary": "类支持两种操作，成员引用和实例化。",
+            "summary": "类支持两种操作，成员引用和实例化。 成员引用 语法 类名.成员名 案例 class Person: \"\"\"人的类\"\"\" home = \"earth\" def __init__(self): self.age = 0 def eat(self): print(\"eating...\"。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -10959,7 +10933,7 @@
           {
             "id": "t01",
             "title": "__init()__方法",
-            "summary": "__init__() 是一个特殊的方法，也被称作构造函数。__init__() 方法的主要作用是在创建类的对象时，对对象的属性进?",
+            "summary": "__init__() 是一个特殊的方法，也被称作构造函数。__init__() 方法的主要作用是在创建类的对象时，对对象的属性进行初始化。当你使用类名创建一个新的对象时，Python 会自动调用 __init__() 方法，并将新创建的对象作为第一个参数（通常命名为 self）传。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -11000,7 +10974,7 @@
           {
             "id": "t01",
             "title": "self作为实例传参",
-            "summary": "self代表类的实例自身。调用实例方法时，实例对象会作为第一个参数被传入。因此，我们调用p.eat()时就相当于调用了Perso?",
+            "summary": "self代表类的实例自身。调用实例方法时，实例对象会作为第一个参数被传入。因此，我们调用p.eat()时就相当于调用了Person.eat(p)。 class Person: \"\"\"人的类\"\"\" home = \"earth\" def __init__(self, name): s。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -11031,7 +11005,7 @@
           {
             "id": "t02",
             "title": "通过self在类中调用类的实例属性和实例方法",
-            "summary": "\"\"\"人的类\"\"\"",
+            "summary": "class Person: \"\"\"人的类\"\"\" home = \"earth\" def __init__(self, name): self.name = name def eat(self): print(\"eating...\") def drink(self): print(\"。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -11072,7 +11046,7 @@
           {
             "id": "t01",
             "title": "类属性",
-            "summary": "也叫类变量。在类中方法外定义的属性。",
+            "summary": "也叫类变量。在类中方法外定义的属性。 通过 类名.属性名 或 实例名.属性名 访问 class Person: \"\"\"人的类\"\"\" home = \"earth\" # 定义类属性 print(Person.home) # 通过类名访问类属性 p1 = Person() # 创建一个。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -11150,7 +11124,7 @@
           {
             "id": "t02",
             "title": "实例属性",
-            "summary": "也叫实例变量。在类__init__方法中定义的属性。通过 self.属性名定义。",
+            "summary": "也叫实例变量。在类__init__方法中定义的属性。通过 self.属性名定义。 通过 实例名.属性名 访问 class Person: \"\"\"人的类\"\"\" def __init__(self, name, age): self.name = name # 定义实例属性 self。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -11233,7 +11207,7 @@
           {
             "id": "t02",
             "title": "实例方法",
-            "summary": "\"\"\"人的类\"\"\"",
+            "summary": "实例方法在类中定义，第一个参数为self，代表实例本身。 实例方法只能被实例对象调用。 可以访问实例属性、类属性、类方法。 class Person: \"\"\"人的类\"\"\" home = \"earth\" def __init__(self, name): self.name = n。",
             "contentBlocks": [
               {
                 "kind": "list",
@@ -11272,7 +11246,7 @@
           {
             "id": "t03",
             "title": "类方法",
-            "summary": "\"\"\"人的类\"\"\"",
+            "summary": "类方法在类中通过 @classmethod 定义，第一个参数为cls，代表类本身。 类方法可以被类和实例对象调用。 可以访问类属性。 在不创建实例的情况下调用，通过类名直接调用，非常方便，适合一些和类整体相关的操作。 class Person: \"\"\"人的类\"\"\" home =。",
             "contentBlocks": [
               {
                 "kind": "list",
@@ -11320,7 +11294,7 @@
           {
             "id": "t04",
             "title": "静态方法",
-            "summary": "\"\"\"人的类\"\"\"",
+            "summary": "静态方法在类中通过 @staticmethod 定义 不访问实例属性或类属性，只依赖于传入的参数 可以通过类名或实例调用，但它不会访问类或实例的内部信息，更像是一个工具函数，只是为了方便组织代码，把它放在了类里面。 class Person: \"\"\"人的类\"\"\" home = \"。",
             "contentBlocks": [
               {
                 "kind": "list",
@@ -11367,7 +11341,7 @@
           {
             "id": "t05",
             "title": "在类外定义方法",
-            "summary": "并非必须在类定义中进行方法定义，也可以将一个函数对象赋值给一个类内局部变量。",
+            "summary": "并非必须在类定义中进行方法定义，也可以将一个函数对象赋值给一个类内局部变量。 # 在类外定义的函数 def f1(self, x, y): print(x & y) class C: f = f1 C().f(6, 13) # 4。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -11386,7 +11360,7 @@
           {
             "id": "t06",
             "title": "特殊方法",
-            "summary": "方法名中有两个前缀下划线和两个后缀下划线的方法为特殊方法，也叫魔法方法。上文提到的 __init__() 就是一个特殊方法。这些?",
+            "summary": "方法名中有两个前缀下划线和两个后缀下划线的方法为特殊方法，也叫魔法方法。上文提到的 __init__() 就是一个特殊方法。这些方法会在进行特定的操作时自动被调用。 几个常见的特殊方法： __new__() 对象实例化时第一个调用的方法。 __init__() 类的初始化方法。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -11461,7 +11435,7 @@
           {
             "id": "t01",
             "title": "动态给对象添加属性",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "class Person: def __init__(self, name=None): self.name = name p = Person(\"张三\") print(p.name) # 张三 p.age = 18 print(p.age) # 18。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -11472,7 +11446,7 @@
           {
             "id": "t02",
             "title": "动态给类添加属性",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "class Person: def __init__(self, name=None): self.name = name p = Person(\"张三\") print(p.name) # 张三 Person.age = 0 print(p.age) # 0。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -11483,7 +11457,7 @@
           {
             "id": "t03",
             "title": "动态给实例添加方法",
-            "summary": "p.eat() # 吃饭",
+            "summary": "添加普通方法 class Person: def __init__(self, name=None): self.name = name def eat(): print(\"吃饭\") p = Person(\"张三\") p.eat = eat p.eat() # 吃饭 添加实例方法。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -11524,7 +11498,7 @@
           {
             "id": "t04",
             "title": "动态给类添加方法",
-            "summary": "给类添加的方法对它的所有对象都生效，添加类方法需要传入 cls 参数，添加静态方法则不需要。",
+            "summary": "给类添加的方法对它的所有对象都生效，添加类方法需要传入 cls 参数，添加静态方法则不需要。 class Person: home = \"earth\" def __init__(self, name=None): self.name = name # 定义类方法 @classme。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -11567,7 +11541,7 @@
           {
             "id": "t05",
             "title": "动态删除属性与方法",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "del 对象.属性名 delattr(对象，属性名)。",
             "contentBlocks": [
               {
                 "kind": "list",
@@ -11581,7 +11555,7 @@
           {
             "id": "t06",
             "title": "__slots__限制实例属性与实例方法",
-            "summary": "Python允许在定义类的时候，定义一个特殊的 __slots__ 变量，来限制该类的实例能添加的属性。使用 __slots__?",
+            "summary": "Python允许在定义类的时候，定义一个特殊的 __slots__ 变量，来限制该类的实例能添加的属性。使用 __slots__ 可以限制添加实例属性和实例方法，但类属性、类方法和静态方法还可以添加。__slots__仅对当前类生效，对其子类无效。 import types cl。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -11612,7 +11586,7 @@
   {
     "id": "m09",
     "title": "面向对象之三大特性",
-    "summary": "将变量和函数写入类中的操作即为封装，即类中封装了属性和方法。 有时为了限制属性和方法只能在类内访问，外部无法访问；或父类中某些属性和方法不希望被子类继承。可以将其私有化。 通过双下划线定义私有?",
+    "summary": "将变量和函数写入类中的操作即为封装，即类中封装了属性和方法。 通过封装，我们可以将一些细节隐藏起来（私有），只暴露出必要的接口供调用者使用。 有时为了限制属性和方法只能在类内访问，外部无法访问；或父类中某些属性和方法不希望被子类继承。可以将其私有化。 单下划线：非公开API 大多数Python代码都遵循这样一个约定：有一个前缀下划线的变量或方法应被视为非公开。",
     "difficulty": "intermediate",
     "estimatedMinutes": 111,
     "sections": [
@@ -11623,7 +11597,7 @@
           {
             "id": "t01",
             "title": "封装",
-            "summary": "将变量和函数写入类中的操作即为封装，即类中封装了属性和方法。",
+            "summary": "将变量和函数写入类中的操作即为封装，即类中封装了属性和方法。 通过封装，我们可以将一些细节隐藏起来（私有），只暴露出必要的接口供调用者使用。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -11638,7 +11612,7 @@
           {
             "id": "t02",
             "title": "私有化",
-            "summary": "有时为了限制属性和方法只能在类内访问，外部无法访问；或父类中某些属性和方法不希望被子类继承。可以将其私有化。",
+            "summary": "有时为了限制属性和方法只能在类内访问，外部无法访问；或父类中某些属性和方法不希望被子类继承。可以将其私有化。 单下划线：非公开API 大多数Python代码都遵循这样一个约定：有一个前缀下划线的变量或方法应被视为非公开的API，例如 _var1。这种约定不具有强制力。 双下划线。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -11667,7 +11641,7 @@
           {
             "id": "t03",
             "title": "私有属性",
-            "summary": "通过双下划线定义私有属性。",
+            "summary": "通过双下划线定义私有属性。 class Person: def __init__(self, name): self.__name = name def get_name(self): return self.__name p = Person(\"张三\") print(p.get。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -11690,7 +11664,7 @@
           {
             "id": "t04",
             "title": "私有方法",
-            "summary": "通过双下划线定义私有方法。",
+            "summary": "通过双下划线定义私有方法。 class Person: # 定义私有方法 def __private_method(self): print(\"private method\") # 定义实例方法，调用私有方法 def do_something(self): self.__priv。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -11725,7 +11699,7 @@
           {
             "id": "t05",
             "title": "property",
-            "summary": "可通过@property装饰器将一个方法转换为属性来调用。转换后可直接使用 .方法名 来使用，而无需使用 .方法名() 。",
+            "summary": "方法转换为属性 可通过@property装饰器将一个方法转换为属性来调用。转换后可直接使用 .方法名 来使用，而无需使用 .方法名() 。 class Person: def __init__(self, name): self.name = name @property def。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -11894,7 +11868,7 @@
           {
             "id": "t01",
             "title": "继承",
-            "summary": "子类（派生类）继承父类（基类）中的属性和方法，实现代码重用。子类可以新增自己特有的方法，也可以重写父类的方法。",
+            "summary": "子类（派生类）继承父类（基类）中的属性和方法，实现代码重用。子类可以新增自己特有的方法，也可以重写父类的方法。 子类不能继承父类的私有属性和私有方法，因为存在名称改写，但是可以通过改写后的名称直接访问父类的私有成员，不过，这种做法违背了封装原则，不建议使用。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -11909,7 +11883,7 @@
           {
             "id": "t02",
             "title": "单继承",
-            "summary": "类体",
+            "summary": "语法 class 类名(父类): 类体 在类名后括号内指定要继承的父类。 案例 class Person: \"\"\"人的类\"\"\" home = \"earth\" # 定义类属性 def __init__(self, name): self.name = name # 定义实例属性 d。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -11994,7 +11968,7 @@
           {
             "id": "t03",
             "title": "多继承",
-            "summary": "调用方法时先在子类中查找，若不存在则从左到右依次查找父类中是否包含方法。",
+            "summary": "调用方法时先在子类中查找，若不存在则从左到右依次查找父类中是否包含方法。 语法 class 类名(父类1, 父类2, ...): 类体 案例 class Person: \"\"\"人的类\"\"\" home = \"earth\" def __init__(self, name): self。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -12071,7 +12045,7 @@
           {
             "id": "t04",
             "title": "复用父类方法",
-            "summary": "子类可以在类中使用 super().方法名() 或 父类名.方法名() 来调用父类的方法。",
+            "summary": "子类可以在类中使用 super().方法名() 或 父类名.方法名() 来调用父类的方法。 super().方法名() class Person: \"\"\"人的类\"\"\" home = \"earth\" def __init__(self, name): self.name = nam。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -12188,7 +12162,7 @@
           {
             "id": "t05",
             "title": "方法解析顺序",
-            "summary": "方法解析顺序（mro—Method Resolution Order）。可使用 类名.__mro__ 访问类的继承链来查看方法解?",
+            "summary": "方法解析顺序（mro—Method Resolution Order）。可使用 类名.__mro__ 访问类的继承链来查看方法解析顺序。 class Person: \"\"\"人的类\"\"\" home = \"earth\" def __init__(self, name): self.n。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -12251,7 +12225,7 @@
           {
             "id": "t06",
             "title": "方法重写",
-            "summary": "在子类中定义与父类方法重名的方法，调用时会调用子类中重写的方法。",
+            "summary": "在子类中定义与父类方法重名的方法，调用时会调用子类中重写的方法。 class Person: home = \"earth\" def __init__(self, name): self.name = name def eat(self): print(\"eating...\") c。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -12292,7 +12266,7 @@
           {
             "id": "t01",
             "title": "多态",
-            "summary": "同一事物在不同场景下呈现不同状态。",
+            "summary": "同一事物在不同场景下呈现不同状态。 class Animal: def go(self): pass class Dog(Animal): def go(self): print(\"跑\") class Fish(Animal): def go(self): print(\"游\")。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -12339,7 +12313,7 @@
   {
     "id": "m10",
     "title": "面向对象案例：愤怒的小鸟",
-    "summary": "在这个模拟的愤怒的小鸟游戏世界里，绿色的小猪偷走了小鸟们的蛋，这引发了小鸟们的愤怒，它们决定展开反击。每只小鸟都具有独特的颜色，? 作为所有小鸟类的基类，它定义了小鸟的通用属性和行为，为后续具?",
+    "summary": "在这个模拟的愤怒的小鸟游戏世界里，绿色的小猪偷走了小鸟们的蛋，这引发了小鸟们的愤怒，它们决定展开反击。每只小鸟都具有独特的颜色，并且各自拥有不同的技能，玩家需要操控这些小鸟，利用它们的技能去攻击小猪们建造的各种障碍物，从而达成击败小猪、夺回鸟蛋的目标。 设计目的 作为所有小鸟类的基类，它定义了小鸟的通用属性和行为，为后续具体小鸟类的扩展提供基础框架，体现了面。",
     "difficulty": "intermediate",
     "estimatedMinutes": 69,
     "sections": [
@@ -12350,7 +12324,7 @@
           {
             "id": "t01",
             "title": "游戏背景",
-            "summary": "在这个模拟的愤怒的小鸟游戏世界里，绿色的小猪偷走了小鸟们的蛋，这引发了小鸟们的愤怒，它们决定展开反击。每只小鸟都具有独特的颜色，?",
+            "summary": "在这个模拟的愤怒的小鸟游戏世界里，绿色的小猪偷走了小鸟们的蛋，这引发了小鸟们的愤怒，它们决定展开反击。每只小鸟都具有独特的颜色，并且各自拥有不同的技能，玩家需要操控这些小鸟，利用它们的技能去攻击小猪们建造的各种障碍物，从而达成击败小猪、夺回鸟蛋的目标。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -12367,7 +12341,7 @@
           {
             "id": "t01",
             "title": "Birds 基类",
-            "summary": "作为所有小鸟类的基类，它定义了小鸟的通用属性和行为，为后续具体小鸟类的扩展提供基础框架，体现了面向对象编程中的抽象和封装思想。",
+            "summary": "设计目的 作为所有小鸟类的基类，它定义了小鸟的通用属性和行为，为后续具体小鸟类的扩展提供基础框架，体现了面向对象编程中的抽象和封装思想。 属性设计 name：用于标识每只小鸟的名称，方便区分不同个体。 color：代表小鸟的颜色，这是小鸟的一个显著特征，在游戏中可以对应不同类型的。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -12417,7 +12391,7 @@
           {
             "id": "t02",
             "title": "具体小鸟子类（RedBirds、YellowBirds、BlueBirds）",
-            "summary": "继承自 Birds 基类，每个子类代表一种特定颜色的小鸟，它们在继承基类属性和方法的基础上，重写部分方法以展示不同小鸟的独特行为?",
+            "summary": "设计目的 继承自 Birds 基类，每个子类代表一种特定颜色的小鸟，它们在继承基类属性和方法的基础上，重写部分方法以展示不同小鸟的独特行为和技能，体现了面向对象编程中的继承和多态思想。 属性设计 通过调用基类的 __init__ 方法，初始化各自的 name、color 和 sk。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -12455,7 +12429,7 @@
           {
             "id": "t03",
             "title": "Obstacle 类",
-            "summary": "代表游戏中的障碍物，如木头堡垒、石头塔楼等，负责处理障碍物被小鸟攻击的逻辑，与小鸟类进行交互，体现了面向对象编程中的对象交互和封?",
+            "summary": "设计目的 代表游戏中的障碍物，如木头堡垒、石头塔楼等，负责处理障碍物被小鸟攻击的逻辑，与小鸟类进行交互，体现了面向对象编程中的对象交互和封装思想。 属性设计 name：标识障碍物的名称，方便区分不同类型的障碍物。 strength：表示障碍物的强度，即它能够承受的伤害值，当强度降。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -12499,7 +12473,7 @@
           {
             "id": "t01",
             "title": "Birds 类的方法",
-            "summary": "作为通用的飞行方法，提供了小鸟飞行的基本描述，子类可以根据自身特点进行个性化实现，以体现不同小鸟的飞行风格。",
+            "summary": "fly() 作为通用的飞行方法，提供了小鸟飞行的基本描述，子类可以根据自身特点进行个性化实现，以体现不同小鸟的飞行风格。 call() 模拟小鸟发出叫声的行为，为游戏增加生动性，子类可以重写该方法来展示不同小鸟的叫声特点。 use_skill() 用于触发小鸟的特殊技能，通过输出。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -12544,7 +12518,7 @@
           {
             "id": "t03",
             "title": "Obstacle 类的方法",
-            "summary": "be_attacked(bird)：接收一个小鸟对象作为参数，根据小鸟的类型计算伤害，并更新障碍物的强度。通过判断障碍物的强度是?",
+            "summary": "be_attacked(bird)：接收一个小鸟对象作为参数，根据小鸟的类型计算伤害，并更新障碍物的强度。通过判断障碍物的强度是否小于等于 0，输出障碍物是否被摧毁的信息，实现了障碍物与小鸟之间的交互逻辑。 通过这样的类和方法设计，整个游戏模拟程序具有良好的扩展性和可维护性，方便。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -12565,7 +12539,7 @@
           {
             "id": "t01",
             "title": "代码实现",
-            "summary": "super().__init__(\"红火\", \"红色\", \"撞击前方障碍物，造成大量伤害\")",
+            "summary": "# 定义鸟类基类 class Birds: def __init__(self, name, color, skill_description): self.name = name self.color = color self.skill_description = skill。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -12640,7 +12614,7 @@
   {
     "id": "m11",
     "title": "错误和异常",
-    "summary": "Python是一门解释型语言，只有在程序运行后才会执行语法检查。所以，只有在运行或测试程序时，才会真正知道该程序能不能正常运行。 程序解析时遇到的错误。 Python 程序的语法是正确的，在运?",
+    "summary": "Python是一门解释型语言，只有在程序运行后才会执行语法检查。所以，只有在运行或测试程序时，才会真正知道该程序能不能正常运行。 Python有两种错误很容易辨认：语法错误和异常。 程序解析时遇到的错误。 例如以下程序，因缺少 : 而出现语法错误。 while True print(1) # while True print(1) # ^^^^^ # Syn。",
     "difficulty": "intermediate",
     "estimatedMinutes": 156,
     "sections": [
@@ -12651,7 +12625,7 @@
           {
             "id": "t01",
             "title": "异常介绍",
-            "summary": "Python是一门解释型语言，只有在程序运行后才会执行语法检查。所以，只有在运行或测试程序时，才会真正知道该程序能不能正常运行。",
+            "summary": "Python是一门解释型语言，只有在程序运行后才会执行语法检查。所以，只有在运行或测试程序时，才会真正知道该程序能不能正常运行。 Python有两种错误很容易辨认：语法错误和异常。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -12666,7 +12640,7 @@
           {
             "id": "t02",
             "title": "语法错误",
-            "summary": "程序解析时遇到的错误。",
+            "summary": "程序解析时遇到的错误。 例如以下程序，因缺少 : 而出现语法错误。 while True print(1) # while True print(1) # ^^^^^ # SyntaxError: invalid syntax。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -12685,7 +12659,7 @@
           {
             "id": "t03",
             "title": "异常",
-            "summary": "Python 程序的语法是正确的，在运行它的时候，也有可能发生错误。运行期检测到的错误被称为异常。",
+            "summary": "Python 程序的语法是正确的，在运行它的时候，也有可能发生错误。运行期检测到的错误被称为异常。 例如以下程序，因变量名未找到而引发NameError。 print(var1) # print(var1) # ^^^^ # NameError: name 'var1' is n。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -12725,7 +12699,7 @@
           {
             "id": "t02",
             "title": "try except",
-            "summary": "可以使用 try except 语句来捕获异常并处理。",
+            "summary": "可以使用 try except 语句来捕获异常并处理。 语法 try: 可能发生异常的代码 except: 异常处理的代码 如果没有发生异常，程序会忽略except中的代码，继续向下执行。 如果发生了异常，会忽略try中剩余代码，执行except中的代码。 案例 try: res。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -12773,7 +12747,7 @@
           {
             "id": "t03",
             "title": "捕获指定类型的异常以及获取异常描述信息",
-            "summary": "在打印出来的异常信息中，冒号之前是异常类型,冒号之后是异常描述信息",
+            "summary": "在打印出来的异常信息中，冒号之前是异常类型,冒号之后是异常描述信息 # NameError: name 'a' is not defined # NameError: 冒号之前是异常类型 # : name 'a' is not defined 冒号之后是异常描述信息 print(。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -12856,7 +12830,7 @@
           {
             "id": "t04",
             "title": "else",
-            "summary": "可选地将else放在所有except之后。如果try中代码没有发生异常，将执行 else 中的代码。",
+            "summary": "可选地将else放在所有except之后。如果try中代码没有发生异常，将执行 else 中的代码。 语法 try: 可能发生异常的代码 except 异常类型1 as 变量名1: 异常处理的代码 except 异常类型2 as 变量名2: 异常处理的代码 else: 没有异常时。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -12934,7 +12908,7 @@
           {
             "id": "t05",
             "title": "finally",
-            "summary": "可选地，放在最后。无论是否发生异常都会执行的代码，通常用于执行一些必须要进行的清理操作，例如关闭文件、释放资源（如网络连接、数据?",
+            "summary": "可选地，放在最后。无论是否发生异常都会执行的代码，通常用于执行一些必须要进行的清理操作，例如关闭文件、释放资源（如网络连接、数据库连接、锁等），即使在执行 try 块中的代码时出现了异常，也能保证这些操作得以完成。 语法 try: 可能发生异常的代码 except 异常类型1 a。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -13034,7 +13008,7 @@
           {
             "id": "t01",
             "title": "raise",
-            "summary": "当你想要在代码中明确表示发生了错误或异常情况时，可以使用 raise 来抛出异常。这可以帮助你在满足某些条件时停止程序的正常执行?",
+            "summary": "当你想要在代码中明确表示发生了错误或异常情况时，可以使用 raise 来抛出异常。这可以帮助你在满足某些条件时停止程序的正常执行，并将控制权转移到异常处理部分。 语法 raise 异常类型(\"异常描述\") 案例 def int_add(x, y): if isinstance(x。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -13079,7 +13053,7 @@
           {
             "id": "t02",
             "title": "assert断言",
-            "summary": "assert用于判断一个表达式，在表达式条件为False的时候触发异常，常用于调试程序。",
+            "summary": "assert用于判断一个表达式，在表达式条件为False的时候触发异常，常用于调试程序。 语法 assert 表达式 [,异常描述] 等价于： if not 表达式: raise AssertionError([异常描述]) 案例 def int_add(x, y): asser。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -13138,7 +13112,7 @@
           {
             "id": "t01",
             "title": "自定义异常",
-            "summary": "通过直接或者间接继承Exception类来创建自己的异常。例如：",
+            "summary": "通过直接或者间接继承Exception类来创建自己的异常。例如： class MyError(Exception): def __init__(self, value): self.value = value def __str__(self): return repr(self。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -13167,7 +13141,7 @@
           {
             "id": "t01",
             "title": "异常的传递",
-            "summary": "当存在 try 嵌套或函数嵌套时，若内层出现了异常且在内层无法处理，会将异常一层一层向外传递，直到异常被处理或程序报错。",
+            "summary": "当存在 try 嵌套或函数嵌套时，若内层出现了异常且在内层无法处理，会将异常一层一层向外传递，直到异常被处理或程序报错。 try: try: try: print(1 / 0) except NameError as e: print(\"第三层\", e) except TypeE。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -13188,7 +13162,7 @@
           {
             "id": "t01",
             "title": "with关键字",
-            "summary": "Python中的with语句用于异常处理，封装了try except finally编码范式，提供了一种简洁的方式来确保资源的正?",
+            "summary": "Python中的with语句用于异常处理，封装了try except finally编码范式，提供了一种简洁的方式来确保资源的正确获取和释放，同时处理可能发生的异常，提高了易用性。使代码更清晰、更具可读性，简化了文件流等公共资源的管理。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -13199,7 +13173,7 @@
           {
             "id": "t02",
             "title": "语法",
-            "summary": "with expression as variable:",
+            "summary": "with expression as variable: # 代码块 expression：通常是一个对象或函数调用，该对象需要是一个上下文管理器，即实现了 __enter__和__exit__方法。 variable：是可选的，用于存储expression的__enter__方。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -13221,7 +13195,7 @@
           {
             "id": "t03",
             "title": "工作原理",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "使用 with 关键字系统会自动调用 f.close() 方法， with 的作用等效于 try finally 语句。 当执行with语句时，会调用expression对象的__enter__方法。 __enter__ 方法的返回值可以被存储在 variable 中（如果有）。",
             "contentBlocks": [
               {
                 "kind": "list",
@@ -13238,7 +13212,7 @@
           {
             "id": "t04",
             "title": "案例：打开一个文件并向其中写入内容，验证出现异常后文件是否正常关闭。",
-            "summary": "file.write(a)",
+            "summary": "常规方式 try: file = open(\"test.txt\", \"w\") file.write(a) file.close() finally: print(\"文件是否关闭：\", file.closed) # 文件是否关闭： False 使用 try finally try。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -13330,7 +13304,7 @@
           {
             "id": "t01",
             "title": "异常基类",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "异常 说明 BaseException 所有内置异常的基类。它不应该被用户自定义类直接继承（这种情况请使用Exception）。 Exception 所有内置的非系统退出类异常都派生自此类。所有用户自定义异常也应当派生自此类。 ArithmeticError 此基类用于派生针对各。",
             "contentBlocks": [
               {
                 "kind": "table",
@@ -13415,7 +13389,7 @@
           {
             "id": "t02",
             "title": "具体异常",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "异常 说明 AssertionError 当 assert 语句失败时将被引发。 AttributeError 当属性引用或赋值失败时将被引发。 IndexError 当序列抽取超出范围时将被引发。 KeyError 当在现有键集合中找不到指定的映射（字典）键时将被引发。 Key。",
             "contentBlocks": [
               {
                 "kind": "table",
@@ -13564,7 +13538,7 @@
   {
     "id": "m12",
     "title": "模块与包",
-    "summary": "Python中一个以.py结尾的源文件即为一个模块（Module）。其中可以包含变量、函数和类等。通常情况下，我们把能够实现某一? 模块名区分大小写，且不能与Python自带的标准模块重名。?",
+    "summary": "Python中一个以.py结尾的源文件即为一个模块（Module）。其中可以包含变量、函数和类等。通常情况下，我们把能够实现某一特定功能的代码放置在一个文件中作为一个模块。 使用模块提高了代码的可维护性，也提高了代码的复用性。即编写好一个模块后，只要是实现该功能的程序，都可以导入。 模块名区分大小写，且不能与Python自带的标准模块重名。 创建一个模块my。",
     "difficulty": "intermediate",
     "estimatedMinutes": 183,
     "sections": [
@@ -13575,7 +13549,7 @@
           {
             "id": "t01",
             "title": "模块概述",
-            "summary": "Python中一个以.py结尾的源文件即为一个模块（Module）。其中可以包含变量、函数和类等。通常情况下，我们把能够实现某一?",
+            "summary": "Python中一个以.py结尾的源文件即为一个模块（Module）。其中可以包含变量、函数和类等。通常情况下，我们把能够实现某一特定功能的代码放置在一个文件中作为一个模块。 使用模块提高了代码的可维护性，也提高了代码的复用性。即编写好一个模块后，只要是实现该功能的程序，都可以导入。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -13596,7 +13570,7 @@
           {
             "id": "t01",
             "title": "创建模块",
-            "summary": "模块名区分大小写，且不能与Python自带的标准模块重名。",
+            "summary": "模块名区分大小写，且不能与Python自带的标准模块重名。 创建一个模块my_add.py num =100 def add(a, b): \"\"\"求两个数的和\"\"\" return a + b。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -13629,7 +13603,7 @@
           {
             "id": "t01",
             "title": "全部导入import",
-            "summary": "导入模块的所有成员，通过模块名.成员名的方式访问。即使多次使用 import导入同一模块，模块也只会被导入一次。",
+            "summary": "导入模块的所有成员，通过模块名.成员名的方式访问。即使多次使用 import导入同一模块，模块也只会被导入一次。 语法 import 模块名 [as 别名] 案例 在同一目录下创建一个main.py文件，在其中导入 my_add.py 模块并使用。 # 导入模块 import m。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -13686,7 +13660,7 @@
           {
             "id": "t02",
             "title": "局部导入 from import",
-            "summary": "指定导入模块的部分成员，直接通过成员名的方式访问。只能使用其导入的成员,未导入的成员不能使用。如果多个模块中存在重名成员，后一次?",
+            "summary": "指定导入模块的部分成员，直接通过成员名的方式访问。只能使用其导入的成员,未导入的成员不能使用。如果多个模块中存在重名成员，后一次导入会覆盖前一次导入。 语法 from 模块名 import 成员名1[as 别名], 成员名2[as 别名],… 案例 创建新的模块my_multi.",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -13787,7 +13761,7 @@
           {
             "id": "t03",
             "title": "局部导入 from import *",
-            "summary": "导入模块中所有不以单下划线开头的成员，直接通过成员名的方式访问。",
+            "summary": "导入模块中所有不以单下划线开头的成员，直接通过成员名的方式访问。 语法 from 模块名 import * 案例 # 导入模块 from my_add import * # 使用模块 print(add(1, 2)) print(num) print(_str1)。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -13824,7 +13798,7 @@
           {
             "id": "t04",
             "title": "模块搜索顺序",
-            "summary": "当导入一个模块时，会按照以下顺序进行查找：",
+            "summary": "当导入一个模块时，会按照以下顺序进行查找： 当前目录。 PYTHONPATH环境变量中的目录。 包含标准 Python 模块以及这些模块所依赖的任何 extension module 的目录。 可以使用以下方式查看模块搜索顺序： import sys print(sys.path。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -13882,7 +13856,7 @@
           {
             "id": "t05",
             "title": "__all__",
-            "summary": "使用from import *导入模块时，可以在被导入的模块中使用 __all__设置哪些内容可以被导入。__all__ 的设置?",
+            "summary": "使用from import *导入模块时，可以在被导入的模块中使用 __all__设置哪些内容可以被导入。__all__ 的设置只针对使用 from import * 导入模块时有效。 在my_add.py 中向__all__添加部分元素： __all__ = [\"num\",\"a。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -13933,7 +13907,7 @@
           {
             "id": "t06",
             "title": "__name__",
-            "summary": "在 Python 中，__name__ 是一个特殊的内置变量",
+            "summary": "在 Python 中，__name__ 是一个特殊的内置变量 当一个Python文件被直接运行时，该文件的__name__属性值为\"__main__\"。 当一个Python文件作为模块被导入时，__name__属性会被设置为该模块的名称（即文件名，不包含 .py 后缀）。 导入模。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -14044,7 +14018,7 @@
           {
             "id": "t01",
             "title": "dir()",
-            "summary": "dir() 是一个内置函数，主要用于列出对象的属性和方法，或者列出当前作用域中定义的名称，并以一个字符串列表的形式返回。",
+            "summary": "dir() 是一个内置函数，主要用于列出对象的属性和方法，或者列出当前作用域中定义的名称，并以一个字符串列表的形式返回。 当你将一个模块作为 dir() 的参数时，它会返回该模块中定义的名称列表，包括函数、类、变量等 import math # 查看math模块下的 print(。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -14105,7 +14079,7 @@
           {
             "id": "t01",
             "title": "包概述",
-            "summary": "包是一种管理 Python 模块命名空间的形式.",
+            "summary": "包是一种管理 Python 模块命名空间的形式. 通过使用.模块名来构造Python模块命名空间的一种方式。例如，模块名A.B表示名为A的包中名为B的子模块。通常我们将多个有联系的模块放入一个包中。包与文件夹相似，不过该文件夹下必须有一个__init__.py文件。 假设要为统一。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -14222,7 +14196,7 @@
           {
             "id": "t01",
             "title": "创建包",
-            "summary": "__init__.py 可以只是一个空文件，也可以执行包的初始化代码或设置 __all__ 变量。",
+            "summary": "__init__.py 可以只是一个空文件，也可以执行包的初始化代码或设置 __all__ 变量。 在PyCharm创建一个graphic文件夹，并在其中创建circle.py、rectangle.py 文件。其中 __init__.py 文件暂时为空。 circle.py 和。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -14235,7 +14209,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image77.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -14292,7 +14266,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image78.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           }
@@ -14305,7 +14279,7 @@
           {
             "id": "t01",
             "title": "全局导入import",
-            "summary": "导入包中模块的所有成员",
+            "summary": "导入包中模块的所有成员 语法 import 包名.模块名 [as 别名] 调用方式 :包名.模块名.成员名 import graphic.circle print(graphic.circle.area(10)) # 314.15926 注意： 使用 import 时，除最后一项。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -14362,7 +14336,7 @@
           {
             "id": "t02",
             "title": "局部导入包下的模块 from import",
-            "summary": "从包中导入模块",
+            "summary": "从包中导入模块 语法 from 包名import模块名 [as 别名] 调用方式 :模块名.成员名 from graphic import circle print(circle.area(10)) # 314.15926。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -14395,7 +14369,7 @@
           {
             "id": "t03",
             "title": "局部导入包下模块的成员 from import",
-            "summary": "从包中模块导入功能",
+            "summary": "从包中模块导入功能 语法 from 包名.模块名 import 成员名 [as 别名] 调用方式 : 成员名 from graphic.circle import area print(area(10)) # 314.15926。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -14428,7 +14402,7 @@
           {
             "id": "t04",
             "title": "局部导入 from import * 从包中导入模块",
-            "summary": "当我们使用 from import * 时，Python并不会查找并导入包的所有子模块，因为这将花费很长的时间，并且可能会产生我?",
+            "summary": "当我们使用 from import * 时，Python并不会查找并导入包的所有子模块，因为这将花费很长的时间，并且可能会产生我们不想要的副作用。 唯一的解决办法是提供包的显式索引。如果包的 __init__.py 中定义了 __all__，运行 from import * 时。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -14487,7 +14461,7 @@
           {
             "id": "t01",
             "title": "常用标准库（包）",
-            "summary": "标准库指的是在安装Python时就一同被安装的库。这些库经过精心挑选和开发，旨在为Python开发者提供通用且强大的工具集，涵盖?",
+            "summary": "标准库指的是在安装Python时就一同被安装的库。这些库经过精心挑选和开发，旨在为Python开发者提供通用且强大的工具集，涵盖各种不同的应用领域。 名称 说明 os 多种操作系统接口。 sys 系统相关的形参和函数。 time 时间的访问和转换。 datetime 提供了用于操。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -14790,7 +14764,7 @@
           {
             "id": "t01",
             "title": "引入第三方库",
-            "summary": "当需要使用Python中没有内置的库时，可以通过以下方式安装第三方库",
+            "summary": "当需要使用Python中没有内置的库时，可以通过以下方式安装第三方库。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -14801,7 +14775,7 @@
           {
             "id": "t02",
             "title": "pip命令方式",
-            "summary": "pip是Python包管理工具，该工具提供了对 Python 包的查找、下载、安装、卸载的功能。pip 默认的源是 Python?",
+            "summary": "pip是Python包管理工具，该工具提供了对 Python 包的查找、下载、安装、卸载的功能。pip 默认的源是 Python Package Index（PyPI），其地址为 https://pypi.org/simple/，如果下载比较慢，还可以指定其它的源 阿里云：htt。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -14882,7 +14856,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image79.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -14893,7 +14867,7 @@
           {
             "id": "t03",
             "title": "Pycharm中引入",
-            "summary": "通过Pycharm安装，我们选择的解释器类型每个项目独立的，所以是将第三方包安装在当前项目环境下，例如：D:\\dev\\works?",
+            "summary": "点击右下角的解释器设置 点击+号 搜索要添加的包 通过Pycharm安装，我们选择的解释器类型每个项目独立的，所以是将第三方包安装在当前项目环境下，例如：D:\\dev\\workspace\\python-2025\\.venv\\Lib\\site-packages。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -14903,7 +14877,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image80.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -14913,7 +14887,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image81.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -14923,7 +14897,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image82.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -14940,7 +14914,7 @@
           {
             "id": "t01",
             "title": "打包自己的库并安装",
-            "summary": "如果不安装setuptools库，后续打包时可能会遇到报错 ModuleNotFoundError: No module nam?",
+            "summary": "先安装 setuptools 库 如果不安装setuptools库，后续打包时可能会遇到报错 ModuleNotFoundError: No module named 'distutils'，所以可以提前安装 setuptools 库。在命令提示符中执行如下命令： pip ins。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -14963,7 +14937,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image83.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -14994,12 +14968,12 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image84.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "image",
                 "src": "course-assets/images/image85.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -15013,7 +14987,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image86.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -15027,7 +15001,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image87.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -15037,22 +15011,22 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image88.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "image",
                 "src": "course-assets/images/image89.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "image",
                 "src": "course-assets/images/image90.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "image",
                 "src": "course-assets/images/image91.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           }
@@ -15063,7 +15037,7 @@
   {
     "id": "m13",
     "title": "Python高级语法",
-    "summary": "????? Python1.0 ???????????????????? ????? Python1.0 ???????????????????? import copy 使用 copy 模块?",
+    "summary": "直接赋值：对象的引用（别名），不产生拷贝。 浅拷贝：拷贝父对象，不会拷贝对象的内部的子对象。拷贝后只有第一层是独立的。 深拷贝：完全拷贝了父对象及其子对象。拷贝后所有层都是独立的。 切片操作（如 [:]）。 使用工厂函数（如 list() / set()）。 使用 copy 模块的 copy() 函数。 创建一个列表，其中包含整型和列表元素，使用 copy(。",
     "difficulty": "advanced",
     "estimatedMinutes": 218,
     "sections": [
@@ -15074,7 +15048,7 @@
           {
             "id": "t01",
             "title": "浅拷贝与深拷贝",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "直接赋值：对象的引用（别名），不产生拷贝。 浅拷贝：拷贝父对象，不会拷贝对象的内部的子对象。拷贝后只有第一层是独立的。 深拷贝：完全拷贝了父对象及其子对象。拷贝后所有层都是独立的。",
             "contentBlocks": [
               {
                 "kind": "list",
@@ -15089,7 +15063,7 @@
           {
             "id": "t02",
             "title": "如何浅拷贝",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "切片操作（如 [:]）。 使用工厂函数（如 list() / set()）。 使用 copy 模块的 copy() 函数。",
             "contentBlocks": [
               {
                 "kind": "list",
@@ -15104,7 +15078,7 @@
           {
             "id": "t03",
             "title": "案例",
-            "summary": "import copy",
+            "summary": "创建一个列表，其中包含整型和列表元素，使用 copy() 对其浅拷贝。使用 id() 查看列表地址和列表中各个元素的地址。 import copy list1 = [1, 2, 3, [100, 200, 300]] print(id(list1), id(list1[0])。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -15126,7 +15100,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image92.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -15144,7 +15118,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image93.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -15166,7 +15140,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image94.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           },
@@ -15184,7 +15158,7 @@
           {
             "id": "t05",
             "title": "案例",
-            "summary": "import copy",
+            "summary": "创建一个列表，其中包含整型和列表元素，使用 deepcopy() 对其深拷贝。使用 id() 查看列表地址和列表中各个元素的地址。 import copy list1 = [1, 2, 3, [100, 200, 300]] print(id(list1), id(list1[0。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -15206,7 +15180,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image95.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -15220,7 +15194,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image96.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -15238,14 +15212,14 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image97.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           },
           {
             "id": "t06",
             "title": "拷贝的特殊情况",
-            "summary": "import copy",
+            "summary": "非容器类型（如数字、字符串、和其他“原子”类型的对象）无法拷贝 import copy var1 = 1 print(id(var1), var1) # 140732039489976 1 var2 = copy.copy(var1) print(id(var2), var2)。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -15284,7 +15258,7 @@
           {
             "id": "t01",
             "title": "迭代器",
-            "summary": "迭代是是遍历容器中元素的一种方式，而迭代器是一个可以记住遍历的位置的对象。迭代器对象从容器的第一个元素开始访问，直到所有的元素被?",
+            "summary": "迭代是是遍历容器中元素的一种方式，而迭代器是一个可以记住遍历的位置的对象。迭代器对象从容器的第一个元素开始访问，直到所有的元素被访问完结束。迭代器只能往前不会后退。字符串，列表或元组对象都可用于创建迭代器。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -15295,7 +15269,7 @@
           {
             "id": "t02",
             "title": "可迭代对象",
-            "summary": "我们发现大多数容器对象都可以使用 for 语句：",
+            "summary": "什么是可迭代对象 我们发现大多数容器对象都可以使用 for 语句： import os for element in [1, 2, 3]: print(element) for element in (1, 2, 3): print(element) for key in {\"o。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -15376,7 +15350,7 @@
           {
             "id": "t03",
             "title": "使用迭代器",
-            "summary": "迭代器有两个基本的方法：iter() 和 next()。",
+            "summary": "迭代器有两个基本的方法：iter() 和 next()。 在容器对象上使用 for 语句时，在幕后，for 语句会在容器对象上调用 iter()。该函数返回一个定义了 __next__() 方法的迭代器对象，此方法将逐一访问容器中的元素。当元素用尽时，__next__() 将引发。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -15407,7 +15381,7 @@
           {
             "id": "t04",
             "title": "创建迭代器",
-            "summary": "了解了迭代器协议背后的机制后，就可以为类添加迭代器行为了。定义 __iter__() 方法用于返回一个带有 __next__()?",
+            "summary": "了解了迭代器协议背后的机制后，就可以为类添加迭代器行为了。定义 __iter__() 方法用于返回一个带有 __next__() 方法的对象。如果类已定义了 __next__()，那么 __iter__() 可以简单地返回 self。 class Reverse: \"\"\"对一个序。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -15468,7 +15442,7 @@
           {
             "id": "t01",
             "title": "什么是生成器",
-            "summary": "生成器（generator）是一个用于创建迭代器的简单而强大的工具。它的写法类似于标准的函数，但当它要返回数据时会使用 yiel?",
+            "summary": "生成器（generator）是一个用于创建迭代器的简单而强大的工具。它的写法类似于标准的函数，但当它要返回数据时会使用 yield 语句。当在生成器函数中使用 yield 语句时，函数的执行将会暂停，并将 yield 后的表达式作为当前迭代的值返回。 每次调用生成器的 next(。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -15487,7 +15461,7 @@
           {
             "id": "t02",
             "title": "创建生成器",
-            "summary": "yield b",
+            "summary": "使用推导式创建生成器 generator = (x for x in range(5)) # 创建生成器 print(generator) # <generator object <genexpr> at 0x0000026C2066CB80> for x in generato。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -15544,7 +15518,7 @@
           {
             "id": "t03",
             "title": "send()",
-            "summary": "恢复执行并向生成器函数“发送”一个值。 这个值作为当前 yield 表达式的结果。 send() 方法会返回生成器所产生的下一个?",
+            "summary": "向生成器发送值 恢复执行并向生成器函数“发送”一个值。 这个值作为当前 yield 表达式的结果。 send() 方法会返回生成器所产生的下一个值，或者如果生成器没有产生下一个值就退出则会引发 StopIteration。 使用 send() 发送任务id，使生成器交替执行两个任。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -15643,7 +15617,7 @@
           {
             "id": "t01",
             "title": "什么是命名空间",
-            "summary": "命名空间（Namespace）是从名称到对象的映射，现在，大多数命名空间都使用Python字典实现。各个命名空间是独立的，没有任?",
+            "summary": "命名空间（Namespace）是从名称到对象的映射，现在，大多数命名空间都使用Python字典实现。各个命名空间是独立的，没有任何关系的，所以一个命名空间中不能有重名，但不同的命名空间是可以重名而没有任何影响。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -15654,7 +15628,7 @@
           {
             "id": "t02",
             "title": "三种命名空间",
-            "summary": "一般有三种命名空间，在不同时刻创建，且拥有不同的生命周期：",
+            "summary": "一般有三种命名空间，在不同时刻创建，且拥有不同的生命周期： 内置名称 内置名称的命名空间是在 Python 解释器启动时创建的，永远不会被删除。 一个模块的全局名称 模块的全局命名空间在读取模块定义时创建。通常，模块的命名空间也会持续到解释器退出。 从脚本文件读取或交互式读取的。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -15717,7 +15691,7 @@
           {
             "id": "t02",
             "title": "四种作用域",
-            "summary": "global 语句用于表明特定变量在全局作用域里，并应在全局作用域中重新绑定。",
+            "summary": "最内层作用域（Local），包含局部名称，并首先在其中进行搜索 那些外层闭包函数的作用域（Enclosing）：包含“非局部、非全局”的名称，从最靠内层的那个作用域开始，逐层向外搜索。 倒数第二层作用域（Global）：包含当前模块的全局名称 最外层（最后搜索）的作用域（Buil。",
             "contentBlocks": [
               {
                 "kind": "list",
@@ -15743,7 +15717,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image98.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           }
@@ -15756,7 +15730,7 @@
           {
             "id": "t01",
             "title": "什么是闭包",
-            "summary": "当调用的函数执行完毕后，函数内的变量就会被销毁。但有时希望在调用函数后函数内的数据能够保存下来重复使用，这时候可以用到闭包。闭包?",
+            "summary": "当调用的函数执行完毕后，函数内的变量就会被销毁。但有时希望在调用函数后函数内的数据能够保存下来重复使用，这时候可以用到闭包。闭包可以避免使用全局值，并提供某种形式的数据隐藏。 构建闭包的条件： 外部函数内定义一个内部函数。 内部函数用到外部函数中的变量。 外部函数将内部函数作为返。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -15779,7 +15753,7 @@
           {
             "id": "t02",
             "title": "使用闭包",
-            "summary": "return a * x + b",
+            "summary": "# 构建闭包 def linear(a, b): def inner(x): return a * x + b return inner y1 = linear(1, 1) print(y1) # <function linear.<locals>.inner at 0x0000。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -15806,7 +15780,7 @@
           {
             "id": "t03",
             "title": "查看闭包中的值",
-            "summary": "所有函数对象都有一个 __closure__ 属性，如果它是一个闭包函数，则该属性返回单元格对象的元组，每个单元格对象都对应着闭?",
+            "summary": "所有函数对象都有一个 __closure__ 属性，如果它是一个闭包函数，则该属性返回单元格对象的元组，每个单元格对象都对应着闭包所引用的外部函数作用域中的一个变量。对于普通函数，__closure__ 属性的值通常为 None。 def linear(a, b): def in。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -15839,7 +15813,7 @@
           {
             "id": "t01",
             "title": "什么是装饰器",
-            "summary": "装饰器允许在不修改原有函数代码的基础上，动态地增加或修改函数的功能。装饰器本质上是一个接收函数作为输入并返回一个新的包装过后的函?",
+            "summary": "装饰器允许在不修改原有函数代码的基础上，动态地增加或修改函数的功能。装饰器本质上是一个接收函数作为输入并返回一个新的包装过后的函数的对象。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -15850,7 +15824,7 @@
           {
             "id": "t02",
             "title": "使用装饰器",
-            "summary": "func(参数)",
+            "summary": "语法 def decorator(func): def inner(参数): # 添加功能 func(参数) # 添加功能 return inner decorator 是一个装饰器函数，它接受一个函数 func 作为参数，并返回一个内部函数 inner。在 inner 函数内部。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -15948,7 +15922,7 @@
           {
             "id": "t03",
             "title": "多层装饰器",
-            "summary": "多个装饰器的装饰过程：离函数最近的装饰器先装饰，然后外面的装饰器再进行装饰。",
+            "summary": "多个装饰器的装饰过程：离函数最近的装饰器先装饰，然后外面的装饰器再进行装饰。 from math import sqrt # 将参数转化为整型 def get_integer(f): def inner(x): x = int(x) return f(x) return inne。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -15999,7 +15973,7 @@
           {
             "id": "t04",
             "title": "带参数的装饰器",
-            "summary": "from math import sqrt",
+            "summary": "from math import sqrt # 求根号n次 def times(n): # 将参数转换为非负数 def get_absolute(f): def inner(x): x = abs(x) for i in range(n): x = f(x) return x r。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -16042,7 +16016,7 @@
           {
             "id": "t05",
             "title": "类装饰器",
-            "summary": "类装饰器是包含 __call__() 方法的类，它接受函数作为参数，并返回新的函数。",
+            "summary": "类装饰器是包含 __call__() 方法的类，它接受函数作为参数，并返回新的函数。 from math import sqrt class DecoratorClass: def __init__(self, f): self.f = f def __call__(self。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -16081,7 +16055,7 @@
   {
     "id": "m14",
     "title": "进程与线程",
-    "summary": "单个 CPU 处理多个任务。各个任务交替执行一段时间。 多个 CPU 同时执行多个任务。 进程是操作系统进行资源分配的基本单位。 Unix/Linux操作系统提供了一个 os.fork() 系?",
+    "summary": "单个 CPU 处理多个任务。各个任务交替执行一段时间。 多个 CPU 同时执行多个任务。 进程是操作系统进行资源分配的基本单位。 操作系统中一个正在运行的程序或软件就是一个进程。 每个进程都有自己独立的一块内存空间。 一个进程崩溃后，在保护模式下不会对其他进程产生影响。 多进程是指在操作系统中同时运行多个程序。",
     "difficulty": "advanced",
     "estimatedMinutes": 140,
     "sections": [
@@ -16101,7 +16075,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image99.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           },
@@ -16117,7 +16091,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image100.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           }
@@ -16130,7 +16104,7 @@
           {
             "id": "t01",
             "title": "什么是进程",
-            "summary": "进程是操作系统进行资源分配的基本单位。",
+            "summary": "进程是操作系统进行资源分配的基本单位。 操作系统中一个正在运行的程序或软件就是一个进程。 每个进程都有自己独立的一块内存空间。 一个进程崩溃后，在保护模式下不会对其他进程产生影响。 多进程是指在操作系统中同时运行多个程序。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -16157,7 +16131,7 @@
           {
             "id": "t02",
             "title": "使用multiprocessing.Process创建进程",
-            "summary": "Unix/Linux操作系统提供了一个 os.fork() 系统调用，它非常特殊。普通的函数调用，调用一次，返回一次，但是 fo?",
+            "summary": "Unix/Linux操作系统提供了一个 os.fork() 系统调用，它非常特殊。普通的函数调用，调用一次，返回一次，但是 fork() 调用一次，返回两次，因为操作系统自动把当前进程（父进程）复制了一份（子进程），然后，分别在父进程和子进程内返回。 Windows 中没有 fo。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -16287,7 +16261,7 @@
           {
             "id": "t03",
             "title": "自定义Process子类创建进程",
-            "summary": "import os",
+            "summary": "import os import multiprocessing class Worker(multiprocessing.Process): def run(self): print(\"进程id：\", os.getpid(), \"\\t父进程id：\", os.getppid())。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -16310,7 +16284,7 @@
           {
             "id": "t04",
             "title": "进程池",
-            "summary": "当需要启动大量子进程时，可以使用进程池。",
+            "summary": "当需要启动大量子进程时，可以使用进程池。 进程池的创建 multiprocessing.Pool([processes[,initializer[,initargs[,maxtasksperchild[,context]]]]]) processes：要使用的工作进程数量。如果。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -16407,7 +16381,7 @@
           {
             "id": "t05",
             "title": "进程间通信",
-            "summary": "子进程向传入的列表中添加元素，最终发现主进程与子进程之间的列表结果不同：",
+            "summary": "进程间不共享全局变量 子进程向传入的列表中添加元素，最终发现主进程与子进程之间的列表结果不同： import os import multiprocessing # 向list1中添加10个元素 def func(list1): for i in range(10): list1。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -16601,7 +16575,7 @@
           {
             "id": "t01",
             "title": "什么是线程",
-            "summary": "线程是处理器任务调度和执行的基本单位。",
+            "summary": "线程是处理器任务调度和执行的基本单位。 一个进程至少有一个线程，也可以运行多个线程。 多个线程之间可共享数据。 线程运行出错异常后，如果没有捕获，会导致整个进程崩溃。 多线程是指在同一进程中同时执行多个任务。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -16628,7 +16602,7 @@
           {
             "id": "t02",
             "title": "使用threading.Thread创建线程",
-            "summary": "Python的标准库提供了两个模块：_thread 和 threading，_thread 是低级模块，threading是高级?",
+            "summary": "Python的标准库提供了两个模块：_thread 和 threading，_thread 是低级模块，threading是高级模块，对 _thread 进行了封装。绝大多数情况下，我们只需要使用 threading 这个高级模块。 Thread 的创建 threading.Th。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -16720,7 +16694,7 @@
           {
             "id": "t03",
             "title": "自定义Thread子类创建线程",
-            "summary": "import time",
+            "summary": "import time import threading class Worker(threading.Thread): def __init__(self, name): super().__init__() self.name = name def run(self): fl。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -16763,7 +16737,7 @@
           {
             "id": "t04",
             "title": "线程池",
-            "summary": "ThreadPoolExecutor 是 concurrent.futures 模块中的线程池实现，它允许我们轻松地提交任务到线?",
+            "summary": "ThreadPoolExecutor 是 concurrent.futures 模块中的线程池实现，它允许我们轻松地提交任务到线程池，并管理任务的执行和结果。 线程池的创建 concurrent.futures.ThreadPoolExecutor(max_workers=Non。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -16844,7 +16818,7 @@
           {
             "id": "t05",
             "title": "互斥锁",
-            "summary": "线程之间共享数据会存在线程安全的问题。",
+            "summary": "线程安全问题 线程之间共享数据会存在线程安全的问题。 比如下面这段代码，3个线程，每个线程都将g_num +1 十次： import time import threading def func(): global g_num for _ in range(10): tmp =。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -16998,7 +16972,7 @@
           {
             "id": "t06",
             "title": "GIL",
-            "summary": "Python 全局解释器锁（Global Interpreter Lock, 简称 GIL）是一个锁，同一时间只允许一个线程保持?",
+            "summary": "Python 全局解释器锁（Global Interpreter Lock, 简称 GIL）是一个锁，同一时间只允许一个线程保持 Python 解释器的控制权，这意味着在任何时间点都只能有一个线程处于执行状态。执行单线程程序时看不到 GIL 的影响，但它可能是 CPU 密集型和多。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -17019,7 +16993,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image101.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -17040,7 +17014,7 @@
           {
             "id": "t01",
             "title": "区别",
-            "summary": "进程拥有独立的内存空间和系统资源，每个进程都有自己的代码段、数据段和堆栈等。而线程共享所属进程的内存空间和资源，同一进程内的线程?",
+            "summary": "资源分配 进程拥有独立的内存空间和系统资源，每个进程都有自己的代码段、数据段和堆栈等。而线程共享所属进程的内存空间和资源，同一进程内的线程之间可以直接访问共享内存。 开销 创建进程需要分配独立的内存、打开文件等系统资源，开销较大。 创建线程只需在所属进程的内存空间内进行少量资源分。",
             "contentBlocks": [
               {
                 "kind": "list",
@@ -17105,7 +17079,7 @@
           {
             "id": "t02",
             "title": "使用场景",
-            "summary": "I/O 密集型任务：如网络请求、文件读写等。线程共享内存，切换开销小，在等待 I/O 操作完成的时间内可以切换到其他线程执行，提?",
+            "summary": "适合使用多线程的情况： I/O 密集型任务：如网络请求、文件读写等。线程共享内存，切换开销小，在等待 I/O 操作完成的时间内可以切换到其他线程执行，提高整体效率。例如一个程序需要同时从多个网站下载数据，使用多线程可以在等待网络响应时执行其他下载任务。 对资源共享要求高：线程间共。",
             "contentBlocks": [
               {
                 "kind": "list",
@@ -17144,7 +17118,7 @@
   {
     "id": "m15",
     "title": "网络编程",
-    "summary": "使用网络能够把多方电脑等设备链接在一起进行数据传递。网络编程就是让在不同的电脑上的软件能够进行数据传递，即进程之间的通信。 ????? Python1.0?",
+    "summary": "使用网络能够把多方电脑等设备链接在一起进行数据传递。网络编程就是让在不同的电脑上的软件能够进行数据传递，即进程之间的通信。 IP：网络中每台计算机的唯一标识，通过IP地址可以找到计算机。 端口：标识进程的逻辑地址，通过端口找到计算机中指定的进程（应用软件）。 协议：定义通信规则。 通信协议 通信协议是一组用于规定不同设备或计算机之间如何进行数据交换和通信的规。",
     "difficulty": "advanced",
     "estimatedMinutes": 195,
     "sections": [
@@ -17166,7 +17140,7 @@
           {
             "id": "t02",
             "title": "网络编程三要素",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "IP：网络中每台计算机的唯一标识，通过IP地址可以找到计算机。 端口：标识进程的逻辑地址，通过端口找到计算机中指定的进程（应用软件）。 协议：定义通信规则。",
             "contentBlocks": [
               {
                 "kind": "list",
@@ -17181,7 +17155,7 @@
           {
             "id": "t03",
             "title": "TCP/IP协议族",
-            "summary": "通信协议是一组用于规定不同设备或计算机之间如何进行数据交换和通信的规则和约定。它定义了通信的各个方面，包括数据的格式、传输的顺序?",
+            "summary": "通信协议 通信协议是一组用于规定不同设备或计算机之间如何进行数据交换和通信的规则和约定。它定义了通信的各个方面，包括数据的格式、传输的顺序、错误检查机制、如何处理不同情况（如重传丢失的数据包）等。协议的目的是确保在网络中传输的数据能够被正确、可靠地理解和处理。 通信协议可以应用于。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -17217,7 +17191,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image102.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -17227,7 +17201,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image103.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           }
@@ -17240,7 +17214,7 @@
           {
             "id": "t01",
             "title": "什么是IP",
-            "summary": "IP地址由一串数字组成，用来标识一台电脑在网络中的位置。当设备连接网络，设备将被分配一个IP地址，用作标识。通过IP地址设备间可?",
+            "summary": "IP地址由一串数字组成，用来标识一台电脑在网络中的位置。当设备连接网络，设备将被分配一个IP地址，用作标识。通过IP地址设备间可以互相通讯。IP地址有两个主要功能：标识设备或网络，以及寻址。 Windows下可以在命令提示符中使用ipconfig查看网络适配器的IP。 Linux。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -17259,7 +17233,7 @@
           {
             "id": "t02",
             "title": "子网掩码",
-            "summary": "IP网络可以在IPv4和IPv6中划分子网。为此将IP地址识别成由两部分组成：网络前缀和主机编号。子网掩码（subnet mas?",
+            "summary": "IP网络可以在IPv4和IPv6中划分子网。为此将IP地址识别成由两部分组成：网络前缀和主机编号。子网掩码（subnet mask）或无类别域间路由（CIDR）表示法确定了IP地址如何分为网络部分和主机部分。 子网掩码一词仅用于IPv4地址中。但是 IPv4和IPv6都使用CID。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -17276,26 +17250,26 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image104.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           },
           {
             "id": "t03",
             "title": "IPv4地址的分类",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "IPv4地址的分类的课程内容。",
             "contentBlocks": [
               {
                 "kind": "image",
                 "src": "course-assets/images/image105.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           },
           {
             "id": "t04",
             "title": "公网与私网",
-            "summary": "公网IP在任何地方都可以访问。而私网IP只能在局域网内访问。",
+            "summary": "公网IP在任何地方都可以访问。而私网IP只能在局域网内访问。 国际规定有一部分IP地址是用于局域网使用，也就是属于私网IP，不在公网中使用的，它们的范围是： 10.0.0.0～10.255.255.255 172.16.0.0～172.31.255.255 192.168.0.0。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -17326,7 +17300,7 @@
           {
             "id": "t05",
             "title": "IPv4与IPv6",
-            "summary": "常见的IP地址分为IPv4与IPv6两大类。IPv4为32位长，通常书写时以四组十进制数字组成，并以点分隔，如：172.16.2?",
+            "summary": "常见的IP地址分为IPv4与IPv6两大类。IPv4为32位长，通常书写时以四组十进制数字组成，并以点分隔，如：172.16.254.1。IPv6为128位长，通常书写时以八组十六进制数字组成，以冒号分割，如：2001:db8:0:1234:0:567:8:1。 随着互联网的快速。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -17347,7 +17321,7 @@
           {
             "id": "t01",
             "title": "什么是端口",
-            "summary": "这里的端口指的是逻辑端口，即TCP/IP协议中的端口。端口用于进程（应用软件）在同一设备或不同设备之间通信。每个端口有一个对应的?",
+            "summary": "这里的端口指的是逻辑端口，即TCP/IP协议中的端口。端口用于进程（应用软件）在同一设备或不同设备之间通信。每个端口有一个对应的端口号。端口号有65536个。 可以使用netstat -ano查看端口信息。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -17362,7 +17336,7 @@
           {
             "id": "t02",
             "title": "端口号的分配",
-            "summary": "0~1023，它们紧密绑定于一些服务。通常这些端口的通讯明确表明了某种服务的协议。端口号0是被保留的，不可使用。1~1023系统?",
+            "summary": "公认端口 0~1023，它们紧密绑定于一些服务。通常这些端口的通讯明确表明了某种服务的协议。端口号0是被保留的，不可使用。1~1023系统保留，只能由root用户使用。 动态端口 1024~65536，之所以称为动态端口，是因为它一般不固定分配某种服务，而是动态分配。当一个系统进。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -17656,7 +17630,7 @@
           {
             "id": "t01",
             "title": "什么是socket",
-            "summary": "socket（套接字）是同一或不同电脑的进程（任务、应用软件）间通信的一个工具，进程之间想要进行网络通信需要基于socket。只?",
+            "summary": "socket（套接字）是同一或不同电脑的进程（任务、应用软件）间通信的一个工具，进程之间想要进行网络通信需要基于socket。只要与网络相关的应用程序或者软件都使用到了socket。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -17667,7 +17641,7 @@
           {
             "id": "t02",
             "title": "socket的使用",
-            "summary": "Python中提供了socket模块用于创建套接字。",
+            "summary": "Python中提供了socket模块用于创建套接字。 import socket # AF_INET 用于 Internet 进程间通信；SOCK_STREAM 流式套接字，TCP tcp_socket = socket.socket(family=socket.AF_INET。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -17692,7 +17666,7 @@
           {
             "id": "t01",
             "title": "什么是UDP",
-            "summary": "用户数据报协议（UDP：User Datagram Protocol）是一个简单的面向数据报的通信协议。UDP只提供数据的不可靠?",
+            "summary": "用户数据报协议（UDP：User Datagram Protocol）是一个简单的面向数据报的通信协议。UDP只提供数据的不可靠传递，它一旦把应用程序发给网络层的数据发送出去，就不保留数据备份。 UDP避免了协议栈中执行错误检查和纠正处理的开销，适用于对时间有较高要求的应用程序。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -17707,7 +17681,7 @@
           {
             "id": "t02",
             "title": "UDP编程",
-            "summary": "UDP服务端：",
+            "summary": "UDP编程流程 案例 UDP服务端： \"\"\"udp服务端\"\"\" import socket # 创建udp套接字 udp_socket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM) # 绑定ip和端口。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -17717,7 +17691,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image106.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -17807,7 +17781,7 @@
           {
             "id": "t01",
             "title": "什么是TCP",
-            "summary": "传输控制协议（TCP：Transmission Control Protocol）是一种面向连接的、可靠的、基于字节流的传输层通?",
+            "summary": "传输控制协议（TCP：Transmission Control Protocol）是一种面向连接的、可靠的、基于字节流的传输层通信协议。TCP协议的运行可划分为三个阶段：连接建立、数据传送和连接终止。 很多重要的机制保证了TCP的可靠性和强壮性，包括： 使用序号，对收到的TCP报。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -17833,7 +17807,7 @@
           {
             "id": "t02",
             "title": "TCP编程",
-            "summary": "TCP服务端：",
+            "summary": "TCP编程流程 案例 TCP服务端： \"\"\"tcp服务端\"\"\" import socket # 创建tcp套接字 tcp_socket = socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM) # 绑定ip和端。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -17843,7 +17817,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image107.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -17949,7 +17923,7 @@
           {
             "id": "t01",
             "title": "什么是HTTP",
-            "summary": "HTTP（超文本传输协议）是一种用于分布式、协作式和超媒体信息系统的应用层协议。是万维网的数据通信的基础。设计HTTP最初的目的?",
+            "summary": "HTTP（超文本传输协议）是一种用于分布式、协作式和超媒体信息系统的应用层协议。是万维网的数据通信的基础。设计HTTP最初的目的是为了提供一种发布和接收HTML页面的方法。通过HTTP或者HTTPS协议请求的资源由统一资源标识符（Uniform Resource Identifi。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -17964,7 +17938,7 @@
           {
             "id": "t02",
             "title": "HTTP消息结构",
-            "summary": "客户端发送一个 HTTP 请求到服务器的请求消息包括以下格式：请求行、请求头、空行和请求体四个部分组成。",
+            "summary": "客户端请求消息 客户端发送一个 HTTP 请求到服务器的请求消息包括以下格式：请求行、请求头、空行和请求体四个部分组成。 请求行 请求方法：如 GET、POST、PUT、DELETE等，指定要执行的操作。 请求 URI：请求的资源路径，通常包括主机名、端口号（如果非默认）、路径和。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -17978,7 +17952,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image108.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -18035,7 +18009,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image109.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -18049,7 +18023,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image110.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -18106,14 +18080,14 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image111.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           },
           {
             "id": "t03",
             "title": "HTTP请求方法",
-            "summary": "HTTP/1.1 协议中共定义了八种方法来以不同方式操作指定的资源，HTTP 服务器至少应该实现 GET 和 HEAD 方法，其?",
+            "summary": "HTTP/1.1 协议中共定义了八种方法来以不同方式操作指定的资源，HTTP 服务器至少应该实现 GET 和 HEAD 方法，其他方法都是可选的。 GET 向指定的资源发出“显示”请求。使用 GET 方法应该只用在读取资料，而不应当被用于产生“副作用”的操作中，例如在网络应用程序。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -18196,7 +18170,7 @@
           {
             "id": "t04",
             "title": "HTTP状态码",
-            "summary": "HTTP状态码是服务器对客户端请求的响应，状态码分为五类：",
+            "summary": "HTTP状态码是服务器对客户端请求的响应，状态码分为五类： 1xx（信息状态码） 表示接收的请求正在处理。例如： 100：继续。客户端应继续其请求。 101：切换协议。服务器根据客户端的请求切换协议。只能切换到更高级的协议。 2xx（成功状态码） 表示请求正常处理完毕。例如： 2。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -18299,7 +18273,7 @@
           {
             "id": "t01",
             "title": "案例：发送HTTP请求以及获取响应数据",
-            "summary": "import requests",
+            "summary": "import requests # 一言网的 API 地址 url = 'https://v1.hitokoto.cn/' # 海外:url = 'https://international.v1.hitokoto.cn' # 请求参数，指定返回中文内容，这里使用默认的所有类型。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -18343,8 +18317,8 @@
         "topics": [
           {
             "id": "t01",
-            "title": "案例：通过Starlette 构建web接口",
-            "summary": "Starlette 是一个轻量级的 Python 异步 Web 框架，专为构建高性能的异步应用程序而设计，它具有简洁、灵活的特点?",
+            "title": "案例：通过Starlette 构建web接口",
+            "summary": "Starlette 是一个轻量级的 Python 异步 Web 框架，专为构建高性能的异步应用程序而设计，它具有简洁、灵活的特点，并且可以与其他库（如 FastAPI 就是基于 Starlette 构建的）很好地集成。我们可以结合 Starlette 构建一个Web 服务，将上面。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -18482,7 +18456,7 @@
   {
     "id": "m16",
     "title": "正则表达式",
-    "summary": "正则表达式（regular expression，常简写为regex、regexp或re），是一种用于匹配和操作文本的强大工具，? Python的re模块提供了正则表达式匹配操作。 re.se?",
+    "summary": "正则表达式（regular expression，常简写为regex、regexp或re），是一种用于匹配和操作文本的强大工具，它是由一系列字符和特殊字符组成的模式，用于描述要匹配的文本模式。正则表达式可以在文本中查找、替换、提取和验证特定的模式。 Python的re模块提供了正则表达式匹配操作。 import re re模块中提供了一些方法用于查找或处理字。",
     "difficulty": "intermediate",
     "estimatedMinutes": 141,
     "sections": [
@@ -18493,7 +18467,7 @@
           {
             "id": "t01",
             "title": "什么是正则表达式",
-            "summary": "正则表达式（regular expression，常简写为regex、regexp或re），是一种用于匹配和操作文本的强大工具，?",
+            "summary": "正则表达式（regular expression，常简写为regex、regexp或re），是一种用于匹配和操作文本的强大工具，它是由一系列字符和特殊字符组成的模式，用于描述要匹配的文本模式。正则表达式可以在文本中查找、替换、提取和验证特定的模式。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -18510,7 +18484,7 @@
           {
             "id": "t01",
             "title": "re模块",
-            "summary": "Python的re模块提供了正则表达式匹配操作。",
+            "summary": "Python的re模块提供了正则表达式匹配操作。 import re re模块中提供了一些方法用于查找或处理字符串。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -18529,7 +18503,7 @@
           {
             "id": "t02",
             "title": "search",
-            "summary": "re.search(pattern, string)",
+            "summary": "re.search(pattern, string) 扫描整个 string 查找正则表达式 pattern 产生匹配的第一个位置，并返回相应的 Match。如果字符串中没有与模式匹配的位置则返回 None。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -18544,7 +18518,7 @@
           {
             "id": "t03",
             "title": "match",
-            "summary": "re.match(pattern, string)",
+            "summary": "re.match(pattern, string) 如果 string 开头的零个或多个字符与正则表达式 pattern 匹配，则返回相应的 Match。如果字符串与模式不匹配则返回 None。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -18559,7 +18533,7 @@
           {
             "id": "t04",
             "title": "findall",
-            "summary": "re.findall(pattern, string)",
+            "summary": "re.findall(pattern, string) 返回 pattern 在 string 中的所有非重叠匹配，以字符串列表或字符串元组列表的形式。对 string 的扫描从左至右，匹配结果按照找到的顺序返回。空匹配也包括在结果中。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -18574,7 +18548,7 @@
           {
             "id": "t05",
             "title": "sub",
-            "summary": "返回通过使用 repl 替换在 string 最左边非重叠出现的 pattern 而获得的字符串。如果样式没有找到，则不加改变地?",
+            "summary": "re.sub(pattern, repl, string, count=0) 返回通过使用 repl 替换在 string 最左边非重叠出现的 pattern 而获得的字符串。如果样式没有找到，则不加改变地返回 string。 repl 可以是字符串或函数；如为字符串，则其中任何。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -18597,7 +18571,7 @@
           {
             "id": "t06",
             "title": "split",
-            "summary": "用 pattern 分开 string 。 如果在 pattern 中捕获到括号，那么所有的组里的文字也会包含在列表里。如果 m?",
+            "summary": "re.split(pattern, string, maxsplit=0) 用 pattern 分开 string 。 如果在 pattern 中捕获到括号，那么所有的组里的文字也会包含在列表里。如果 maxsplit 非零， 最多进行 maxsplit 次分隔， 剩下的字符全部。",
             "contentBlocks": [
               {
                 "kind": "code",
@@ -18618,7 +18592,7 @@
           {
             "id": "t01",
             "title": "表示字符",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "字符 描述 . 匹配除 \\r，\\n 之外的任何单个字符。要匹配包括 \\r，\\n 在内的任何字符，请使用像 (.|\\r|\\n) 的模式。 \\d 匹配一个数字字符。等价于 [0-9]。 \\D 匹配一个非数字字符。等价于 [^0-9]。 \\w 匹配包括下划线的任何单词字符。等价于 [A。",
             "contentBlocks": [
               {
                 "kind": "table",
@@ -18769,7 +18743,7 @@
           {
             "id": "t01",
             "title": "表示数量",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "讲解正则表达式中用于表示匹配次数和范围的常用数量符。",
             "contentBlocks": [
               {
                 "kind": "table",
@@ -18884,7 +18858,7 @@
           {
             "id": "t01",
             "title": "表示边界",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "字符 描述 ^ 匹配字符串的开始位置。 $ 匹配字符串的结束位置。 \\b 匹配一个单词边界，也就是指单词和空格间的位置。 \\B 匹配非单词边界。",
             "contentBlocks": [
               {
                 "kind": "table",
@@ -18963,7 +18937,7 @@
           {
             "id": "t01",
             "title": "匹配分组",
-            "summary": "注意：. ^ $ * + ? { } [ ] \\ | ( )属于元字符，[ 和 ] 。这两个元字符用于指定一个字符类，也就是你希?",
+            "summary": "讲解正则表达式中分组、命名分组和引用分组的常用写法。",
             "contentBlocks": [
               {
                 "kind": "table",
@@ -19058,7 +19032,7 @@
           {
             "id": "t01",
             "title": "原始字符串",
-            "summary": "Python中字符串前面加上 r 表示原始字符串，忽略转义。原始字符串非常适合用于正则表达式，因为正则表达式中通常包含很多反斜杠?",
+            "summary": "Python中字符串前面加上 r 表示原始字符串，忽略转义。原始字符串非常适合用于正则表达式，因为正则表达式中通常包含很多反斜杠（例如 \\d 或 \\w），使用原始字符串可以避免反斜杠带来的转义问题。 例如： import re text = \"abcdef123456\" prin。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -19091,7 +19065,7 @@
           {
             "id": "t01",
             "title": "匹配电话号码",
-            "summary": "import re",
+            "summary": "import re test = [ \"13812345678\", # 合法 \"11456817239\", # 非法 \"19912345678\", # 合法 \"17138412356\", # 合法 \"1234567890\", # 非法 \"14752345673\", # 合法 \"1。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -19142,7 +19116,7 @@
           {
             "id": "t02",
             "title": "匹配邮箱",
-            "summary": "import re",
+            "summary": "import re test = [ \"example@example.com\", \"user.name@subdomain.example.co\", \"username@.com\", \"@missingusername.com\", \"-dasd@qq.com\", ] # 匹配邮。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -19185,7 +19159,7 @@
           {
             "id": "t03",
             "title": "匹配0-255之间的数字",
-            "summary": "import re",
+            "summary": "import re test = [\"0\", \"9\", \"50\", \"100\", \"199\", \"200\", \"255\", \"256\", \"-1\", \"01\", \"001\"] # 十位为1-9，表示可以没有十位，个位是0-9 # 或 百位是1，十位是0-9，个位是0-9 # 或。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -19200,7 +19174,7 @@
           {
             "id": "t04",
             "title": "从标签中获取网址",
-            "summary": "import re",
+            "summary": "import re test = \"\"\"<link rel=\"alternate\" hreflang=\"zh\" href=\"https://zh.wikipedia.org/wiki/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F\">。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -19215,7 +19189,7 @@
           {
             "id": "t05",
             "title": "替换文本中的所有数字为对应的词",
-            "summary": "import re",
+            "summary": "import re test = \"I have 2 apples and 3 oranges.\" # 定义数字到词的映射 num_map = {\"1\": \"one\", \"2\": \"two\", \"3\": \"three\", \"4\": \"four\", \"5\": \"five\"} pri。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -19234,7 +19208,7 @@
   {
     "id": "m17",
     "title": "综合案例：客户信息管理系统",
-    "summary": "????? Python1.0 ???????????????????? 输入纯数字则正常添加。 输入要删除的客户的id，不存在则终止，存在则删除。 输入要修改的客户的id，只能修改年龄、电话?",
+    "summary": "主菜单的课程内容。 添加id 输入纯数字则正常添加。 否则提示id必须为纯数字，并再次输入。 第三次输入时有额外提醒。 三次输入失败后终止添加客户。 id若已存在则终止添加。 添加姓名 输入字母或汉字则正常添加。 否则提示姓名必须为字符，并再次输入。 第三次输入时有额外提醒。 三次输入失败后终止添加。 输入要删除的客户的id，不存在则终止，存在则删除。",
     "difficulty": "advanced",
     "estimatedMinutes": 93,
     "sections": [
@@ -19245,19 +19219,19 @@
           {
             "id": "t01",
             "title": "主菜单",
-            "summary": "????? Python1.0 ????????????????????",
+            "summary": "主菜单的课程内容。",
             "contentBlocks": [
               {
                 "kind": "image",
                 "src": "course-assets/images/image112.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           },
           {
             "id": "t02",
             "title": "添加客户",
-            "summary": "输入纯数字则正常添加。",
+            "summary": "添加id 输入纯数字则正常添加。 否则提示id必须为纯数字，并再次输入。 第三次输入时有额外提醒。 三次输入失败后终止添加客户。 id若已存在则终止添加。 添加姓名 输入字母或汉字则正常添加。 否则提示姓名必须为字符，并再次输入。 第三次输入时有额外提醒。 三次输入失败后终止添加。",
             "contentBlocks": [
               {
                 "kind": "heading",
@@ -19271,7 +19245,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image113.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -19280,7 +19254,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image114.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -19289,7 +19263,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image115.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -19298,7 +19272,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image116.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -19307,7 +19281,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image117.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -19321,7 +19295,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image118.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -19330,7 +19304,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image119.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -19339,7 +19313,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image120.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -19348,7 +19322,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image121.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -19362,7 +19336,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image122.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -19371,7 +19345,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image123.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -19385,7 +19359,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image124.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -19394,7 +19368,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image125.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -19403,7 +19377,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image126.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "heading",
@@ -19417,7 +19391,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image127.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -19426,7 +19400,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image128.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           },
@@ -19442,19 +19416,19 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image129.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "image",
                 "src": "course-assets/images/image130.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           },
           {
             "id": "t04",
             "title": "修改客户",
-            "summary": "输入要修改的客户的id，只能修改年龄、电话、邮箱。",
+            "summary": "输入要修改的客户的id，只能修改年龄、电话、邮箱。 未设置的属性保持历史数据不变。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -19463,7 +19437,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image131.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -19472,7 +19446,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image132.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           },
@@ -19488,19 +19462,19 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image133.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "image",
                 "src": "course-assets/images/image134.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           },
           {
             "id": "t06",
             "title": "显示客户",
-            "summary": "系统内若没有客户则提示暂无客户信息。",
+            "summary": "系统内若没有客户则提示暂无客户信息。 若有客户则显示所有客户信息，之前未设置的年龄、电话、邮箱显示 None。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -19509,7 +19483,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image135.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               },
               {
                 "kind": "paragraph",
@@ -19518,7 +19492,7 @@
               {
                 "kind": "image",
                 "src": "course-assets/images/image136.png",
-                "alt": "Python ????"
+                "alt": "课程配图"
               }
             ]
           },
@@ -19542,7 +19516,7 @@
           {
             "id": "t01",
             "title": "客户类",
-            "summary": "import re",
+            "summary": "import re class Customer: \"\"\"客户类\"\"\" def __init__(self, c_id, name, age=\"None\", phone=\"None\", email=\"None\"): \"\"\"初始化客户信息\"\"\" self.id = c_id # 客。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
@@ -19665,7 +19639,7 @@
           {
             "id": "t02",
             "title": "客户管理系统类",
-            "summary": "import re",
+            "summary": "import re import time from customer import Customer class CMS: \"\"\"客户管理系统类\"\"\" def __init__(self): \"\"\"初始化客户管理系统\"\"\" self.customer_id_dict = {}。",
             "contentBlocks": [
               {
                 "kind": "paragraph",
