@@ -54,20 +54,31 @@
   top: 18px !important;
   right: 18px !important;
   bottom: 18px !important;
+  left: auto !important;
   z-index: 2100;
   height: calc(100% - 36px) !important;
   border: 1px solid rgba(15, 118, 110, 0.16);
   border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(240, 253, 250, 0.88), rgba(255, 255, 255, 0.98)),
+    #ffffff;
   box-shadow: 0 28px 70px rgba(16, 42, 42, 0.22);
+  overflow: hidden;
 }
 
 .release-history-drawer .el-drawer__header {
+  flex: 0 0 auto;
   margin-bottom: 0;
   padding: 22px 24px 14px;
+  border-bottom: 1px solid rgba(15, 118, 110, 0.1);
+  color: #102a2a;
+  font-weight: 950;
 }
 
 .release-history-drawer .el-drawer__body {
+  min-height: 0;
   padding: 8px 24px 18px;
+  overflow-y: auto;
   scrollbar-color: rgba(13, 148, 136, 0.58) rgba(15, 118, 110, 0.08);
   scrollbar-width: thin;
 }
@@ -92,34 +103,62 @@
 }
 
 .release-history-drawer .el-drawer__footer {
+  flex: 0 0 auto;
   padding: 14px 24px 22px;
   border-top: 1px solid rgba(15, 118, 110, 0.1);
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.92);
 }
 
 .release-history {
   display: grid;
-  gap: 12px;
+  gap: 14px;
 }
 
 .release-history__item {
   display: grid;
-  gap: 8px;
-  padding: 16px;
+  gap: 10px;
+  padding: 16px 18px;
   border: 1px solid rgba(15, 118, 110, 0.16);
   border-radius: 8px;
-  background: #f8fffd;
+  background:
+    linear-gradient(90deg, rgba(15, 118, 110, 0.08), transparent 34%),
+    #ffffff;
+  box-shadow: 0 12px 28px rgba(16, 42, 42, 0.07);
 }
 
-.release-history__item span,
+.release-history__item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.release-history__item-header span,
 .release-history__item p,
 .release-history__source {
   color: #64748b;
   line-height: 1.6;
 }
 
+.release-history__item-header strong {
+  flex: 0 0 auto;
+  padding: 4px 8px;
+  border-radius: 999px;
+  color: #0f766e;
+  background: rgba(15, 118, 110, 0.1);
+  font-size: 0.78rem;
+}
+
+.release-history__item h3 {
+  margin: 0;
+  color: #102a2a;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
 .release-history__item p {
   margin: 0;
+  overflow-wrap: anywhere;
 }
 
 .release-history__source {
@@ -140,5 +179,12 @@
     width: 92vw !important;
     height: 100% !important;
     border-radius: 8px 0 0 8px;
+  }
+
+  .release-history-drawer .el-drawer__header,
+  .release-history-drawer .el-drawer__body,
+  .release-history-drawer .el-drawer__footer {
+    padding-right: 18px;
+    padding-left: 18px;
   }
 }

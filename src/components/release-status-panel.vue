@@ -109,14 +109,18 @@ onMounted(async () => {
     <el-drawer
       v-model="isHistoryOpen"
       title="发布历史"
+      append-to-body
       direction="rtl"
       size="min(92vw, 520px)"
       class="release-history-drawer"
     >
       <div class="release-history" aria-label="发布历史列表">
         <article v-for="release in releases" :key="release.id" class="release-history__item">
-          <span>{{ formatDate(release.published_at) }}</span>
-          <strong>{{ release.name || release.tag_name }}</strong>
+          <div class="release-history__item-header">
+            <span>{{ formatDate(release.published_at) }}</span>
+            <strong>{{ release.tag_name }}</strong>
+          </div>
+          <h3>{{ release.name || release.tag_name }}</h3>
           <p>{{ release.body || "查看完整发布说明" }}</p>
           <a :href="release.html_url" target="_blank" rel="noreferrer">查看 GitHub Release</a>
         </article>
