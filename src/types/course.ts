@@ -35,7 +35,15 @@ export interface CourseExercise {
   kind: ExerciseKind;
   difficulty: ExerciseDifficulty;
   prompt: string;
-  answer: string;
+  answer: CourseExerciseAnswer;
+}
+
+export interface CourseExerciseAnswer {
+  explanation: string;
+  example: string;
+  result: string;
+  counterExample: string;
+  notes: string[];
 }
 
 export type CourseContentBlock =

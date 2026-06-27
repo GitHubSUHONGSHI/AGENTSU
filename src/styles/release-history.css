@@ -64,6 +64,7 @@
     #ffffff;
   box-shadow: 0 28px 70px rgba(16, 42, 42, 0.22);
   overflow: hidden;
+  scrollbar-gutter: stable;
 }
 
 .release-history-drawer .el-drawer__header {
@@ -77,29 +78,37 @@
 
 .release-history-drawer .el-drawer__body {
   min-height: 0;
-  padding: 8px 24px 18px;
+  padding: 8px 18px 18px 24px;
   overflow-y: auto;
-  scrollbar-color: rgba(13, 148, 136, 0.58) rgba(15, 118, 110, 0.08);
+  scrollbar-color: rgba(13, 148, 136, 0.46) transparent;
   scrollbar-width: thin;
 }
 
 .release-history-drawer .el-drawer__body::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 .release-history-drawer .el-drawer__body::-webkit-scrollbar-track {
   border-radius: 999px;
-  background: rgba(15, 118, 110, 0.08);
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0 3px,
+      rgba(15, 118, 110, 0.08) 3px 7px,
+      transparent 7px 100%
+    );
 }
 
 .release-history-drawer .el-drawer__body::-webkit-scrollbar-thumb {
-  border: 2px solid rgba(248, 255, 253, 0.96);
+  border: 3px solid transparent;
   border-radius: 999px;
-  background: rgba(13, 148, 136, 0.58);
+  background: rgba(13, 148, 136, 0.5);
+  background-clip: padding-box;
 }
 
 .release-history-drawer .el-drawer__body::-webkit-scrollbar-thumb:hover {
   background: rgba(15, 118, 110, 0.76);
+  background-clip: padding-box;
 }
 
 .release-history-drawer .el-drawer__footer {

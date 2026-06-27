@@ -39,6 +39,7 @@ declare module 'vue' {
     ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
     ElTag: typeof import('element-plus/es')['ElTag']
     ModuleOverview: typeof import('./src/components/module-overview.vue')['default']
+    PracticeAnswerPanel: typeof import('./src/components/practice-answer-panel.vue')['default']
     ReleaseStatusPanel: typeof import('./src/components/release-status-panel.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

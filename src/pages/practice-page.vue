@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useRouter } from "vue-router";
-import { Collection, EditPen, Reading } from "@element-plus/icons-vue";
+import { Collection, Reading } from "@element-plus/icons-vue";
 import {
   exerciseDifficultyLabel,
   exerciseKindLabel,
   getExercisesForTopic,
   getPracticeTopicContext,
 } from "../data/practice-exercises";
+import PracticeAnswerPanel from "../components/practice-answer-panel.vue";
 import { courseModules } from "../data/python-course";
 import { useCourseRoute } from "../composables/use-course-route";
 import type { CourseSection, CourseTopic, ExerciseDifficulty, ExerciseKind } from "../types/course";
@@ -151,10 +152,7 @@ const tagTypeForDifficulty = (difficulty: ExerciseDifficulty) =>
 
             <el-collapse class="practice-page__answer">
               <el-collapse-item title="查看参考答案 / 自检提示" :name="exercise.id">
-                <div class="practice-page__answer-text">
-                  <el-icon><EditPen /></el-icon>
-                  <p>{{ exercise.answer }}</p>
-                </div>
+                <PracticeAnswerPanel :answer="exercise.answer" />
               </el-collapse-item>
             </el-collapse>
           </section>
