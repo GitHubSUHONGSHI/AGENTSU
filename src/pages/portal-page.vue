@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from "vue";
+import { computed, ref } from "vue";
 import {
   ArrowRight,
   Connection,
@@ -8,18 +8,10 @@ import {
   Link,
   Monitor,
   Promotion,
-  Refresh,
   Tools,
 } from "@element-plus/icons-vue";
-
-type ReleaseInfo = {
-  id: number;
-  name: string | null;
-  tag_name: string;
-  html_url: string;
-  published_at: string | null;
-  body: string | null;
-};
+import ReleaseStatusPanel from "../components/release-status-panel.vue";
+import { personalSiteUrl, repositoryUrl } from "../data/release-history";
 
 type NoticeType = "release" | "fix" | "change";
 
@@ -30,25 +22,7 @@ type NoticeItem = {
   meta: string;
 };
 
-const repositoryUrl = "https://github.com/GitHubSUHONGSHI/AGENTSU";
-const releasesUrl = `${repositoryUrl}/releases`;
-const personalSiteUrl = "https://githubsuhongshi.github.io/AGENTSU/";
-const releaseApiUrl = "https://api.github.com/repos/GitHubSUHONGSHI/AGENTSU/releases?per_page=5";
-const fallbackReleases: ReleaseInfo[] = [
-  {
-    id: 1,
-    name: "首版 Python 学习站点",
-    tag_name: "v1.0.0",
-    html_url: `${repositoryUrl}/releases/tag/v1.0.0`,
-    published_at: "2026-06-26T00:00:00Z",
-    body: "首个版本已完成课程门户、学习工作台、课程目录和本地进度记录。",
-  },
-];
-
 const activeNoticeType = ref<NoticeType>("release");
-const releases = ref<ReleaseInfo[]>(fallbackReleases);
-const isLoadingReleases = ref(false);
-const releaseError = ref("");
 const commandInput = ref("npm run dev");
 const terminalLines = ref<string[]>([
   "$ open /course",
@@ -118,21 +92,6 @@ const noticeTabs: Array<{ label: string; value: NoticeType }> = [
 const filteredNotices = computed(() =>
   notices.filter((notice) => notice.type === activeNoticeType.value),
 );
-const hasReleaseFallback = computed(
-  () => !isLoadingReleases.value && releaseError.value !== "" && releases.value.length === 0,
-);
-
-const formatDate = (value: string | null) => {
-  if (!value) {
-    return "未标注日期";
-  }
-
-  return new Intl.DateTimeFormat("zh-CN", {
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  }).format(new Date(value));
-};
 
 const runCommand = (command: string, output?: string[]) => {
   const matchedCommand = commands.find((item) => item.label === command);
@@ -150,35 +109,6 @@ const submitCommand = () => {
   runCommand(command);
 };
 
-const fetchReleases = async () => {
-  isLoadingReleases.value = true;
-  releaseError.value = "";
-
-  try {
-    const response = await fetch(releaseApiUrl, {
-      cache: "no-store",
-      headers: {
-        Accept: "application/vnd.github+json",
-      },
-    });
-
-    if (!response.ok) {
-      throw new Error(`GitHub Releases request failed: ${response.status}`);
-    }
-
-    const releaseItems = (await response.json()) as ReleaseInfo[];
-    releases.value = releaseItems.length > 0 ? releaseItems : fallbackReleases;
-  } catch (error) {
-    releases.value = fallbackReleases;
-    releaseError.value = error instanceof Error ? error.message : "GitHub Releases 暂时不可用";
-  } finally {
-    isLoadingReleases.value = false;
-  }
-};
-
-onMounted(async () => {
-  await fetchReleases();
-});
 </script>
 
 <template>
@@ -210,44 +140,7 @@ onMounted(async () => {
         </div>
       </div>
 
-      <aside class="portal-status" aria-label="发布状态">
-        <div class="portal-status__header">
-          <div>
-            <p>Release Channel</p>
-            <h2>发布信息</h2>
-          </div>
-          <el-button
-            class="portal-status__refresh"
-            :icon="Refresh"
-            :loading="isLoadingReleases"
-            circle
-            aria-label="刷新发布信息"
-            @click="fetchReleases"
-          />
-        </div>
-
-        <el-skeleton v-if="isLoadingReleases" :rows="3" animated />
-
-        <div v-else-if="hasReleaseFallback" class="portal-release-fallback">
-          <strong>暂无正式发布</strong>
-          <span>当前 GitHub Releases 为空或暂时不可访问，可先通过仓库查看最新提交与部署状态。</span>
-          <a :href="releasesUrl" target="_blank" rel="noreferrer">查看 Releases</a>
-        </div>
-
-        <a
-          v-for="release in releases"
-          v-else
-          :key="release.id"
-          class="portal-release"
-          :href="release.html_url"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <span>{{ formatDate(release.published_at) }}</span>
-          <strong>{{ release.name || release.tag_name }}</strong>
-          <small>{{ release.body || "查看完整发布说明" }}</small>
-        </a>
-      </aside>
+      <ReleaseStatusPanel />
     </section>
 
     <section class="portal-grid" aria-label="门户信息面板">

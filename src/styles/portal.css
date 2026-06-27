@@ -115,7 +115,6 @@
 }
 
 .portal-link-button,
-.portal-release,
 .portal-links a {
   text-decoration: none;
 }
@@ -169,41 +168,6 @@
   border-color: #f59e0b;
   color: #92400e;
   background: #fffbeb;
-}
-
-.portal-release,
-.portal-release-fallback {
-  display: grid;
-  gap: 8px;
-  padding: 16px;
-  border: 1px solid rgba(15, 118, 110, 0.18);
-  border-radius: 8px;
-  color: #102a2a;
-  background: #ffffff;
-}
-.portal-release:hover,
-.portal-links a:hover {
-  border-color: rgba(245, 158, 11, 0.5);
-  box-shadow: 0 14px 34px rgba(16, 42, 42, 0.1);
-}
-
-.portal-release span,
-.portal-release small,
-.portal-release-fallback span {
-  color: #64748b;
-  line-height: 1.6;
-}
-
-.portal-release small {
-  display: -webkit-box;
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-}
-
-.portal-release-fallback a {
-  color: #0f766e;
-  font-weight: 900;
 }
 
 .portal-grid {

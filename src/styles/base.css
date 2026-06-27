@@ -21,6 +21,26 @@ body {
   background:
     radial-gradient(circle at top left, rgba(45, 212, 191, 0.22), transparent 32rem),
     linear-gradient(135deg, #f6fffd 0%, #eef8f5 46%, #fff7ed 100%);
+  scrollbar-color: rgba(13, 148, 136, 0.58) rgba(15, 118, 110, 0.08);
+  scrollbar-width: thin;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(15, 118, 110, 0.08);
+}
+
+body::-webkit-scrollbar-thumb {
+  border: 2px solid rgba(246, 255, 253, 0.92);
+  border-radius: 999px;
+  background: rgba(13, 148, 136, 0.58);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: rgba(15, 118, 110, 0.76);
 }
 
 button,

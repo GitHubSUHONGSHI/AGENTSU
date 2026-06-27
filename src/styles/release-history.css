@@ -1,0 +1,144 @@
+.portal-release,
+.portal-release-fallback {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+  border: 1px solid rgba(15, 118, 110, 0.18);
+  border-radius: 8px;
+  color: #102a2a;
+  background: #ffffff;
+}
+
+.portal-release:hover,
+.portal-links a:hover {
+  border-color: rgba(245, 158, 11, 0.5);
+  box-shadow: 0 14px 34px rgba(16, 42, 42, 0.1);
+}
+
+.portal-release span,
+.portal-release small,
+.portal-release-fallback span {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.portal-release small {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.portal-release-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.portal-release-source {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.portal-release-fallback a,
+.release-history__item a {
+  color: #0f766e;
+  font-weight: 900;
+}
+
+.release-history-drawer {
+  position: fixed !important;
+  top: 18px !important;
+  right: 18px !important;
+  bottom: 18px !important;
+  z-index: 2100;
+  height: calc(100% - 36px) !important;
+  border: 1px solid rgba(15, 118, 110, 0.16);
+  border-radius: 8px;
+  box-shadow: 0 28px 70px rgba(16, 42, 42, 0.22);
+}
+
+.release-history-drawer .el-drawer__header {
+  margin-bottom: 0;
+  padding: 22px 24px 14px;
+}
+
+.release-history-drawer .el-drawer__body {
+  padding: 8px 24px 18px;
+  scrollbar-color: rgba(13, 148, 136, 0.58) rgba(15, 118, 110, 0.08);
+  scrollbar-width: thin;
+}
+
+.release-history-drawer .el-drawer__body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.release-history-drawer .el-drawer__body::-webkit-scrollbar-track {
+  border-radius: 999px;
+  background: rgba(15, 118, 110, 0.08);
+}
+
+.release-history-drawer .el-drawer__body::-webkit-scrollbar-thumb {
+  border: 2px solid rgba(248, 255, 253, 0.96);
+  border-radius: 999px;
+  background: rgba(13, 148, 136, 0.58);
+}
+
+.release-history-drawer .el-drawer__body::-webkit-scrollbar-thumb:hover {
+  background: rgba(15, 118, 110, 0.76);
+}
+
+.release-history-drawer .el-drawer__footer {
+  padding: 14px 24px 22px;
+  border-top: 1px solid rgba(15, 118, 110, 0.1);
+  background: #ffffff;
+}
+
+.release-history {
+  display: grid;
+  gap: 12px;
+}
+
+.release-history__item {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+  border: 1px solid rgba(15, 118, 110, 0.16);
+  border-radius: 8px;
+  background: #f8fffd;
+}
+
+.release-history__item span,
+.release-history__item p,
+.release-history__source {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.release-history__item p {
+  margin: 0;
+}
+
+.release-history__source {
+  display: block;
+  text-align: left;
+}
+
+@media (max-width: 640px) {
+  .portal-release-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .release-history-drawer {
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 92vw !important;
+    height: 100% !important;
+    border-radius: 8px 0 0 8px;
+  }
+}
