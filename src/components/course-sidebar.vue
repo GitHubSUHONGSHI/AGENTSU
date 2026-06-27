@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useRouter } from "vue-router";
-import { Check, Document, House } from "@element-plus/icons-vue";
+import { Check, Collection, Document, House } from "@element-plus/icons-vue";
 import type { CourseModule } from "../types/course";
 
 const props = defineProps<{
@@ -10,6 +10,7 @@ const props = defineProps<{
   selectedSectionId?: string;
   completedModuleIds: string[];
   isHomeActive: boolean;
+  isPracticeActive: boolean;
 }>();
 
 const emit = defineEmits<{
@@ -20,14 +21,18 @@ const router = useRouter();
 const defaultOpeneds = computed(() => props.modules.map((module) => module.id));
 const sectionMenuId = (moduleId: string, sectionId: string) => `${moduleId}:${sectionId}`;
 const activeMenuId = computed(() =>
-  props.isHomeActive
-    ? "home"
-    : props.selectedSectionId
-      ? sectionMenuId(props.selectedModuleId, props.selectedSectionId)
-      : props.selectedModuleId,
+  props.isPracticeActive
+    ? "practice"
+    : props.isHomeActive
+      ? "home"
+      : props.selectedSectionId
+        ? sectionMenuId(props.selectedModuleId, props.selectedSectionId)
+        : props.selectedModuleId,
 );
 const isActiveSection = (moduleId: string, sectionId: string) =>
-  props.selectedModuleId === moduleId && props.selectedSectionId === sectionId;
+  !props.isPracticeActive &&
+  props.selectedModuleId === moduleId &&
+  props.selectedSectionId === sectionId;
 const isCompleted = (moduleId: string) => props.completedModuleIds.includes(moduleId);
 const navigateToPortal = () => {
   emit("navigate");
@@ -55,6 +60,17 @@ const navigateToPortal = () => {
     >
       <el-icon><House /></el-icon>
       <span>课程首页</span>
+    </router-link>
+
+    <router-link
+      class="course-sidebar__home"
+      :class="{ 'is-home-active': isPracticeActive }"
+      to="/practice"
+      :aria-current="isPracticeActive ? 'page' : undefined"
+      @click="emit('navigate')"
+    >
+      <el-icon><Collection /></el-icon>
+      <span>知识点练习</span>
     </router-link>
 
     <el-menu

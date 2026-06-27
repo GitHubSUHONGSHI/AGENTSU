@@ -9,6 +9,7 @@ const routeParam = (value: string | string[] | undefined) =>
   Array.isArray(value) ? value[0] : value;
 
 const isCourseHomeRoute = computed(() => route.name === "course-home");
+const isPracticeRoute = computed(() => String(route.name ?? "").startsWith("practice"));
 const moduleId = computed(() => routeParam(route.params.moduleId));
 const sectionId = computed(() => routeParam(route.params.sectionId));
 const topicId = computed(() => routeParam(route.params.topicId));
@@ -33,21 +34,25 @@ const sectionPath = computed(() => `${modulePath.value}/sections/${sectionId.val
     <el-breadcrumb :separator="isCourseHomeRoute ? '' : '/'">
       <el-breadcrumb-item v-if="isCourseHomeRoute">课程首页</el-breadcrumb-item>
       <el-breadcrumb-item v-else :to="{ path: '/course' }">课程首页</el-breadcrumb-item>
-      <el-breadcrumb-item v-if="!isCourseHomeRoute && sectionId" :to="{ path: modulePath }">
-        {{ moduleTitle }}
-      </el-breadcrumb-item>
-      <el-breadcrumb-item v-else-if="!isCourseHomeRoute">
-        {{ moduleTitle }}
-      </el-breadcrumb-item>
-      <el-breadcrumb-item v-if="!isCourseHomeRoute && sectionId && topicId" :to="{ path: sectionPath }">
-        {{ sectionTitle }}
-      </el-breadcrumb-item>
-      <el-breadcrumb-item v-else-if="!isCourseHomeRoute && sectionId">
-        {{ sectionTitle }}
-      </el-breadcrumb-item>
-      <el-breadcrumb-item v-if="!isCourseHomeRoute && topicId">
-        {{ topicTitle }}
-      </el-breadcrumb-item>
+
+      <template v-if="isPracticeRoute">
+        <el-breadcrumb-item :to="{ path: '/practice' }">知识点练习</el-breadcrumb-item>
+        <el-breadcrumb-item v-if="moduleId">{{ moduleTitle }}</el-breadcrumb-item>
+        <el-breadcrumb-item v-if="sectionId">{{ sectionTitle }}</el-breadcrumb-item>
+        <el-breadcrumb-item v-if="topicId">{{ topicTitle }}</el-breadcrumb-item>
+      </template>
+
+      <template v-else-if="!isCourseHomeRoute">
+        <el-breadcrumb-item v-if="sectionId" :to="{ path: modulePath }">
+          {{ moduleTitle }}
+        </el-breadcrumb-item>
+        <el-breadcrumb-item v-else>{{ moduleTitle }}</el-breadcrumb-item>
+        <el-breadcrumb-item v-if="sectionId && topicId" :to="{ path: sectionPath }">
+          {{ sectionTitle }}
+        </el-breadcrumb-item>
+        <el-breadcrumb-item v-else-if="sectionId">{{ sectionTitle }}</el-breadcrumb-item>
+        <el-breadcrumb-item v-if="topicId">{{ topicTitle }}</el-breadcrumb-item>
+      </template>
     </el-breadcrumb>
   </nav>
 </template>

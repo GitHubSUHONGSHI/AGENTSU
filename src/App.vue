@@ -20,6 +20,7 @@ provide(courseProgressKey, progress);
 
 const isPortalRoute = computed(() => route.name === "portal");
 const isCourseHomeRoute = computed(() => route.name === "course-home");
+const isPracticeRoute = computed(() => String(route.name ?? "").startsWith("practice"));
 const activeModuleId = computed(() =>
   isPortalRoute.value || isCourseHomeRoute.value
     ? ""
@@ -53,6 +54,7 @@ watch(
           :selected-section-id="activeSectionId"
           :completed-module-ids="progress.completedModuleIds.value"
           :is-home-active="isCourseHomeRoute"
+          :is-practice-active="isPracticeRoute"
           @navigate="closeNavigation"
         />
       </el-aside>
@@ -89,6 +91,7 @@ watch(
           :selected-section-id="activeSectionId"
           :completed-module-ids="progress.completedModuleIds.value"
           :is-home-active="isCourseHomeRoute"
+          :is-practice-active="isPracticeRoute"
           @navigate="closeNavigation"
         />
       </el-drawer>

@@ -1,4 +1,6 @@
 export type Difficulty = "beginner" | "intermediate" | "advanced";
+export type ExerciseKind = "operation" | "reflection";
+export type ExerciseDifficulty = "easy" | "hard" | "deep";
 
 export interface CourseTopic {
   id: string;
@@ -25,6 +27,15 @@ export interface CourseModule {
 export interface CourseSearchResult {
   module: CourseModule;
   matchedSections: CourseSection[];
+}
+
+export interface CourseExercise {
+  id: string;
+  topicId: string;
+  kind: ExerciseKind;
+  difficulty: ExerciseDifficulty;
+  prompt: string;
+  answer: string;
 }
 
 export type CourseContentBlock =
