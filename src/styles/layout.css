@@ -7,21 +7,20 @@
   position: sticky;
   top: 0;
   height: 100vh;
-  border-right: 1px solid rgba(13, 148, 136, 0.16);
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(18px);
+  border-right: 1px solid var(--course-border);
+  background: rgba(255, 255, 255, 0.94);
 }
 
 .app-shell__header {
   position: sticky;
   top: 0;
   z-index: 10;
-  padding: 18px 24px 0;
-  background: linear-gradient(180deg, rgba(246, 255, 253, 0.96), rgba(246, 255, 253, 0));
+  padding: 16px 24px 0;
+  background: linear-gradient(180deg, rgba(243, 248, 246, 0.98), rgba(243, 248, 246, 0));
 }
 
 .app-shell__main {
-  padding: 22px 24px 40px;
+  padding: 20px 24px 42px;
 }
 
 .app-shell__content,
@@ -51,7 +50,7 @@
     flex-direction: column;
   }
 
-  .course-header__menu {
+  .course-header__menu.el-button {
     display: inline-flex;
   }
 
@@ -67,6 +66,10 @@
   .app-shell__main {
     padding-right: 14px;
     padding-left: 14px;
+  }
+
+  .app-shell__main {
+    padding-top: 16px;
   }
 
   .module-overview__content,

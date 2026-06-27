@@ -3,15 +3,15 @@
   display: grid;
   gap: 8px;
   padding: 16px;
-  border: 1px solid rgba(15, 118, 110, 0.18);
-  border-radius: 8px;
-  color: #102a2a;
+  border: 1px solid var(--course-border);
+  border-radius: 10px;
+  color: var(--course-text);
   background: #ffffff;
 }
 
 .portal-release:hover,
 .portal-links a:hover {
-  border-color: rgba(245, 158, 11, 0.5);
+  border-color: rgba(249, 115, 22, 0.42);
   box-shadow: 0 14px 34px rgba(16, 42, 42, 0.1);
 }
 
@@ -45,8 +45,8 @@
 
 .portal-release-fallback a,
 .release-history__item a {
-  color: #0f766e;
-  font-weight: 900;
+  color: var(--course-primary);
+  font-weight: 850;
 }
 
 .release-history-drawer {
@@ -57,12 +57,10 @@
   left: auto !important;
   z-index: 2100;
   height: calc(100% - 36px) !important;
-  border: 1px solid rgba(15, 118, 110, 0.16);
-  border-radius: 8px;
-  background:
-    linear-gradient(180deg, rgba(240, 253, 250, 0.88), rgba(255, 255, 255, 0.98)),
-    #ffffff;
-  box-shadow: 0 28px 70px rgba(16, 42, 42, 0.22);
+  border: 1px solid var(--course-border);
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 28px 70px rgba(16, 42, 42, 0.2);
   overflow: hidden;
   scrollbar-gutter: stable;
 }
@@ -72,43 +70,14 @@
   margin-bottom: 0;
   padding: 22px 24px 14px;
   border-bottom: 1px solid rgba(15, 118, 110, 0.1);
-  color: #102a2a;
-  font-weight: 950;
+  color: var(--course-text);
+  font-weight: 850;
 }
 
 .release-history-drawer .el-drawer__body {
   min-height: 0;
   padding: 8px 18px 18px 24px;
   overflow-y: auto;
-  scrollbar-color: rgba(13, 148, 136, 0.46) transparent;
-  scrollbar-width: thin;
-}
-
-.release-history-drawer .el-drawer__body::-webkit-scrollbar {
-  width: 10px;
-}
-
-.release-history-drawer .el-drawer__body::-webkit-scrollbar-track {
-  border-radius: 999px;
-  background:
-    linear-gradient(
-      90deg,
-      transparent 0 3px,
-      rgba(15, 118, 110, 0.08) 3px 7px,
-      transparent 7px 100%
-    );
-}
-
-.release-history-drawer .el-drawer__body::-webkit-scrollbar-thumb {
-  border: 3px solid transparent;
-  border-radius: 999px;
-  background: rgba(13, 148, 136, 0.5);
-  background-clip: padding-box;
-}
-
-.release-history-drawer .el-drawer__body::-webkit-scrollbar-thumb:hover {
-  background: rgba(15, 118, 110, 0.76);
-  background-clip: padding-box;
 }
 
 .release-history-drawer .el-drawer__footer {
@@ -127,12 +96,9 @@
   display: grid;
   gap: 10px;
   padding: 16px 18px;
-  border: 1px solid rgba(15, 118, 110, 0.16);
-  border-radius: 8px;
-  background:
-    linear-gradient(90deg, rgba(15, 118, 110, 0.08), transparent 34%),
-    #ffffff;
-  box-shadow: 0 12px 28px rgba(16, 42, 42, 0.07);
+  border: 1px solid var(--course-border);
+  border-radius: 10px;
+  background: #ffffff;
 }
 
 .release-history__item-header {
@@ -153,14 +119,14 @@
   flex: 0 0 auto;
   padding: 4px 8px;
   border-radius: 999px;
-  color: #0f766e;
+  color: var(--course-primary);
   background: rgba(15, 118, 110, 0.1);
   font-size: 0.78rem;
 }
 
 .release-history__item h3 {
   margin: 0;
-  color: #102a2a;
+  color: var(--course-text);
   font-size: 1rem;
   line-height: 1.45;
 }

@@ -68,7 +68,7 @@ const tagTypeForDifficulty = (difficulty: ExerciseDifficulty) =>
       <p class="module-overview__eyebrow">Practice Studio</p>
       <h2 id="practice-title">知识点练习</h2>
       <p>
-        每个知识点固定 6 道自检题，覆盖操作式与思考式，并按简单、难、深度逐层推进。
+        每个知识点固定提供 6 道自检题，覆盖操作式与思考式任务，并按简单、困难、深度逐层推进。
       </p>
     </section>
 

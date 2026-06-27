@@ -1,0 +1,668 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - navigation "课程目录" [ref=e5]:
+      - link "Py 学习路径 17 个模块" [ref=e6] [cursor=pointer]:
+        - /url: "#/"
+        - generic [ref=e7]: Py
+        - generic [ref=e8]:
+          - strong [ref=e9]: 学习路径
+          - generic [ref=e10]: 17 个模块
+      - link "课程首页" [ref=e11] [cursor=pointer]:
+        - /url: "#/course"
+        - img [ref=e13]
+        - generic [ref=e15]: 课程首页
+      - link "知识点练习" [ref=e16] [cursor=pointer]:
+        - /url: "#/practice"
+        - img [ref=e18]
+        - generic [ref=e21]: 知识点练习
+      - menubar [ref=e22]:
+        - menuitem "知识章节" [expanded] [ref=e23]:
+          - generic [ref=e24] [cursor=pointer]:
+            - generic [ref=e25]:
+              - img [ref=e27]
+              - generic [ref=e30]: 知识章节
+            - img [ref=e32]
+          - menu [ref=e34]:
+            - menuitem "概述" [expanded] [ref=e35]:
+              - generic [ref=e36] [cursor=pointer]:
+                - link "概述" [ref=e37]:
+                  - /url: "#/modules/m01"
+                  - img [ref=e39]
+                  - generic [ref=e41]: 概述
+                - img [ref=e43]
+              - menu [ref=e45]:
+                - menuitem "计算机的组成" [ref=e46] [cursor=pointer]:
+                  - link "计算机的组成" [ref=e47]:
+                    - /url: "#/modules/m01/sections/s01"
+                - menuitem "程序和编程语言" [ref=e48] [cursor=pointer]:
+                  - link "程序和编程语言" [ref=e49]:
+                    - /url: "#/modules/m01/sections/s02"
+                - menuitem "计算机语言简史" [ref=e50] [cursor=pointer]:
+                  - link "计算机语言简史" [ref=e51]:
+                    - /url: "#/modules/m01/sections/s03"
+                - menuitem "为什么学习Python" [ref=e52] [cursor=pointer]:
+                  - link "为什么学习Python" [ref=e53]:
+                    - /url: "#/modules/m01/sections/s04"
+                - menuitem "Python版本" [ref=e54] [cursor=pointer]:
+                  - link "Python版本" [ref=e55]:
+                    - /url: "#/modules/m01/sections/s05"
+                - menuitem "Python解释器" [ref=e56] [cursor=pointer]:
+                  - link "Python解释器" [ref=e57]:
+                    - /url: "#/modules/m01/sections/s06"
+            - menuitem "快速入门" [expanded] [ref=e58]:
+              - generic [ref=e59] [cursor=pointer]:
+                - link "快速入门" [ref=e60]:
+                  - /url: "#/modules/m02"
+                  - img [ref=e62]
+                  - generic [ref=e64]: 快速入门
+                - img [ref=e66]
+              - menu [ref=e68]:
+                - menuitem "安装Python" [ref=e69] [cursor=pointer]:
+                  - link "安装Python" [ref=e70]:
+                    - /url: "#/modules/m02/sections/s01"
+                - menuitem "安装PyCharm" [ref=e71] [cursor=pointer]:
+                  - link "安装PyCharm" [ref=e72]:
+                    - /url: "#/modules/m02/sections/s02"
+                - menuitem "第一个Python程序" [ref=e73] [cursor=pointer]:
+                  - link "第一个Python程序" [ref=e74]:
+                    - /url: "#/modules/m02/sections/s03"
+            - menuitem "基础知识" [expanded] [ref=e75]:
+              - generic [ref=e76] [cursor=pointer]:
+                - link "基础知识" [ref=e77]:
+                  - /url: "#/modules/m03"
+                  - img [ref=e79]
+                  - generic [ref=e81]: 基础知识
+                - img [ref=e83]
+              - menu [ref=e85]:
+                - menuitem "注释" [ref=e86] [cursor=pointer]:
+                  - link "注释" [ref=e87]:
+                    - /url: "#/modules/m03/sections/s01"
+                - menuitem "变量" [ref=e88] [cursor=pointer]:
+                  - link "变量" [ref=e89]:
+                    - /url: "#/modules/m03/sections/s02"
+                - menuitem "进制以及转换" [ref=e90] [cursor=pointer]:
+                  - link "进制以及转换" [ref=e91]:
+                    - /url: "#/modules/m03/sections/s03"
+                - menuitem "数据类型" [ref=e92] [cursor=pointer]:
+                  - link "数据类型" [ref=e93]:
+                    - /url: "#/modules/m03/sections/s04"
+                - menuitem "输入与输出" [ref=e94] [cursor=pointer]:
+                  - link "输入与输出" [ref=e95]:
+                    - /url: "#/modules/m03/sections/s05"
+                - menuitem "运算符" [ref=e96] [cursor=pointer]:
+                  - link "运算符" [ref=e97]:
+                    - /url: "#/modules/m03/sections/s06"
+                - menuitem "Python编码规范" [ref=e98] [cursor=pointer]:
+                  - link "Python编码规范" [ref=e99]:
+                    - /url: "#/modules/m03/sections/s07"
+            - menuitem "流程控制语句" [expanded] [ref=e100]:
+              - generic [ref=e101] [cursor=pointer]:
+                - link "流程控制语句" [ref=e102]:
+                  - /url: "#/modules/m04"
+                  - img [ref=e104]
+                  - generic [ref=e106]: 流程控制语句
+                - img [ref=e108]
+              - menu [ref=e110]:
+                - menuitem "顺序" [ref=e111] [cursor=pointer]:
+                  - link "顺序" [ref=e112]:
+                    - /url: "#/modules/m04/sections/s02"
+                - menuitem "分支" [ref=e113] [cursor=pointer]:
+                  - link "分支" [ref=e114]:
+                    - /url: "#/modules/m04/sections/s03"
+                - menuitem "循环" [ref=e115] [cursor=pointer]:
+                  - link "循环" [ref=e116]:
+                    - /url: "#/modules/m04/sections/s04"
+            - menuitem "容器数据类型" [expanded] [ref=e117]:
+              - generic [ref=e118] [cursor=pointer]:
+                - link "容器数据类型" [ref=e119]:
+                  - /url: "#/modules/m05"
+                  - img [ref=e121]
+                  - generic [ref=e123]: 容器数据类型
+                - img [ref=e125]
+              - menu [ref=e127]:
+                - menuitem "序列" [ref=e128] [cursor=pointer]:
+                  - link "序列" [ref=e129]:
+                    - /url: "#/modules/m05/sections/s01"
+                - menuitem "列表List" [ref=e130] [cursor=pointer]:
+                  - link "列表List" [ref=e131]:
+                    - /url: "#/modules/m05/sections/s02"
+                - menuitem "字符串String" [ref=e132] [cursor=pointer]:
+                  - link "字符串String" [ref=e133]:
+                    - /url: "#/modules/m05/sections/s03"
+                - menuitem "元组Tuple" [ref=e134] [cursor=pointer]:
+                  - link "元组Tuple" [ref=e135]:
+                    - /url: "#/modules/m05/sections/s04"
+                - menuitem "集合Set" [ref=e136] [cursor=pointer]:
+                  - link "集合Set" [ref=e137]:
+                    - /url: "#/modules/m05/sections/s05"
+                - menuitem "字典Dictionary" [ref=e138] [cursor=pointer]:
+                  - link "字典Dictionary" [ref=e139]:
+                    - /url: "#/modules/m05/sections/s06"
+                - menuitem "列表、元组、字典和集合的区别" [ref=e140] [cursor=pointer]:
+                  - link "列表、元组、字典和集合的区别" [ref=e141]:
+                    - /url: "#/modules/m05/sections/s07"
+            - menuitem "函数" [expanded] [ref=e142]:
+              - generic [ref=e143] [cursor=pointer]:
+                - link "函数" [ref=e144]:
+                  - /url: "#/modules/m06"
+                  - img [ref=e146]
+                  - generic [ref=e148]: 函数
+                - img [ref=e150]
+              - menu [ref=e152]:
+                - menuitem "函数的概念" [ref=e153] [cursor=pointer]:
+                  - link "函数的概念" [ref=e154]:
+                    - /url: "#/modules/m06/sections/s02"
+                - menuitem "函数的定义" [ref=e155] [cursor=pointer]:
+                  - link "函数的定义" [ref=e156]:
+                    - /url: "#/modules/m06/sections/s03"
+                - menuitem "函数的抽取以及调用" [ref=e157] [cursor=pointer]:
+                  - link "函数的抽取以及调用" [ref=e158]:
+                    - /url: "#/modules/m06/sections/s04"
+                - menuitem "使用函数的好处" [ref=e159] [cursor=pointer]:
+                  - link "使用函数的好处" [ref=e160]:
+                    - /url: "#/modules/m06/sections/s05"
+                - menuitem "函数的参数" [ref=e161] [cursor=pointer]:
+                  - link "函数的参数" [ref=e162]:
+                    - /url: "#/modules/m06/sections/s06"
+                - menuitem "函数说明文档" [ref=e163] [cursor=pointer]:
+                  - link "函数说明文档" [ref=e164]:
+                    - /url: "#/modules/m06/sections/s07"
+                - menuitem "返回值" [ref=e165] [cursor=pointer]:
+                  - link "返回值" [ref=e166]:
+                    - /url: "#/modules/m06/sections/s08"
+                - menuitem "函数嵌套调用" [ref=e167] [cursor=pointer]:
+                  - link "函数嵌套调用" [ref=e168]:
+                    - /url: "#/modules/m06/sections/s09"
+                - menuitem "变量的作用域" [ref=e169] [cursor=pointer]:
+                  - link "变量的作用域" [ref=e170]:
+                    - /url: "#/modules/m06/sections/s10"
+                - menuitem "递归" [ref=e171] [cursor=pointer]:
+                  - link "递归" [ref=e172]:
+                    - /url: "#/modules/m06/sections/s11"
+                - menuitem "匿名函数" [ref=e173] [cursor=pointer]:
+                  - link "匿名函数" [ref=e174]:
+                    - /url: "#/modules/m06/sections/s12"
+                - menuitem "函数的注释（了解）" [ref=e175] [cursor=pointer]:
+                  - link "函数的注释（了解）" [ref=e176]:
+                    - /url: "#/modules/m06/sections/s13"
+            - menuitem "文件操作" [expanded] [ref=e177]:
+              - generic [ref=e178] [cursor=pointer]:
+                - link "文件操作" [ref=e179]:
+                  - /url: "#/modules/m07"
+                  - img [ref=e181]
+                  - generic [ref=e183]: 文件操作
+                - img [ref=e185]
+              - menu [ref=e187]:
+                - menuitem "文件的基本概念" [ref=e188] [cursor=pointer]:
+                  - link "文件的基本概念" [ref=e189]:
+                    - /url: "#/modules/m07/sections/s01"
+                - menuitem "文件的打开与关闭" [ref=e190] [cursor=pointer]:
+                  - link "文件的打开与关闭" [ref=e191]:
+                    - /url: "#/modules/m07/sections/s02"
+                - menuitem "文件读写" [ref=e192] [cursor=pointer]:
+                  - link "文件读写" [ref=e193]:
+                    - /url: "#/modules/m07/sections/s03"
+                - menuitem "常用函数" [ref=e194] [cursor=pointer]:
+                  - link "常用函数" [ref=e195]:
+                    - /url: "#/modules/m07/sections/s04"
+                - menuitem "案例：文件拷贝" [ref=e196] [cursor=pointer]:
+                  - link "案例：文件拷贝" [ref=e197]:
+                    - /url: "#/modules/m07/sections/s05"
+            - menuitem "面向对象之类和对象" [expanded] [ref=e198]:
+              - generic [ref=e199] [cursor=pointer]:
+                - link "面向对象之类和对象" [ref=e200]:
+                  - /url: "#/modules/m08"
+                  - img [ref=e202]
+                  - generic [ref=e204]: 面向对象之类和对象
+                - img [ref=e206]
+              - menu [ref=e208]:
+                - menuitem "面向过程和面向对象" [ref=e209] [cursor=pointer]:
+                  - link "面向过程和面向对象" [ref=e210]:
+                    - /url: "#/modules/m08/sections/s01"
+                - menuitem "类和对象" [ref=e211] [cursor=pointer]:
+                  - link "类和对象" [ref=e212]:
+                    - /url: "#/modules/m08/sections/s02"
+                - menuitem "定义类" [ref=e213] [cursor=pointer]:
+                  - link "定义类" [ref=e214]:
+                    - /url: "#/modules/m08/sections/s03"
+                - menuitem "类的操作" [ref=e215] [cursor=pointer]:
+                  - link "类的操作" [ref=e216]:
+                    - /url: "#/modules/m08/sections/s04"
+                - menuitem "__init()__方法" [ref=e217] [cursor=pointer]:
+                  - link "__init()__方法" [ref=e218]:
+                    - /url: "#/modules/m08/sections/s05"
+                - menuitem "self" [ref=e219] [cursor=pointer]:
+                  - link "self" [ref=e220]:
+                    - /url: "#/modules/m08/sections/s06"
+                - menuitem "属性" [ref=e221] [cursor=pointer]:
+                  - link "属性" [ref=e222]:
+                    - /url: "#/modules/m08/sections/s07"
+                - menuitem "方法" [ref=e223] [cursor=pointer]:
+                  - link "方法" [ref=e224]:
+                    - /url: "#/modules/m08/sections/s08"
+                - menuitem "动态添加属性与方法" [ref=e225] [cursor=pointer]:
+                  - link "动态添加属性与方法" [ref=e226]:
+                    - /url: "#/modules/m08/sections/s09"
+            - menuitem "面向对象之三大特性" [expanded] [ref=e227]:
+              - generic [ref=e228] [cursor=pointer]:
+                - link "面向对象之三大特性" [ref=e229]:
+                  - /url: "#/modules/m09"
+                  - img [ref=e231]
+                  - generic [ref=e233]: 面向对象之三大特性
+                - img [ref=e235]
+              - menu [ref=e237]:
+                - menuitem "封装" [ref=e238] [cursor=pointer]:
+                  - link "封装" [ref=e239]:
+                    - /url: "#/modules/m09/sections/s01"
+                - menuitem "继承" [ref=e240] [cursor=pointer]:
+                  - link "继承" [ref=e241]:
+                    - /url: "#/modules/m09/sections/s02"
+                - menuitem "多态" [ref=e242] [cursor=pointer]:
+                  - link "多态" [ref=e243]:
+                    - /url: "#/modules/m09/sections/s03"
+            - menuitem "面向对象案例：愤怒的小鸟" [expanded] [ref=e244]:
+              - generic [ref=e245] [cursor=pointer]:
+                - link "面向对象案例：愤怒的小鸟" [ref=e246]:
+                  - /url: "#/modules/m10"
+                  - img [ref=e248]
+                  - generic [ref=e250]: 面向对象案例：愤怒的小鸟
+                - img [ref=e252]
+              - menu [ref=e254]:
+                - menuitem "游戏背景" [ref=e255] [cursor=pointer]:
+                  - link "游戏背景" [ref=e256]:
+                    - /url: "#/modules/m10/sections/s01"
+                - menuitem "类的设计思路" [ref=e257] [cursor=pointer]:
+                  - link "类的设计思路" [ref=e258]:
+                    - /url: "#/modules/m10/sections/s02"
+                - menuitem "方法设计思路" [ref=e259] [cursor=pointer]:
+                  - link "方法设计思路" [ref=e260]:
+                    - /url: "#/modules/m10/sections/s03"
+                - menuitem "代码实现" [ref=e261] [cursor=pointer]:
+                  - link "代码实现" [ref=e262]:
+                    - /url: "#/modules/m10/sections/s04"
+            - menuitem "错误和异常" [expanded] [ref=e263]:
+              - generic [ref=e264] [cursor=pointer]:
+                - link "错误和异常" [ref=e265]:
+                  - /url: "#/modules/m11"
+                  - img [ref=e267]
+                  - generic [ref=e269]: 错误和异常
+                - img [ref=e271]
+              - menu [ref=e273]:
+                - menuitem "异常介绍" [ref=e274] [cursor=pointer]:
+                  - link "异常介绍" [ref=e275]:
+                    - /url: "#/modules/m11/sections/s01"
+                - menuitem "异常处理" [ref=e276] [cursor=pointer]:
+                  - link "异常处理" [ref=e277]:
+                    - /url: "#/modules/m11/sections/s02"
+                - menuitem "抛出异常" [ref=e278] [cursor=pointer]:
+                  - link "抛出异常" [ref=e279]:
+                    - /url: "#/modules/m11/sections/s03"
+                - menuitem "自定义异常" [ref=e280] [cursor=pointer]:
+                  - link "自定义异常" [ref=e281]:
+                    - /url: "#/modules/m11/sections/s04"
+                - menuitem "异常的传递" [ref=e282] [cursor=pointer]:
+                  - link "异常的传递" [ref=e283]:
+                    - /url: "#/modules/m11/sections/s05"
+                - menuitem "with关键字" [ref=e284] [cursor=pointer]:
+                  - link "with关键字" [ref=e285]:
+                    - /url: "#/modules/m11/sections/s06"
+                - menuitem "Python常见异常" [ref=e286] [cursor=pointer]:
+                  - link "Python常见异常" [ref=e287]:
+                    - /url: "#/modules/m11/sections/s07"
+            - menuitem "模块与包" [expanded] [ref=e288]:
+              - generic [ref=e289] [cursor=pointer]:
+                - link "模块与包" [ref=e290]:
+                  - /url: "#/modules/m12"
+                  - img [ref=e292]
+                  - generic [ref=e294]: 模块与包
+                - img [ref=e296]
+              - menu [ref=e298]:
+                - menuitem "模块概述" [ref=e299] [cursor=pointer]:
+                  - link "模块概述" [ref=e300]:
+                    - /url: "#/modules/m12/sections/s01"
+                - menuitem "创建模块" [ref=e301] [cursor=pointer]:
+                  - link "创建模块" [ref=e302]:
+                    - /url: "#/modules/m12/sections/s02"
+                - menuitem "导入模块" [ref=e303] [cursor=pointer]:
+                  - link "导入模块" [ref=e304]:
+                    - /url: "#/modules/m12/sections/s03"
+                - menuitem "dir()" [ref=e305] [cursor=pointer]:
+                  - link "dir()" [ref=e306]:
+                    - /url: "#/modules/m12/sections/s04"
+                - menuitem "包概述" [ref=e307] [cursor=pointer]:
+                  - link "包概述" [ref=e308]:
+                    - /url: "#/modules/m12/sections/s05"
+                - menuitem "创建包" [ref=e309] [cursor=pointer]:
+                  - link "创建包" [ref=e310]:
+                    - /url: "#/modules/m12/sections/s06"
+                - menuitem "导入包" [ref=e311] [cursor=pointer]:
+                  - link "导入包" [ref=e312]:
+                    - /url: "#/modules/m12/sections/s07"
+                - menuitem "常用标准库（包）" [ref=e313] [cursor=pointer]:
+                  - link "常用标准库（包）" [ref=e314]:
+                    - /url: "#/modules/m12/sections/s08"
+                - menuitem "引入第三方库" [ref=e315] [cursor=pointer]:
+                  - link "引入第三方库" [ref=e316]:
+                    - /url: "#/modules/m12/sections/s09"
+                - menuitem "打包自己的库并安装" [ref=e317] [cursor=pointer]:
+                  - link "打包自己的库并安装" [ref=e318]:
+                    - /url: "#/modules/m12/sections/s10"
+            - menuitem "Python高级语法" [expanded] [ref=e319]:
+              - generic [ref=e320] [cursor=pointer]:
+                - link "Python高级语法" [ref=e321]:
+                  - /url: "#/modules/m13"
+                  - img [ref=e323]
+                  - generic [ref=e325]: Python高级语法
+                - img [ref=e327]
+              - menu [ref=e329]:
+                - menuitem "浅拷贝与深拷贝" [ref=e330] [cursor=pointer]:
+                  - link "浅拷贝与深拷贝" [ref=e331]:
+                    - /url: "#/modules/m13/sections/s01"
+                - menuitem "迭代器" [ref=e332] [cursor=pointer]:
+                  - link "迭代器" [ref=e333]:
+                    - /url: "#/modules/m13/sections/s02"
+                - menuitem "生成器" [ref=e334] [cursor=pointer]:
+                  - link "生成器" [ref=e335]:
+                    - /url: "#/modules/m13/sections/s03"
+                - menuitem "命名空间" [ref=e336] [cursor=pointer]:
+                  - link "命名空间" [ref=e337]:
+                    - /url: "#/modules/m13/sections/s04"
+                - menuitem "作用域" [ref=e338] [cursor=pointer]:
+                  - link "作用域" [ref=e339]:
+                    - /url: "#/modules/m13/sections/s05"
+                - menuitem "闭包" [ref=e340] [cursor=pointer]:
+                  - link "闭包" [ref=e341]:
+                    - /url: "#/modules/m13/sections/s06"
+                - menuitem "装饰器" [ref=e342] [cursor=pointer]:
+                  - link "装饰器" [ref=e343]:
+                    - /url: "#/modules/m13/sections/s07"
+            - menuitem "进程与线程" [expanded] [ref=e344]:
+              - generic [ref=e345] [cursor=pointer]:
+                - link "进程与线程" [ref=e346]:
+                  - /url: "#/modules/m14"
+                  - img [ref=e348]
+                  - generic [ref=e350]: 进程与线程
+                - img [ref=e352]
+              - menu [ref=e354]:
+                - menuitem "并发与并行" [ref=e355] [cursor=pointer]:
+                  - link "并发与并行" [ref=e356]:
+                    - /url: "#/modules/m14/sections/s01"
+                - menuitem "多进程" [ref=e357] [cursor=pointer]:
+                  - link "多进程" [ref=e358]:
+                    - /url: "#/modules/m14/sections/s02"
+                - menuitem "多线程" [ref=e359] [cursor=pointer]:
+                  - link "多线程" [ref=e360]:
+                    - /url: "#/modules/m14/sections/s03"
+                - menuitem "进程和线程对比" [ref=e361] [cursor=pointer]:
+                  - link "进程和线程对比" [ref=e362]:
+                    - /url: "#/modules/m14/sections/s04"
+            - menuitem "网络编程" [expanded] [ref=e363]:
+              - generic [ref=e364] [cursor=pointer]:
+                - link "网络编程" [ref=e365]:
+                  - /url: "#/modules/m15"
+                  - img [ref=e367]
+                  - generic [ref=e369]: 网络编程
+                - img [ref=e371]
+              - menu [ref=e373]:
+                - menuitem "网络" [ref=e374] [cursor=pointer]:
+                  - link "网络" [ref=e375]:
+                    - /url: "#/modules/m15/sections/s01"
+                - menuitem "IP" [ref=e376] [cursor=pointer]:
+                  - link "IP" [ref=e377]:
+                    - /url: "#/modules/m15/sections/s02"
+                - menuitem "端口" [ref=e378] [cursor=pointer]:
+                  - link "端口" [ref=e379]:
+                    - /url: "#/modules/m15/sections/s03"
+                - menuitem "socket套接字" [ref=e380] [cursor=pointer]:
+                  - link "socket套接字" [ref=e381]:
+                    - /url: "#/modules/m15/sections/s04"
+                - menuitem "UDP" [ref=e382] [cursor=pointer]:
+                  - link "UDP" [ref=e383]:
+                    - /url: "#/modules/m15/sections/s05"
+                - menuitem "TCP" [ref=e384] [cursor=pointer]:
+                  - link "TCP" [ref=e385]:
+                    - /url: "#/modules/m15/sections/s06"
+                - menuitem "HTTP" [ref=e386] [cursor=pointer]:
+                  - link "HTTP" [ref=e387]:
+                    - /url: "#/modules/m15/sections/s07"
+                - menuitem "案例：发送HTTP请求以及获取响应数据" [ref=e388] [cursor=pointer]:
+                  - link "案例：发送HTTP请求以及获取响应数据" [ref=e389]:
+                    - /url: "#/modules/m15/sections/s08"
+                - menuitem "案例：通过Starlette 构建web接口" [ref=e390] [cursor=pointer]:
+                  - link "案例：通过Starlette 构建web接口" [ref=e391]:
+                    - /url: "#/modules/m15/sections/s09"
+            - menuitem "正则表达式" [expanded] [ref=e392]:
+              - generic [ref=e393] [cursor=pointer]:
+                - link "正则表达式" [ref=e394]:
+                  - /url: "#/modules/m16"
+                  - img [ref=e396]
+                  - generic [ref=e398]: 正则表达式
+                - img [ref=e400]
+              - menu [ref=e402]:
+                - menuitem "什么是正则表达式" [ref=e403] [cursor=pointer]:
+                  - link "什么是正则表达式" [ref=e404]:
+                    - /url: "#/modules/m16/sections/s01"
+                - menuitem "re模块" [ref=e405] [cursor=pointer]:
+                  - link "re模块" [ref=e406]:
+                    - /url: "#/modules/m16/sections/s02"
+                - menuitem "表示字符" [ref=e407] [cursor=pointer]:
+                  - link "表示字符" [ref=e408]:
+                    - /url: "#/modules/m16/sections/s03"
+                - menuitem "表示数量" [ref=e409] [cursor=pointer]:
+                  - link "表示数量" [ref=e410]:
+                    - /url: "#/modules/m16/sections/s04"
+                - menuitem "表示边界" [ref=e411] [cursor=pointer]:
+                  - link "表示边界" [ref=e412]:
+                    - /url: "#/modules/m16/sections/s05"
+                - menuitem "匹配分组" [ref=e413] [cursor=pointer]:
+                  - link "匹配分组" [ref=e414]:
+                    - /url: "#/modules/m16/sections/s06"
+                - menuitem "原始字符串" [ref=e415] [cursor=pointer]:
+                  - link "原始字符串" [ref=e416]:
+                    - /url: "#/modules/m16/sections/s07"
+                - menuitem "案例" [ref=e417] [cursor=pointer]:
+                  - link "案例" [ref=e418]:
+                    - /url: "#/modules/m16/sections/s08"
+            - menuitem "综合案例：客户信息管理系统" [expanded] [ref=e419]:
+              - generic [ref=e420] [cursor=pointer]:
+                - link "综合案例：客户信息管理系统" [ref=e421]:
+                  - /url: "#/modules/m17"
+                  - img [ref=e423]
+                  - generic [ref=e425]: 综合案例：客户信息管理系统
+                - img [ref=e427]
+              - menu [ref=e429]:
+                - menuitem "需求说明" [ref=e430] [cursor=pointer]:
+                  - link "需求说明" [ref=e431]:
+                    - /url: "#/modules/m17/sections/s01"
+                - menuitem "代码实现" [ref=e432] [cursor=pointer]:
+                  - link "代码实现" [ref=e433]:
+                    - /url: "#/modules/m17/sections/s02"
+  - generic [ref=e434]:
+    - generic [ref=e437]:
+      - generic [ref=e439]:
+        - paragraph [ref=e440]: Python Course Studio
+        - heading "Python 课程学习站" [level=1] [ref=e441]
+      - generic [ref=e442]:
+        - generic [ref=e444]:
+          - img [ref=e447]
+          - textbox "搜索课程内容" [ref=e449]:
+            - /placeholder: 搜索模块、章节或知识点
+        - generic "整体学习进度" [ref=e451]:
+          - generic [ref=e452]: 0/17 已完成
+          - progressbar [ref=e453]:
+            - generic [ref=e456]: 0%
+    - main [ref=e457]:
+      - navigation "当前位置" [ref=e458]:
+        - navigation "Breadcrumb" [ref=e459]:
+          - link "课程首页" [ref=e461]
+      - main [ref=e462]:
+        - generic [ref=e463]:
+          - generic [ref=e464]:
+            - paragraph [ref=e465]: Learning Workspace
+            - heading "从一条清晰路径开始学习 Python" [level=2] [ref=e466]
+            - paragraph [ref=e467]: 课程把 Python1.0 文档整理成可浏览、可搜索、可练习、可记录进度的学习工作台，适合初学者按模块逐步推进。
+            - generic [ref=e468]:
+              - link "继续学习" [ref=e469] [cursor=pointer]:
+                - /url: "#/modules/m01"
+                - button "继续学习" [ref=e470]:
+                  - img [ref=e472]
+                  - generic [ref=e474]: 继续学习
+              - link "进入练习" [ref=e475] [cursor=pointer]:
+                - /url: "#/practice"
+                - button "进入练习" [ref=e476]:
+                  - img [ref=e478]
+                  - generic [ref=e480]: 进入练习
+          - generic [ref=e481]:
+            - generic [ref=e482]: 学习进度
+            - generic [ref=e483]:
+              - strong [ref=e484]: 0/17
+              - progressbar [ref=e485]:
+                - generic [ref=e488]: 0%
+              - paragraph [ref=e489]: 下一站：概述
+              - link "打开模块" [ref=e490] [cursor=pointer]:
+                - /url: "#/modules/m01"
+        - region "课程数据概览" [ref=e491]:
+          - generic [ref=e493]:
+            - img [ref=e495]
+            - strong [ref=e498]: "17"
+            - generic [ref=e499]: 知识模块
+          - generic [ref=e501]:
+            - img [ref=e503]
+            - strong [ref=e506]: "106"
+            - generic [ref=e507]: 课程章节
+          - generic [ref=e509]:
+            - img [ref=e511]
+            - strong [ref=e514]: "343"
+            - generic [ref=e515]: 知识点
+          - generic [ref=e517]:
+            - img [ref=e519]
+            - strong [ref=e521]: "0"
+            - generic [ref=e522]: 已完成模块
+        - generic [ref=e523]:
+          - generic [ref=e524]:
+            - img [ref=e526]
+            - heading "可视化学习路径" [level=3] [ref=e528]
+          - generic [ref=e529]:
+            - link "1 概述 入门" [ref=e530] [cursor=pointer]:
+              - /url: "#/modules/m01"
+              - generic [ref=e531]: "1"
+              - strong [ref=e532]: 概述
+              - generic:
+                - generic: 入门
+            - link "2 快速入门 入门" [ref=e533] [cursor=pointer]:
+              - /url: "#/modules/m02"
+              - generic [ref=e534]: "2"
+              - strong [ref=e535]: 快速入门
+              - generic:
+                - generic: 入门
+            - link "3 基础知识 入门" [ref=e536] [cursor=pointer]:
+              - /url: "#/modules/m03"
+              - generic [ref=e537]: "3"
+              - strong [ref=e538]: 基础知识
+              - generic:
+                - generic: 入门
+            - link "4 流程控制语句 入门" [ref=e539] [cursor=pointer]:
+              - /url: "#/modules/m04"
+              - generic [ref=e540]: "4"
+              - strong [ref=e541]: 流程控制语句
+              - generic:
+                - generic: 入门
+            - link "5 容器数据类型 入门" [ref=e542] [cursor=pointer]:
+              - /url: "#/modules/m05"
+              - generic [ref=e543]: "5"
+              - strong [ref=e544]: 容器数据类型
+              - generic:
+                - generic: 入门
+            - link "6 函数 进阶" [ref=e545] [cursor=pointer]:
+              - /url: "#/modules/m06"
+              - generic [ref=e546]: "6"
+              - strong [ref=e547]: 函数
+              - generic:
+                - generic: 进阶
+            - link "7 文件操作 进阶" [ref=e548] [cursor=pointer]:
+              - /url: "#/modules/m07"
+              - generic [ref=e549]: "7"
+              - strong [ref=e550]: 文件操作
+              - generic:
+                - generic: 进阶
+            - link "8 面向对象之类和对象 进阶" [ref=e551] [cursor=pointer]:
+              - /url: "#/modules/m08"
+              - generic [ref=e552]: "8"
+              - strong [ref=e553]: 面向对象之类和对象
+              - generic:
+                - generic: 进阶
+            - link "9 面向对象之三大特性 进阶" [ref=e554] [cursor=pointer]:
+              - /url: "#/modules/m09"
+              - generic [ref=e555]: "9"
+              - strong [ref=e556]: 面向对象之三大特性
+              - generic:
+                - generic: 进阶
+            - link "10 面向对象案例：愤怒的小鸟 进阶" [ref=e557] [cursor=pointer]:
+              - /url: "#/modules/m10"
+              - generic [ref=e558]: "10"
+              - strong [ref=e559]: 面向对象案例：愤怒的小鸟
+              - generic:
+                - generic: 进阶
+            - link "11 错误和异常 进阶" [ref=e560] [cursor=pointer]:
+              - /url: "#/modules/m11"
+              - generic [ref=e561]: "11"
+              - strong [ref=e562]: 错误和异常
+              - generic:
+                - generic: 进阶
+            - link "12 模块与包 进阶" [ref=e563] [cursor=pointer]:
+              - /url: "#/modules/m12"
+              - generic [ref=e564]: "12"
+              - strong [ref=e565]: 模块与包
+              - generic:
+                - generic: 进阶
+            - link "13 Python高级语法 高级" [ref=e566] [cursor=pointer]:
+              - /url: "#/modules/m13"
+              - generic [ref=e567]: "13"
+              - strong [ref=e568]: Python高级语法
+              - generic:
+                - generic: 高级
+            - link "14 进程与线程 高级" [ref=e569] [cursor=pointer]:
+              - /url: "#/modules/m14"
+              - generic [ref=e570]: "14"
+              - strong [ref=e571]: 进程与线程
+              - generic:
+                - generic: 高级
+            - link "15 网络编程 高级" [ref=e572] [cursor=pointer]:
+              - /url: "#/modules/m15"
+              - generic [ref=e573]: "15"
+              - strong [ref=e574]: 网络编程
+              - generic:
+                - generic: 高级
+            - link "16 正则表达式 进阶" [ref=e575] [cursor=pointer]:
+              - /url: "#/modules/m16"
+              - generic [ref=e576]: "16"
+              - strong [ref=e577]: 正则表达式
+              - generic:
+                - generic: 进阶
+            - link "17 综合案例：客户信息管理系统 高级" [ref=e578] [cursor=pointer]:
+              - /url: "#/modules/m17"
+              - generic [ref=e579]: "17"
+              - strong [ref=e580]: 综合案例：客户信息管理系统
+              - generic:
+                - generic: 高级
+        - generic [ref=e581]:
+          - generic [ref=e582]:
+            - img [ref=e584]
+            - heading "核心能力要点" [level=3] [ref=e586]
+          - generic [ref=e587]:
+            - generic:
+              - generic: 环境搭建
+            - generic:
+              - generic: 语法基础
+            - generic:
+              - generic: 流程控制
+            - generic:
+              - generic: 数据结构
+            - generic:
+              - generic: 函数
+            - generic:
+              - generic: 面向对象
+            - generic:
+              - generic: 文件与异常
+            - generic:
+              - generic: 网络与正则

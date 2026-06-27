@@ -2,30 +2,31 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
-  padding: 18px;
-  border: 1px solid rgba(13, 148, 136, 0.16);
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 16px 50px rgba(15, 118, 110, 0.09);
+  gap: 22px;
+  padding: 14px 16px;
+  border: 1px solid var(--course-border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 12px 34px rgba(15, 58, 56, 0.07);
 }
 
 .course-header__title {
   display: flex;
+  min-width: 0;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
 }
 
-.course-header__menu {
+.course-header__menu.el-button {
   display: none;
 }
 
 .course-header__eyebrow,
 .module-overview__eyebrow {
   margin: 0 0 4px;
-  color: #0d9488;
+  color: var(--course-primary);
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -35,33 +36,34 @@
 .section-list h2,
 .section-detail h2 {
   margin: 0;
-  color: #123937;
+  color: var(--course-text);
   letter-spacing: 0;
 }
 
 .course-header h1 {
-  font-size: 26px;
+  font-size: 24px;
+  line-height: 1.2;
 }
 
 .course-header__tools {
   display: grid;
-  grid-template-columns: minmax(220px, 360px) 220px;
+  grid-template-columns: minmax(230px, 360px) 220px;
   align-items: center;
-  gap: 18px;
+  gap: 16px;
 }
 
 .course-header__progress {
   display: grid;
   gap: 8px;
   min-width: 0;
-  color: #475569;
+  color: var(--course-muted);
   font-size: 13px;
 }
 
 .course-breadcrumb {
   width: 100%;
   max-width: var(--course-content-width);
-  margin: 0 auto 16px;
+  margin: 0 auto 14px;
   padding: 0 4px;
 }
 
@@ -72,7 +74,7 @@
 }
 
 .course-breadcrumb a {
-  color: #0d9488;
+  color: var(--course-primary);
 }
 
 .course-sidebar {
@@ -87,7 +89,8 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 0 8px 18px;
+  margin-bottom: 14px;
+  padding: 10px 8px;
   border-radius: 12px;
   color: inherit;
   text-decoration: none;
@@ -98,20 +101,20 @@
 
 .course-sidebar__brand:hover,
 .course-sidebar__brand:focus-visible {
-  color: #0d9488;
+  color: var(--course-primary);
   background: rgba(13, 148, 136, 0.08);
 }
 
 .course-sidebar__mark {
   display: grid;
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   place-items: center;
-  border-radius: 12px;
+  border-radius: 10px;
   color: #fff;
-  background: #0d9488;
-  font-weight: 800;
-  box-shadow: 0 12px 24px rgba(13, 148, 136, 0.28);
+  background: var(--course-primary);
+  font-weight: 900;
+  box-shadow: 0 10px 22px rgba(13, 148, 136, 0.24);
 }
 
 .course-sidebar__brand small {
@@ -127,7 +130,30 @@
   background: transparent;
 }
 
+.course-sidebar__shortcut.el-menu-item {
+  height: auto;
+  margin-bottom: 8px;
+  padding: 0 !important;
+  border-radius: 10px;
+  color: #334155;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+.course-sidebar__shortcut.el-menu-item.is-active {
+  color: #334155;
+  background: transparent;
+}
+
+.course-sidebar__shortcut.el-menu-item.is-shortcut-active {
+  color: var(--course-primary);
+  background: rgba(13, 148, 136, 0.1);
+}
+
 .course-sidebar__home,
+.course-sidebar__knowledge,
 .course-sidebar__module,
 .course-sidebar__section {
   display: inline-flex;
@@ -141,24 +167,66 @@
 }
 
 .course-sidebar__home {
-  margin-bottom: 12px;
-  padding: 11px 16px;
+  padding: 10px 14px;
   border-radius: 10px;
-  color: #334155;
-  font-weight: 700;
+  color: inherit;
 }
 
-.course-sidebar__home:hover,
-.course-sidebar__home.is-home-active {
-  color: #0d9488;
+.course-sidebar__shortcut.el-menu-item:hover,
+.course-sidebar__home:hover {
+  color: var(--course-primary);
   background: rgba(13, 148, 136, 0.1);
+}
+
+.course-sidebar__knowledge-menu > .el-sub-menu__title {
+  height: auto;
+  margin-bottom: 8px;
+  padding: 10px 14px !important;
+  border-radius: 10px;
+  color: #334155;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+.course-sidebar__knowledge {
+  font-size: 16px;
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+.course-sidebar__knowledge-menu > .el-sub-menu__title:hover {
+  color: var(--course-primary);
+  background: rgba(13, 148, 136, 0.1);
+}
+
+.course-sidebar__knowledge-menu.is-active > .el-sub-menu__title {
+  color: #334155;
+  background: transparent;
+}
+
+.course-sidebar__knowledge-menu.is-knowledge-active > .el-sub-menu__title {
+  color: var(--course-primary);
+  background: rgba(13, 148, 136, 0.1);
+}
+
+.course-sidebar__module-menu.is-active > .el-sub-menu__title {
+  color: #334155;
+}
+
+.course-sidebar__module-menu.is-module-active > .el-sub-menu__title,
+.is-section-active {
+  color: var(--course-primary);
+  background: rgba(13, 148, 136, 0.1);
+  border-radius: 10px;
 }
 
 .course-sidebar__module[aria-current="page"],
 .course-sidebar__section.router-link-active,
 .is-section-active {
-  color: #0d9488;
-  font-weight: 700;
+  color: var(--course-primary);
+  font-weight: 800;
 }
 
 .module-overview,
@@ -166,9 +234,10 @@
 .section-detail__hero,
 .section-detail__panel,
 .section-detail__grid .el-card {
-  border: 1px solid rgba(13, 148, 136, 0.16);
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--course-border);
+  border-radius: 12px;
+  background: var(--course-surface);
+  box-shadow: 0 12px 32px rgba(15, 58, 56, 0.05);
 }
 
 .module-overview__content,
@@ -182,6 +251,7 @@
 .module-overview h2,
 .section-detail h2 {
   font-size: 34px;
+  line-height: 1.18;
 }
 
 .module-overview__summary,
@@ -189,7 +259,7 @@
 .section-detail__grid p {
   max-width: 760px;
   margin: 12px 0 18px;
-  color: #475569;
+  color: var(--course-muted);
   font-size: 16px;
   line-height: 1.75;
 }
@@ -250,7 +320,7 @@
 
 .section-list__topics .el-icon {
   margin-top: 3px;
-  color: #f97316;
+  color: var(--course-accent);
 }
 
 .section-detail__back {
@@ -258,7 +328,7 @@
   align-items: center;
   gap: 6px;
   margin-bottom: 16px;
-  color: #0d9488;
-  font-weight: 700;
+  color: var(--course-primary);
+  font-weight: 800;
   text-decoration: none;
 }

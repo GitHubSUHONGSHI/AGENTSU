@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useRouter } from "vue-router";
-import { Check, Collection, Document, House } from "@element-plus/icons-vue";
+import { Check, Collection, Document, House, Reading } from "@element-plus/icons-vue";
 import type { CourseModule } from "../types/course";
 
 const props = defineProps<{
@@ -10,6 +10,7 @@ const props = defineProps<{
   selectedSectionId?: string;
   completedModuleIds: string[];
   isHomeActive: boolean;
+  isKnowledgeActive: boolean;
   isPracticeActive: boolean;
 }>();
 
@@ -18,25 +19,45 @@ const emit = defineEmits<{
 }>();
 
 const router = useRouter();
-const defaultOpeneds = computed(() => props.modules.map((module) => module.id));
+const knowledgeMenuId = "knowledge";
+const defaultOpeneds = computed(() => [
+  knowledgeMenuId,
+  ...props.modules.map((module) => module.id),
+]);
 const sectionMenuId = (moduleId: string, sectionId: string) => `${moduleId}:${sectionId}`;
-const activeMenuId = computed(() =>
+const routeActiveMenuId = computed(() =>
   props.isPracticeActive
     ? "practice"
     : props.isHomeActive
       ? "home"
-      : props.selectedSectionId
-        ? sectionMenuId(props.selectedModuleId, props.selectedSectionId)
-        : props.selectedModuleId,
+      : props.isKnowledgeActive
+        ? knowledgeMenuId
+        : props.selectedSectionId
+          ? sectionMenuId(props.selectedModuleId, props.selectedSectionId)
+          : props.selectedModuleId,
 );
+const activeMenuId = computed(() => routeActiveMenuId.value);
 const isActiveSection = (moduleId: string, sectionId: string) =>
   !props.isPracticeActive &&
+  !props.isKnowledgeActive &&
   props.selectedModuleId === moduleId &&
   props.selectedSectionId === sectionId;
+const isActiveModule = (moduleId: string) =>
+  !props.isPracticeActive &&
+  !props.isKnowledgeActive &&
+  props.selectedModuleId === moduleId &&
+  !props.selectedSectionId;
+const selectCourseItem = () => {
+  emit("navigate");
+};
 const isCompleted = (moduleId: string) => props.completedModuleIds.includes(moduleId);
 const navigateToPortal = () => {
-  emit("navigate");
+  selectCourseItem();
   void router.push("/");
+};
+const navigateToKnowledge = () => {
+  emit("navigate");
+  void router.push("/knowledge");
 };
 </script>
 
@@ -50,65 +71,94 @@ const navigateToPortal = () => {
       </div>
     </router-link>
 
-    <el-empty v-if="modules.length === 0" description="未找到匹配课程" :image-size="96" />
-    <router-link
-      class="course-sidebar__home"
-      :class="{ 'is-home-active': isHomeActive }"
-      to="/course"
-      :aria-current="isHomeActive ? 'page' : undefined"
-      @click="emit('navigate')"
-    >
-      <el-icon><House /></el-icon>
-      <span>课程首页</span>
-    </router-link>
-
-    <router-link
-      class="course-sidebar__home"
-      :class="{ 'is-home-active': isPracticeActive }"
-      to="/practice"
-      :aria-current="isPracticeActive ? 'page' : undefined"
-      @click="emit('navigate')"
-    >
-      <el-icon><Collection /></el-icon>
-      <span>知识点练习</span>
-    </router-link>
-
     <el-menu
-      v-if="modules.length > 0"
       class="course-sidebar__menu"
       :default-active="activeMenuId"
       :default-openeds="defaultOpeneds"
       unique-opened
     >
-      <el-sub-menu v-for="module in modules" :key="module.id" :index="module.id">
-        <template #title>
-          <router-link
-            class="course-sidebar__module"
-            :to="`/modules/${module.id}`"
-            :aria-current="selectedModuleId === module.id && !selectedSectionId ? 'page' : undefined"
-            @click.stop="emit('navigate')"
-          >
-            <el-icon>
-              <Check v-if="isCompleted(module.id)" />
-              <Document v-else />
-            </el-icon>
-            <span>{{ module.title }}</span>
-          </router-link>
-        </template>
-        <el-menu-item
-          v-for="section in module.sections"
-          :key="sectionMenuId(module.id, section.id)"
-          :index="sectionMenuId(module.id, section.id)"
-          :class="{ 'is-section-active': isActiveSection(module.id, section.id) }"
+      <el-menu-item
+        index="home"
+        class="course-sidebar__shortcut"
+        :class="{ 'is-shortcut-active': activeMenuId === 'home' }"
+      >
+        <router-link
+          class="course-sidebar__home"
+          to="/course"
+          :aria-current="isHomeActive ? 'page' : undefined"
+          @click="emit('navigate')"
         >
-          <router-link
-            class="course-sidebar__section"
-            :to="`/modules/${module.id}/sections/${section.id}`"
-            @click="emit('navigate')"
+          <el-icon><House /></el-icon>
+          <span>课程首页</span>
+        </router-link>
+      </el-menu-item>
+
+      <el-menu-item
+        index="practice"
+        class="course-sidebar__shortcut"
+        :class="{ 'is-shortcut-active': activeMenuId === 'practice' }"
+      >
+        <router-link
+          class="course-sidebar__home"
+          to="/practice"
+          :aria-current="isPracticeActive ? 'page' : undefined"
+          @click="emit('navigate')"
+        >
+          <el-icon><Collection /></el-icon>
+          <span>知识点练习</span>
+        </router-link>
+      </el-menu-item>
+
+      <el-empty v-if="modules.length === 0" description="未找到匹配课程" :image-size="96" />
+      <el-sub-menu
+        v-else
+        :index="knowledgeMenuId"
+        class="course-sidebar__knowledge-menu"
+        :class="{ 'is-knowledge-active': isKnowledgeActive }"
+      >
+        <template #title>
+          <span class="course-sidebar__knowledge" @click.stop="navigateToKnowledge">
+            <el-icon><Reading /></el-icon>
+            <span>知识章节</span>
+          </span>
+        </template>
+
+        <el-sub-menu
+          v-for="module in modules"
+          :key="module.id"
+          :index="module.id"
+          class="course-sidebar__module-menu"
+          :class="{ 'is-module-active': isActiveModule(module.id) }"
+        >
+          <template #title>
+            <router-link
+              class="course-sidebar__module"
+              :to="`/modules/${module.id}`"
+              :aria-current="selectedModuleId === module.id && !selectedSectionId ? 'page' : undefined"
+              @click.stop="selectCourseItem"
+            >
+              <el-icon>
+                <Check v-if="isCompleted(module.id)" />
+                <Document v-else />
+              </el-icon>
+              <span>{{ module.title }}</span>
+            </router-link>
+          </template>
+          <el-menu-item
+            v-for="section in module.sections"
+            :key="sectionMenuId(module.id, section.id)"
+            :index="sectionMenuId(module.id, section.id)"
+            :class="{ 'is-section-active': isActiveSection(module.id, section.id) }"
           >
-            {{ section.title }}
-          </router-link>
-        </el-menu-item>
+            <router-link
+              class="course-sidebar__section"
+              :to="`/modules/${module.id}/sections/${section.id}`"
+              @click.stop="selectCourseItem"
+            >
+              {{ section.title }}
+            </router-link>
+          </el-menu-item>
+        </el-sub-menu>
       </el-sub-menu>
     </el-menu>
   </nav>

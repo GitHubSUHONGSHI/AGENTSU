@@ -15,7 +15,7 @@ export const releaseApiUrl = "https://api.github.com/repos/GitHubSUHONGSHI/AGENT
 export const fallbackReleases: ReleaseInfo[] = [
   {
     id: 130,
-    name: "首版PYTHON练习工程",
+    name: "首版 Python 练习工程",
     tag_name: "v1.3.0",
     html_url: `${repositoryUrl}/releases/tag/v1.3.0`,
     published_at: "2026-06-27T02:33:00Z",
@@ -27,6 +27,6 @@ export const fallbackReleases: ReleaseInfo[] = [
     tag_name: "v1.0.0",
     html_url: `${repositoryUrl}/releases/tag/v1.0.0`,
     published_at: "2026-06-26T00:00:00Z",
-    body: "首个版本已完成课程门户、学习工作台、课程目录和本地进度记录。",
+    body: "完成课程门户、学习工作台、课程目录和本地学习进度记录。",
   },
 ];

@@ -35,7 +35,7 @@ const kindLabel: Record<ExerciseKind, string> = {
 
 const difficultyLabel: Record<ExerciseDifficulty, string> = {
   easy: "简单",
-  hard: "难",
+  hard: "困难",
   deep: "深度",
 };
 
@@ -87,13 +87,14 @@ const operationExampleFor = (context: TopicContext, difficulty: ExerciseDifficul
     ].join("\n");
   }
 
+  const functionName = topic.id.replace(/[^a-zA-Z0-9_]/g, "_");
   return [
-    `def practice_${topic.id.replace(/[^a-zA-Z0-9_]/g, "_")}(value):`,
+    `def practice_${functionName}(value):`,
     `    if value is None:`,
     `        return "缺少测试数据"`,
     `    return f"${topic.title} 已处理: {value}"`,
     ``,
-    `print(practice_${topic.id.replace(/[^a-zA-Z0-9_]/g, "_")}("测试数据"))`,
+    `print(practice_${functionName}("测试数据"))`,
   ].join("\n");
 };
 
@@ -102,20 +103,20 @@ const reflectionExampleFor = (context: TopicContext, difficulty: ExerciseDifficu
   const path = `${module.title} / ${section.title}`;
 
   if (difficulty === "easy") {
-    return `案例：学习「${path}」时，先用一句话解释「${topic.title}」解决的问题，再说出它在小练习中出现的位置。`;
+    return `示例：学习“${path}”时，先用一句话解释“${topic.title}”解决的问题，再说出它在小练习中出现的位置。`;
   }
 
   if (difficulty === "hard") {
-    return `案例：把「${topic.title}」和同章节相邻知识对照，分别写出“适合用它”的场景与“不该强行使用它”的场景。`;
+    return `示例：把“${topic.title}”和同章节相邻知识点对照，分别写出“适合使用它”的场景与“不应该强行使用它”的场景。`;
   }
 
-  return `案例：为「${topic.title}」写一份复盘说明，包含原理、边界、失败原因和改进策略，像给同学做代码评审一样说明取舍。`;
+  return `示例：为“${topic.title}”写一份复盘说明，包含原理、边界、失败原因和改进策略，像给同学做代码评审一样说明取舍。`;
 };
 
 const resultFor = (kind: ExerciseKind, difficulty: ExerciseDifficulty, topic: CourseTopic) => {
   if (kind === "operation") {
     return difficulty === "easy"
-      ? `控制台应输出练习知识点和核心线索，能看出案例确实围绕「${topic.title}」。`
+      ? `控制台应输出练习知识点和核心线索，能看出示例确实围绕“${topic.title}”。`
       : difficulty === "hard"
         ? "有输入时输出处理后的内容；空输入时输出防错提示。"
         : "传入测试数据时返回处理结果；传入 None 时返回明确的失败提示。";
@@ -131,7 +132,7 @@ const resultFor = (kind: ExerciseKind, difficulty: ExerciseDifficulty, topic: Co
 const counterExampleFor = (kind: ExerciseKind, topic: CourseTopic) =>
   kind === "operation"
     ? `反例：只写“使用 ${topic.title} 就可以完成任务”，但没有输入、处理过程或输出结果。问题是无法验证代码是否真的会运行，也无法定位错误发生在哪里。`
-    : `反例：只背诵「${topic.title}」的定义，却没有说明适用场景和边界。问题是看似理解了概念，实际遇到相邻知识点时仍然会混用。`;
+    : `反例：只背诵“${topic.title}”的定义，却没有说明适用场景和边界。问题是看似理解了概念，实际遇到相邻知识点时仍然会混用。`;
 
 const promptFor = (
   context: TopicContext,
@@ -139,11 +140,11 @@ const promptFor = (
   difficulty: ExerciseDifficulty,
 ) => {
   const { module, section, topic } = context;
-  const title = `《${topic.title}》`;
+  const title = `“${topic.title}”`;
   const path = `${module.title} / ${section.title}`;
 
   if (kind === "operation" && difficulty === "easy") {
-    return `围绕 ${title} 完成一个最小操作：写出 3-5 行 Python 示例或操作步骤，体现它在「${path}」中的核心用法。`;
+    return `围绕 ${title} 完成一个最小操作：写出 3-5 行 Python 示例或操作步骤，体现它在“${path}”中的核心用法。`;
   }
 
   if (kind === "reflection" && difficulty === "easy") {
@@ -176,8 +177,9 @@ const answerFor = (
     kind === "operation"
       ? "答案应包含可执行的代码片段或清晰步骤，并能说明输入、处理和输出。"
       : "答案应包含概念解释、适用场景和一个容易混淆的边界。";
+
   return {
-    explanation: `${taskShape} 参考方向：结合「${module.title} / ${section.title}」中的「${topic.title}」，先用摘要“${topic.summary}”定位目标，再参考正文线索“${sourceHint}”。`,
+    explanation: `${taskShape} 参考方向：结合“${module.title} / ${section.title}”中的“${topic.title}”，先用摘要“${topic.summary}”定位目标，再参考正文线索“${sourceHint}”。`,
     example:
       kind === "operation"
         ? operationExampleFor(context, difficulty)
@@ -187,7 +189,7 @@ const answerFor = (
     notes: [
       depthHintFor(difficulty),
       "自检时要能指出案例的输入、处理过程和结果，不能只停留在文字解释。",
-      "反例用于提醒常见误区：没有结果、没有边界、或把相邻概念混用。",
+      "反例用于提醒常见误区：没有结果、没有边界，或把相邻概念混用。",
     ],
   };
 };

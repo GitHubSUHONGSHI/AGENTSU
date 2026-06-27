@@ -9,6 +9,7 @@ const routeParam = (value: string | string[] | undefined) =>
   Array.isArray(value) ? value[0] : value;
 
 const isCourseHomeRoute = computed(() => route.name === "course-home");
+const isKnowledgeRoute = computed(() => route.name === "knowledge");
 const isPracticeRoute = computed(() => String(route.name ?? "").startsWith("practice"));
 const moduleId = computed(() => routeParam(route.params.moduleId));
 const sectionId = computed(() => routeParam(route.params.sectionId));
@@ -35,7 +36,11 @@ const sectionPath = computed(() => `${modulePath.value}/sections/${sectionId.val
       <el-breadcrumb-item v-if="isCourseHomeRoute">课程首页</el-breadcrumb-item>
       <el-breadcrumb-item v-else :to="{ path: '/course' }">课程首页</el-breadcrumb-item>
 
-      <template v-if="isPracticeRoute">
+      <template v-if="isKnowledgeRoute">
+        <el-breadcrumb-item>知识章节</el-breadcrumb-item>
+      </template>
+
+      <template v-else-if="isPracticeRoute">
         <el-breadcrumb-item :to="{ path: '/practice' }">知识点练习</el-breadcrumb-item>
         <el-breadcrumb-item v-if="moduleId">{{ moduleTitle }}</el-breadcrumb-item>
         <el-breadcrumb-item v-if="sectionId">{{ sectionTitle }}</el-breadcrumb-item>

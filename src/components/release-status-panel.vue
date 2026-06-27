@@ -69,7 +69,7 @@ onMounted(async () => {
     <div class="portal-status__header">
       <div>
         <p>Release Channel</p>
-        <h2>发布信息</h2>
+        <h2>站点状态</h2>
       </div>
       <el-button
         class="portal-status__refresh"

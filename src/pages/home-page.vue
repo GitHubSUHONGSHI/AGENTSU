@@ -59,18 +59,18 @@ const isCompleted = (moduleId: string) => completedModuleIds.value.includes(modu
 <template>
   <main class="course-main home-page" id="main-content">
     <section class="home-hero">
-      <div>
-        <p class="home-page__eyebrow">Python Course Studio</p>
-        <h2>Python 课程学习站</h2>
+      <div class="home-hero__copy">
+        <p class="home-page__eyebrow">Learning Workspace</p>
+        <h2>从一条清晰路径开始学习 Python</h2>
         <p>
-          将 Python1.0 文档整理为可浏览、可搜索、可追踪进度的学习路径，并补充完整正文、图片和表格详情。
+          课程把 Python1.0 文档整理成可浏览、可搜索、可练习、可记录进度的学习工作台，适合初学者按模块逐步推进。
         </p>
         <div class="home-hero__actions">
-          <router-link class="home-link-button" to="/modules/m01">
-            <el-button type="primary" :icon="Promotion">开始学习</el-button>
-          </router-link>
           <router-link class="home-link-button" :to="continuePath">
-            <el-button :icon="ArrowRight">继续学习</el-button>
+            <el-button type="primary" :icon="Promotion">继续学习</el-button>
+          </router-link>
+          <router-link class="home-link-button" to="/practice">
+            <el-button :icon="ArrowRight">进入练习</el-button>
           </router-link>
         </div>
       </div>
@@ -82,7 +82,8 @@ const isCompleted = (moduleId: string) => completedModuleIds.value.includes(modu
           :stroke-width="12"
           color="#0d9488"
         />
-        <p>下一站：{{ nextModule?.title ?? "概述" }}</p>
+        <p>下一站：{{ nextModule?.title ?? "课程首页" }}</p>
+        <router-link :to="continuePath">打开模块</router-link>
       </el-card>
     </section>
 

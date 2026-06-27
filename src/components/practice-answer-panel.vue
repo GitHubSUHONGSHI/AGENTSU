@@ -14,17 +14,17 @@ const answerSections = [
   },
   {
     key: "example",
-    title: "案例",
+    title: "示例",
     icon: Document,
   },
   {
     key: "result",
-    title: "结果",
+    title: "预期结果",
     icon: CircleCheck,
   },
   {
     key: "counterExample",
-    title: "反例案例",
+    title: "反例提醒",
     icon: Warning,
   },
 ] as const;
