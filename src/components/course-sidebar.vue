@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useRouter } from "vue-router";
-import { Check, Collection, Document, House, Reading } from "@element-plus/icons-vue";
+import { ChatLineRound, Check, Collection, Document, House, Reading } from "@element-plus/icons-vue";
 import type { CourseModule } from "../types/course";
 
 const props = defineProps<{
@@ -10,6 +10,7 @@ const props = defineProps<{
   selectedSectionId?: string;
   completedModuleIds: string[];
   isHomeActive: boolean;
+  isInterviewActive: boolean;
   isKnowledgeActive: boolean;
   isPracticeActive: boolean;
 }>();
@@ -28,6 +29,8 @@ const sectionMenuId = (moduleId: string, sectionId: string) => `${moduleId}:${se
 const routeActiveMenuId = computed(() =>
   props.isPracticeActive
     ? "practice"
+    : props.isInterviewActive
+      ? "interview"
     : props.isHomeActive
       ? "home"
       : props.isKnowledgeActive
@@ -39,11 +42,13 @@ const routeActiveMenuId = computed(() =>
 const activeMenuId = computed(() => routeActiveMenuId.value);
 const isActiveSection = (moduleId: string, sectionId: string) =>
   !props.isPracticeActive &&
+  !props.isInterviewActive &&
   !props.isKnowledgeActive &&
   props.selectedModuleId === moduleId &&
   props.selectedSectionId === sectionId;
 const isActiveModule = (moduleId: string) =>
   !props.isPracticeActive &&
+  !props.isInterviewActive &&
   !props.isKnowledgeActive &&
   props.selectedModuleId === moduleId &&
   !props.selectedSectionId;
@@ -106,6 +111,22 @@ const navigateToKnowledge = () => {
         >
           <el-icon><Collection /></el-icon>
           <span>知识点练习</span>
+        </router-link>
+      </el-menu-item>
+
+      <el-menu-item
+        index="interview"
+        class="course-sidebar__shortcut"
+        :class="{ 'is-shortcut-active': activeMenuId === 'interview' }"
+      >
+        <router-link
+          class="course-sidebar__home"
+          to="/interview"
+          :aria-current="isInterviewActive ? 'page' : undefined"
+          @click="emit('navigate')"
+        >
+          <el-icon><ChatLineRound /></el-icon>
+          <span>面试八股</span>
         </router-link>
       </el-menu-item>
 

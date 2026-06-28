@@ -9,6 +9,7 @@ const routeParam = (value: string | string[] | undefined) =>
   Array.isArray(value) ? value[0] : value;
 
 const isCourseHomeRoute = computed(() => route.name === "course-home");
+const isInterviewRoute = computed(() => route.name === "interview");
 const isKnowledgeRoute = computed(() => route.name === "knowledge");
 const isPracticeRoute = computed(() => String(route.name ?? "").startsWith("practice"));
 const moduleId = computed(() => routeParam(route.params.moduleId));
@@ -38,6 +39,10 @@ const sectionPath = computed(() => `${modulePath.value}/sections/${sectionId.val
 
       <template v-if="isKnowledgeRoute">
         <el-breadcrumb-item>知识章节</el-breadcrumb-item>
+      </template>
+
+      <template v-else-if="isInterviewRoute">
+        <el-breadcrumb-item>面试八股</el-breadcrumb-item>
       </template>
 
       <template v-else-if="isPracticeRoute">

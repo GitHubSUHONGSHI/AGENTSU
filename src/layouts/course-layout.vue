@@ -10,6 +10,7 @@ const {
   closeNavigation,
   filteredModules,
   isCourseHomeRoute,
+  isInterviewRoute,
   isKnowledgeRoute,
   isMobileNavigationOpen,
   isPracticeRoute,
@@ -29,6 +30,7 @@ const {
         :selected-section-id="activeSectionId"
         :completed-module-ids="progress.completedModuleIds.value"
         :is-home-active="isCourseHomeRoute"
+        :is-interview-active="isInterviewRoute"
         :is-knowledge-active="isKnowledgeRoute"
         :is-practice-active="isPracticeRoute"
         @navigate="closeNavigation"
@@ -67,6 +69,7 @@ const {
         :selected-section-id="activeSectionId"
         :completed-module-ids="progress.completedModuleIds.value"
         :is-home-active="isCourseHomeRoute"
+        :is-interview-active="isInterviewRoute"
         :is-knowledge-active="isKnowledgeRoute"
         :is-practice-active="isPracticeRoute"
         @navigate="closeNavigation"
