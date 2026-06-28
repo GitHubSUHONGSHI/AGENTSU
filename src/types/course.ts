@@ -29,6 +29,16 @@ export interface CourseSearchResult {
   matchedSections: CourseSection[];
 }
 
+export type CourseSearchOptionType = "module" | "section" | "topic";
+
+export interface CourseSearchOption {
+  id: string;
+  type: CourseSearchOptionType;
+  title: string;
+  subtitle: string;
+  path: string;
+}
+
 export interface CourseExercise {
   id: string;
   topicId: string;

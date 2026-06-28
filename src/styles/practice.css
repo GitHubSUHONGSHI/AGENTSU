@@ -59,6 +59,14 @@
   color: var(--course-text);
 }
 
+.practice-page__nav-title span {
+  display: block;
+  margin-top: 3px;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 750;
+}
+
 .practice-page__field {
   display: grid;
   gap: 8px;
@@ -115,6 +123,20 @@
 .practice-page__answer {
   border-top: 1px solid rgba(13, 148, 136, 0.14);
   border-bottom: 0;
+}
+
+.practice-page__answer-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--course-primary);
+  font-weight: 850;
+}
+
+.practice-page__mastery {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 12px;
 }
 
 .practice-answer-panel {
@@ -198,5 +220,10 @@
 
   .practice-page__tags {
     justify-content: flex-start;
+  }
+
+  .practice-page__mastery,
+  .practice-page__mastery .el-button {
+    width: 100%;
   }
 }

@@ -1,16 +1,21 @@
 import { computed, provide, ref, watch } from "vue";
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 import { courseModules } from "../data/python-course";
 import { courseProgressKey } from "../symbols/course-progress";
+import type { CourseSearchOption } from "../types/course";
 import { useCourseProgress } from "./use-course-progress";
 import { useCourseSearch } from "./use-course-search";
 
 export const useCourseLayout = () => {
   const route = useRoute();
+  const router = useRouter();
   const searchKeyword = ref("");
   const isMobileNavigationOpen = ref(false);
 
-  const { filteredModules } = useCourseSearch(courseModules, searchKeyword);
+  const { filteredModules, normalizedKeyword, searchOptions } = useCourseSearch(
+    courseModules,
+    searchKeyword,
+  );
   const progress = useCourseProgress(courseModules.length);
 
   provide(courseProgressKey, progress);
@@ -28,6 +33,22 @@ export const useCourseLayout = () => {
     const value = route.params.sectionId;
     return value ? String(value) : undefined;
   });
+  const activeModule = computed(() =>
+    courseModules.find((module) => module.id === activeModuleId.value),
+  );
+  const activeSection = computed(() =>
+    activeModule.value?.sections.find((section) => section.id === activeSectionId.value),
+  );
+  const activeLocationLabel = computed(() =>
+    activeSection.value?.title ?? activeModule.value?.title ?? "课程首页",
+  );
+  const searchResultCount = computed(() =>
+    filteredModules.value.reduce(
+      (total, module) =>
+        total + module.sections.reduce((sum, section) => sum + section.topics.length, 0),
+      0,
+    ),
+  );
 
   const closeNavigation = () => {
     isMobileNavigationOpen.value = false;
@@ -35,6 +56,11 @@ export const useCourseLayout = () => {
 
   const openNavigation = () => {
     isMobileNavigationOpen.value = true;
+  };
+
+  const selectSearchResult = (option: CourseSearchOption) => {
+    closeNavigation();
+    void router.push(option.path);
   };
 
   watch(
@@ -46,6 +72,7 @@ export const useCourseLayout = () => {
 
   return {
     activeModuleId,
+    activeLocationLabel,
     activeSectionId,
     closeNavigation,
     filteredModules,
@@ -56,7 +83,13 @@ export const useCourseLayout = () => {
     isPracticeRoute,
     openNavigation,
     progress,
+    searchResultCount,
     searchKeyword,
+    searchOptions,
+    searchSummary: computed(() =>
+      normalizedKeyword.value ? `找到 ${searchResultCount.value} 个知识点` : "搜索模块、章节或知识点",
+    ),
+    selectSearchResult,
     totalModules: courseModules.length,
   };
 };

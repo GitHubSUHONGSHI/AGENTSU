@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, ref, watch } from "vue";
 import { useRouter } from "vue-router";
-import { Collection, Reading } from "@element-plus/icons-vue";
+import { Check, Collection, Reading, View } from "@element-plus/icons-vue";
 import {
   exerciseDifficultyLabel,
   exerciseKindLabel,
@@ -11,10 +11,13 @@ import {
 import PracticeAnswerPanel from "../components/practice-answer-panel.vue";
 import { courseModules } from "../data/python-course";
 import { useCourseRoute } from "../composables/use-course-route";
+import { usePracticeProgress, type PracticeStatus } from "../composables/use-practice-progress";
 import type { CourseSection, CourseTopic, ExerciseDifficulty, ExerciseKind } from "../types/course";
 
 const router = useRouter();
 const { moduleId, sectionId, topicId } = useCourseRoute();
+const { setStatus, statusFor } = usePracticeProgress();
+const activeAnswerNames = ref<string[]>([]);
 
 const selectedContext = computed(() =>
   getPracticeTopicContext(moduleId.value, sectionId.value, topicId.value),
@@ -26,6 +29,12 @@ const selectedTopicKey = computed(() => selectedContext.value.topicKey);
 const selectedSections = computed(() => selectedContext.value.module.sections);
 const selectedTopics = computed(() => selectedContext.value.section.topics);
 const exercises = computed(() => getExercisesForTopic(selectedTopicKey.value));
+const statusMeta: Record<PracticeStatus, { label: string; type: "info" | "warning" | "success" }> = {
+  unseen: { label: "未做", type: "info" },
+  viewedAnswer: { label: "已查看答案", type: "warning" },
+  mastered: { label: "已掌握", type: "success" },
+};
+const exerciseStatus = (exerciseId: string) => statusFor(exerciseId);
 const practicePath = (moduleIdValue: string, sectionIdValue: string, topicIdValue: string) =>
   `/practice/modules/${moduleIdValue}/sections/${sectionIdValue}/topics/${topicIdValue}`;
 
@@ -60,6 +69,21 @@ const optionLabel = (item: CourseSection | CourseTopic) => item.title;
 const tagTypeForKind = (kind: ExerciseKind) => (kind === "operation" ? "primary" : "success");
 const tagTypeForDifficulty = (difficulty: ExerciseDifficulty) =>
   difficulty === "easy" ? "info" : difficulty === "hard" ? "warning" : "danger";
+const markMastered = (exerciseId: string) => {
+  setStatus(exerciseId, "mastered");
+};
+
+watch(activeAnswerNames, (names) => {
+  names.forEach((name) => {
+    if (statusFor(name) === "unseen") {
+      setStatus(name, "viewedAnswer");
+    }
+  });
+});
+
+watch(selectedTopicKey, () => {
+  activeAnswerNames.value = [];
+});
 </script>
 
 <template>
@@ -76,7 +100,10 @@ const tagTypeForDifficulty = (difficulty: ExerciseDifficulty) =>
       <aside class="practice-page__nav" aria-label="选择练习知识点">
         <div class="practice-page__nav-title">
           <el-icon><Collection /></el-icon>
-          <strong>练习目录</strong>
+          <div>
+            <strong>练习目录</strong>
+            <span>模块 → 章节 → 知识点</span>
+          </div>
         </div>
 
         <label class="practice-page__field">
@@ -141,6 +168,9 @@ const tagTypeForDifficulty = (difficulty: ExerciseDifficulty) =>
             <div class="practice-page__exercise-head">
               <h4 :id="`${exercise.id}-title`">{{ exercise.prompt }}</h4>
               <div class="practice-page__tags">
+                <el-tag :type="statusMeta[exerciseStatus(exercise.id)].type" effect="dark">
+                  {{ statusMeta[exerciseStatus(exercise.id)].label }}
+                </el-tag>
                 <el-tag :type="tagTypeForKind(exercise.kind)" effect="plain">
                   {{ exerciseKindLabel[exercise.kind] }}
                 </el-tag>
@@ -150,9 +180,24 @@ const tagTypeForDifficulty = (difficulty: ExerciseDifficulty) =>
               </div>
             </div>
 
-            <el-collapse class="practice-page__answer">
-              <el-collapse-item title="查看参考答案 / 自检提示" :name="exercise.id">
+            <el-collapse v-model="activeAnswerNames" class="practice-page__answer">
+              <el-collapse-item :name="exercise.id">
+                <template #title>
+                  <span class="practice-page__answer-title">
+                    <el-icon><View /></el-icon>
+                    先独立思考，再查看参考答案
+                  </span>
+                </template>
                 <PracticeAnswerPanel :answer="exercise.answer" />
+                <div class="practice-page__mastery">
+                  <el-button
+                    :type="exerciseStatus(exercise.id) === 'mastered' ? 'success' : 'primary'"
+                    :icon="Check"
+                    @click="markMastered(exercise.id)"
+                  >
+                    {{ exerciseStatus(exercise.id) === "mastered" ? "已掌握" : "标记为已掌握" }}
+                  </el-button>
+                </div>
               </el-collapse-item>
             </el-collapse>
           </section>

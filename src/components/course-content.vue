@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, ref } from "vue";
+import { CopyDocument, ZoomIn } from "@element-plus/icons-vue";
 import type { CourseContentBlock, CourseTableCell } from "../types/course";
 
 const props = defineProps<{
@@ -8,8 +9,27 @@ const props = defineProps<{
 
 const baseUrl = import.meta.env.BASE_URL;
 const hasContent = computed(() => props.blocks.length > 0);
+const copiedCodeIndex = ref<number | null>(null);
+const previewImage = ref("");
+const isPreviewOpen = computed({
+  get: () => Boolean(previewImage.value),
+  set: (value: boolean) => {
+    if (!value) {
+      previewImage.value = "";
+    }
+  },
+});
 const imageSrc = (src: string) => `${baseUrl}${src}`;
 const cellLines = (cell: CourseTableCell) => cell.text.split("\n").filter(Boolean);
+const copyCode = async (code: string, index: number) => {
+  await navigator.clipboard.writeText(code);
+  copiedCodeIndex.value = index;
+  window.setTimeout(() => {
+    if (copiedCodeIndex.value === index) {
+      copiedCodeIndex.value = null;
+    }
+  }, 1400);
+};
 </script>
 
 <template>
@@ -31,14 +51,27 @@ const cellLines = (cell: CourseTableCell) => cell.text.split("\n").filter(Boolea
         <li v-for="item in block.items" :key="item">{{ item }}</li>
       </ul>
 
-      <pre v-else-if="block.kind === 'code'" class="course-content__code"><code>{{ block.code }}</code></pre>
+      <div v-else-if="block.kind === 'code'" class="course-content__code-wrap">
+        <button class="course-content__copy" type="button" @click="copyCode(block.code, index)">
+          <el-icon><CopyDocument /></el-icon>
+          {{ copiedCodeIndex === index ? "已复制" : "复制代码" }}
+        </button>
+        <pre class="course-content__code"><code>{{ block.code }}</code></pre>
+      </div>
 
       <figure v-else-if="block.kind === 'image'" class="course-content__figure">
-        <img :src="imageSrc(block.src)" :alt="block.alt" loading="lazy" />
+        <button class="course-content__image-button" type="button" @click="previewImage = imageSrc(block.src)">
+          <img :src="imageSrc(block.src)" :alt="block.alt" loading="lazy" />
+          <span>
+            <el-icon><ZoomIn /></el-icon>
+            放大查看
+          </span>
+        </button>
         <figcaption v-if="block.alt">{{ block.alt }}</figcaption>
       </figure>
 
       <div v-else-if="block.kind === 'table'" class="course-content__table-wrap">
+        <span class="course-content__table-hint">表格可横向滑动查看</span>
         <table class="course-content__table">
           <thead v-if="block.hasHeader && block.rows[0]">
             <tr>
@@ -70,6 +103,9 @@ const cellLines = (cell: CourseTableCell) => cell.text.split("\n").filter(Boolea
         </table>
       </div>
     </template>
+    <el-dialog v-model="isPreviewOpen" title="图片预览" width="min(920px, 94vw)">
+      <img class="course-content__preview" :src="previewImage" alt="课程图片预览" />
+    </el-dialog>
   </article>
   <el-empty v-else description="暂无正文内容" />
 </template>

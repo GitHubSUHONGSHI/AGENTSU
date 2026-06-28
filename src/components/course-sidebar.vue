@@ -56,6 +56,7 @@ const selectCourseItem = () => {
   emit("navigate");
 };
 const isCompleted = (moduleId: string) => props.completedModuleIds.includes(moduleId);
+const sectionCountLabel = (module: CourseModule) => `${module.sections.length} 章`;
 const navigateToPortal = () => {
   selectCourseItem();
   void router.push("/");
@@ -80,7 +81,6 @@ const navigateToKnowledge = () => {
       class="course-sidebar__menu"
       :default-active="activeMenuId"
       :default-openeds="defaultOpeneds"
-      unique-opened
     >
       <el-menu-item
         index="home"
@@ -163,6 +163,7 @@ const navigateToKnowledge = () => {
                 <Document v-else />
               </el-icon>
               <span>{{ module.title }}</span>
+              <small>{{ sectionCountLabel(module) }}</small>
             </router-link>
           </template>
           <el-menu-item

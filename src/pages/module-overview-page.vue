@@ -1,15 +1,26 @@
 <script setup lang="ts">
-import { computed, inject } from "vue";
+import { computed, inject, watchEffect } from "vue";
 import ModuleOverview from "../components/module-overview.vue";
 import SectionList from "../components/section-list.vue";
 import { courseProgressKey } from "../symbols/course-progress";
 import { useCourseRoute } from "../composables/use-course-route";
+import { useRecentLearning } from "../composables/use-recent-learning";
 
 const { module } = useCourseRoute();
 const progress = inject(courseProgressKey);
+const { writeRecentLearning } = useRecentLearning();
 
 const completed = computed(() => (module.value ? progress?.isCompleted(module.value.id) ?? false : false));
 const toggleCompleted = (moduleId: string) => progress?.toggleCompleted(moduleId);
+
+watchEffect(() => {
+  if (module.value) {
+    writeRecentLearning({
+      moduleId: module.value.id,
+      title: module.value.title,
+    });
+  }
+});
 </script>
 
 <template>

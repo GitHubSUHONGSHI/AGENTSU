@@ -11,6 +11,7 @@ import {
   TrendCharts,
 } from "@element-plus/icons-vue";
 import { courseModules } from "../data/python-course";
+import { useRecentLearning } from "../composables/use-recent-learning";
 import { courseProgressKey } from "../symbols/course-progress";
 import type { Difficulty } from "../types/course";
 
@@ -21,6 +22,7 @@ type DifficultyMeta = {
 };
 
 const progress = inject(courseProgressKey);
+const { recentPath, recentTitle } = useRecentLearning();
 const difficultyMap: Record<Difficulty, DifficultyMeta> = {
   beginner: { label: "入门", type: "success", className: "is-beginner" },
   intermediate: { label: "进阶", type: "warning", className: "is-intermediate" },
@@ -53,6 +55,8 @@ const nextModule = computed(
   () => courseModules.find((module) => !completedModuleIds.value.includes(module.id)) ?? courseModules[0],
 );
 const continuePath = computed(() => `/modules/${nextModule.value?.id ?? "m01"}`);
+const smartContinuePath = computed(() => recentPath.value || continuePath.value);
+const smartContinueTitle = computed(() => recentPath.value ? recentTitle.value : nextModule.value?.title ?? "课程首页");
 const isCompleted = (moduleId: string) => completedModuleIds.value.includes(moduleId);
 </script>
 
@@ -66,7 +70,7 @@ const isCompleted = (moduleId: string) => completedModuleIds.value.includes(modu
           课程把 Python1.0 文档整理成可浏览、可搜索、可练习、可记录进度的学习工作台，适合初学者按模块逐步推进。
         </p>
         <div class="home-hero__actions">
-          <router-link class="home-link-button" :to="continuePath">
+          <router-link class="home-link-button" :to="smartContinuePath">
             <el-button type="primary" :icon="Promotion">继续学习</el-button>
           </router-link>
           <router-link class="home-link-button" to="/practice">
@@ -82,8 +86,8 @@ const isCompleted = (moduleId: string) => completedModuleIds.value.includes(modu
           :stroke-width="12"
           color="#0d9488"
         />
-        <p>下一站：{{ nextModule?.title ?? "课程首页" }}</p>
-        <router-link :to="continuePath">打开模块</router-link>
+        <p>当前任务：{{ smartContinueTitle }}</p>
+        <router-link :to="smartContinuePath">打开学习任务</router-link>
       </el-card>
     </section>
 

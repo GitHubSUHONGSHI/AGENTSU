@@ -1,14 +1,19 @@
 <script setup lang="ts">
-import { computed, inject } from "vue";
-import { ArrowLeft, Check, Document, Picture, Reading } from "@element-plus/icons-vue";
+import { computed, inject, watchEffect } from "vue";
+import { ArrowLeft, Check, Collection, Document, Picture, Reading } from "@element-plus/icons-vue";
 import CourseContent from "../components/course-content.vue";
 import { useCourseRoute } from "../composables/use-course-route";
 import { courseProgressKey } from "../symbols/course-progress";
+import { useRecentLearning } from "../composables/use-recent-learning";
 
 const { module, section, topic } = useCourseRoute();
 const progress = inject(courseProgressKey);
+const { writeRecentLearning } = useRecentLearning();
 
 const completed = computed(() => (module.value ? progress?.isCompleted(module.value.id) ?? false : false));
+const headingCount = computed(() =>
+  topic.value?.contentBlocks.filter((block) => block.kind === "heading").length ?? 0,
+);
 const tableCount = computed(() =>
   topic.value?.contentBlocks.filter((block) => block.kind === "table").length ?? 0,
 );
@@ -23,6 +28,17 @@ const toggleCompleted = () => {
     progress?.toggleCompleted(module.value.id);
   }
 };
+
+watchEffect(() => {
+  if (module.value && section.value && topic.value) {
+    writeRecentLearning({
+      moduleId: module.value.id,
+      sectionId: section.value.id,
+      topicId: topic.value.id,
+      title: topic.value.title,
+    });
+  }
+});
 </script>
 
 <template>
@@ -57,6 +73,21 @@ const toggleCompleted = () => {
         </el-tag>
       </div>
     </el-card>
+
+    <aside class="learning-taskbar" aria-label="当前知识点学习操作">
+      <div>
+        <span>本节要点</span>
+        <strong>{{ headingCount }} 个小节，{{ topic.contentBlocks.length }} 个内容块。</strong>
+      </div>
+      <div class="learning-taskbar__actions">
+        <router-link :to="`/practice/modules/${module.id}/sections/${section.id}/topics/${topic.id}`">
+          <el-button :icon="Collection">练习本知识点</el-button>
+        </router-link>
+        <el-button :type="completed ? 'success' : 'primary'" :icon="Check" @click="toggleCompleted">
+          {{ completed ? "已完成" : "标记完成" }}
+        </el-button>
+      </div>
+    </aside>
 
     <el-card class="topic-detail__content" shadow="never">
       <CourseContent :blocks="topic.contentBlocks" />

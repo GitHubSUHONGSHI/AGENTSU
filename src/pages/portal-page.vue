@@ -14,8 +14,10 @@ import ReleaseStatusPanel from "../components/release-status-panel.vue";
 import { courseModules } from "../data/python-course";
 import { personalSiteUrl, repositoryUrl } from "../data/release-history";
 import { useCourseProgress } from "../composables/use-course-progress";
+import { useRecentLearning } from "../composables/use-recent-learning";
 
 const progress = useCourseProgress(courseModules.length);
+const { recentPath, recentTitle } = useRecentLearning();
 
 const completedCount = computed(() => progress.completedCount.value);
 const sectionCount = computed(() =>
@@ -33,7 +35,8 @@ const nextModule = computed(
     courseModules.find((module) => !progress.completedModuleIds.value.includes(module.id)) ??
     courseModules[0],
 );
-const continuePath = computed(() => `/modules/${nextModule.value?.id ?? "m01"}`);
+const continuePath = computed(() => recentPath.value || `/modules/${nextModule.value?.id ?? "m01"}`);
+const continueLabel = computed(() => (recentPath.value ? recentTitle.value : nextModule.value?.title ?? "课程首页"));
 </script>
 
 <template>
@@ -54,7 +57,10 @@ const continuePath = computed(() => `/modules/${nextModule.value?.id ?? "m01"}`)
             <el-button type="primary" size="large" :icon="Promotion">继续学习</el-button>
           </router-link>
           <router-link class="portal-link-button" to="/practice">
-            <el-button size="large" :icon="Reading">进入练习</el-button>
+            <el-button size="large" text :icon="Reading">进入练习</el-button>
+          </router-link>
+          <router-link class="portal-link-button" to="/course">
+            <el-button size="large" text>课程工作台</el-button>
           </router-link>
         </div>
 
@@ -65,10 +71,10 @@ const continuePath = computed(() => `/modules/${nextModule.value?.id ?? "m01"}`)
         </div>
       </div>
 
-      <aside class="portal-progress" aria-label="学习进度概览">
+      <aside class="portal-progress" aria-label="继续学习任务">
         <div class="portal-progress__header">
-          <p>Learning Progress</p>
-          <h2>{{ completedCount }}/{{ courseModules.length }} 已完成</h2>
+          <p>Next Step</p>
+          <h2>{{ continueLabel }}</h2>
         </div>
         <el-progress
           type="dashboard"
@@ -77,11 +83,11 @@ const continuePath = computed(() => `/modules/${nextModule.value?.id ?? "m01"}`)
           color="#0d9488"
         />
         <div class="portal-progress__next">
-          <span>下一站</span>
-          <strong>{{ nextModule?.title ?? "课程首页" }}</strong>
+          <span>整体进度</span>
+          <strong>{{ completedCount }}/{{ courseModules.length }} 个模块已完成</strong>
         </div>
         <router-link class="portal-progress__link" :to="continuePath">
-          打开当前模块
+          打开当前学习任务
           <el-icon><ArrowRight /></el-icon>
         </router-link>
       </aside>

@@ -1,19 +1,36 @@
 <script setup lang="ts">
-import { computed, inject } from "vue";
-import { ArrowLeft, Check, Document, Reading } from "@element-plus/icons-vue";
+import { computed, inject, watchEffect } from "vue";
+import { ArrowLeft, Check, Collection, Document, Reading } from "@element-plus/icons-vue";
 import { courseProgressKey } from "../symbols/course-progress";
 import { useCourseRoute } from "../composables/use-course-route";
+import { useRecentLearning } from "../composables/use-recent-learning";
 
 const { module, section } = useCourseRoute();
 const progress = inject(courseProgressKey);
+const { writeRecentLearning } = useRecentLearning();
 
 const completed = computed(() => (module.value ? progress?.isCompleted(module.value.id) ?? false : false));
 const topicCount = computed(() => section.value?.topics.length ?? 0);
+const firstTopicPath = computed(() =>
+  module.value && section.value && section.value.topics[0]
+    ? `/modules/${module.value.id}/sections/${section.value.id}/topics/${section.value.topics[0].id}`
+    : "/course",
+);
 const toggleCompleted = () => {
   if (module.value) {
     progress?.toggleCompleted(module.value.id);
   }
 };
+
+watchEffect(() => {
+  if (module.value && section.value) {
+    writeRecentLearning({
+      moduleId: module.value.id,
+      sectionId: section.value.id,
+      title: section.value.title,
+    });
+  }
+});
 </script>
 
 <template>
@@ -44,6 +61,24 @@ const toggleCompleted = () => {
         </el-tag>
       </div>
     </el-card>
+
+    <aside class="learning-taskbar" aria-label="本节学习操作">
+      <div>
+        <span>本节要点</span>
+        <strong>{{ topicCount }} 个知识点，建议按顺序阅读后进入练习。</strong>
+      </div>
+      <div class="learning-taskbar__actions">
+        <router-link :to="firstTopicPath">
+          <el-button :icon="Reading">开始阅读</el-button>
+        </router-link>
+        <router-link to="/practice">
+          <el-button :icon="Collection">进入练习</el-button>
+        </router-link>
+        <el-button :type="completed ? 'success' : 'primary'" :icon="Check" @click="toggleCompleted">
+          {{ completed ? "已完成" : "标记完成" }}
+        </el-button>
+      </div>
+    </aside>
 
     <section class="topic-cards" aria-labelledby="topic-cards-title">
       <div class="section-list__heading">

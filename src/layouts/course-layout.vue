@@ -6,6 +6,7 @@ import { useCourseLayout } from "../composables/use-course-layout";
 
 const {
   activeModuleId,
+  activeLocationLabel,
   activeSectionId,
   closeNavigation,
   filteredModules,
@@ -16,7 +17,10 @@ const {
   isPracticeRoute,
   openNavigation,
   progress,
+  searchSummary,
   searchKeyword,
+  searchOptions,
+  selectSearchResult,
   totalModules,
 } = useCourseLayout();
 </script>
@@ -43,9 +47,12 @@ const {
           <CourseHeader
             v-model:keyword="searchKeyword"
             :completed-count="progress.completedCount.value"
+            :search-summary="searchSummary"
+            :search-options="searchOptions"
             :total-count="totalModules"
             :progress-percent="progress.progressPercent.value"
             @open-navigation="openNavigation"
+            @select-search-result="selectSearchResult"
           />
         </div>
       </el-header>
@@ -63,6 +70,11 @@ const {
       size="86%"
       class="app-shell__drawer"
     >
+      <div class="app-shell__drawer-status">
+        <span>当前位置</span>
+        <strong>{{ activeLocationLabel }}</strong>
+        <router-link to="/course" @click="closeNavigation">继续回到课程首页</router-link>
+      </div>
       <CourseSidebar
         :modules="filteredModules"
         :selected-module-id="activeModuleId"

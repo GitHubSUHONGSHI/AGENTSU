@@ -16,7 +16,7 @@
 
 .portal-hero {
   display: grid;
-  min-height: calc(100vh - 110px);
+  min-height: min(760px, calc(100vh - 72px));
   grid-template-columns: minmax(0, 1.14fr) minmax(320px, 0.86fr);
   align-items: center;
   gap: 26px;
@@ -136,6 +136,10 @@
 
 .portal-progress {
   justify-items: center;
+  border-color: rgba(13, 148, 136, 0.24);
+  background:
+    linear-gradient(180deg, rgba(240, 253, 250, 0.8), #ffffff 46%),
+    #fff;
 }
 
 .portal-progress__header {
