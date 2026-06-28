@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
+    "audit:content": "node scripts/audit-course-content.mjs",
     "check:practice": "node scripts/validate-practice-coverage.mjs",
     "preview": "vite preview"
   },

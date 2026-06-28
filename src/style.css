@@ -1,7 +1,10 @@
 @import "./styles/base.css";
+@import "./styles/course-header.css";
 @import "./styles/course.css";
+@import "./styles/course-detail.css";
 @import "./styles/course-sidebar.css";
 @import "./styles/content.css";
+@import "./styles/content-outline.css";
 @import "./styles/home.css";
 @import "./styles/interview.css";
 @import "./styles/knowledge.css";

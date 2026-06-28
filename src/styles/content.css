@@ -57,6 +57,18 @@
   line-height: 1.65;
 }
 
+.topic-cards__item small {
+  color: #475569;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.topic-cards__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
 .topic-detail__content {
   border: 1px solid var(--course-border);
   border-radius: 12px;

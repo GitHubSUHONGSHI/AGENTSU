@@ -10,7 +10,18 @@ const props = defineProps<{
 const baseUrl = import.meta.env.BASE_URL;
 const hasContent = computed(() => props.blocks.length > 0);
 const copiedCodeIndex = ref<number | null>(null);
+const copyFailedIndex = ref<number | null>(null);
 const previewImage = ref("");
+const outlineItems = computed(() =>
+  props.blocks
+    .map((block, index) => ({ block, index }))
+    .filter((item) => item.block.kind === "heading")
+    .map((item) => ({
+      id: headingId(item.index),
+      text: item.block.kind === "heading" ? item.block.text : "",
+      level: item.block.kind === "heading" ? item.block.level : 3,
+    })),
+);
 const isPreviewOpen = computed({
   get: () => Boolean(previewImage.value),
   set: (value: boolean) => {
@@ -21,19 +32,39 @@ const isPreviewOpen = computed({
 });
 const imageSrc = (src: string) => `${baseUrl}${src}`;
 const cellLines = (cell: CourseTableCell) => cell.text.split("\n").filter(Boolean);
+const headingId = (index: number) => `content-heading-${index}`;
 const copyCode = async (code: string, index: number) => {
-  await navigator.clipboard.writeText(code);
-  copiedCodeIndex.value = index;
+  try {
+    await navigator.clipboard.writeText(code);
+    copiedCodeIndex.value = index;
+    copyFailedIndex.value = null;
+  } catch {
+    copyFailedIndex.value = index;
+  }
+
   window.setTimeout(() => {
-    if (copiedCodeIndex.value === index) {
-      copiedCodeIndex.value = null;
-    }
+    if (copiedCodeIndex.value === index) copiedCodeIndex.value = null;
+    if (copyFailedIndex.value === index) copyFailedIndex.value = null;
   }, 1400);
 };
 </script>
 
 <template>
   <article v-if="hasContent" class="course-content">
+    <nav v-if="outlineItems.length" class="course-content__outline" aria-label="正文小节目录">
+      <strong>本知识点小节</strong>
+      <div>
+        <a
+          v-for="item in outlineItems"
+          :key="item.id"
+          :href="`#${item.id}`"
+          :class="{ 'course-content__outline-link--nested': item.level > 3 }"
+        >
+          {{ item.text }}
+        </a>
+      </div>
+    </nav>
+
     <template v-for="(block, index) in blocks" :key="index">
       <p v-if="block.kind === 'paragraph'" class="course-content__paragraph">
         {{ block.text }}
@@ -42,6 +73,7 @@ const copyCode = async (code: string, index: number) => {
       <component
         :is="block.level <= 3 ? 'h3' : 'h4'"
         v-else-if="block.kind === 'heading'"
+        :id="headingId(index)"
         class="course-content__heading"
       >
         {{ block.text }}
@@ -54,7 +86,7 @@ const copyCode = async (code: string, index: number) => {
       <div v-else-if="block.kind === 'code'" class="course-content__code-wrap">
         <button class="course-content__copy" type="button" @click="copyCode(block.code, index)">
           <el-icon><CopyDocument /></el-icon>
-          {{ copiedCodeIndex === index ? "已复制" : "复制代码" }}
+          {{ copyFailedIndex === index ? "复制失败" : copiedCodeIndex === index ? "已复制" : "复制代码" }}
         </button>
         <pre class="course-content__code"><code>{{ block.code }}</code></pre>
       </div>

@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { computed, inject, watchEffect } from "vue";
-import { ArrowLeft, Check, Collection, Document, Reading } from "@element-plus/icons-vue";
+import { ArrowLeft, Check, Collection, Document, Picture, Reading } from "@element-plus/icons-vue";
 import { courseProgressKey } from "../symbols/course-progress";
 import { useCourseRoute } from "../composables/use-course-route";
 import { useRecentLearning } from "../composables/use-recent-learning";
+import { sectionContentStats, topicContentStats, topicExcerpt } from "../utils/course-content-stats";
 
 const { module, section } = useCourseRoute();
 const progress = inject(courseProgressKey);
@@ -11,6 +12,7 @@ const { writeRecentLearning } = useRecentLearning();
 
 const completed = computed(() => (module.value ? progress?.isCompleted(module.value.id) ?? false : false));
 const topicCount = computed(() => section.value?.topics.length ?? 0);
+const stats = computed(() => (section.value ? sectionContentStats(section.value) : null));
 const firstTopicPath = computed(() =>
   module.value && section.value && section.value.topics[0]
     ? `/modules/${module.value.id}/sections/${section.value.id}/topics/${section.value.topics[0].id}`
@@ -57,7 +59,11 @@ watchEffect(() => {
         </el-tag>
         <el-tag effect="plain">
           <el-icon><Document /></el-icon>
-          正文详情可读
+          {{ stats?.blocks ?? 0 }} 个正文块
+        </el-tag>
+        <el-tag effect="plain">
+          <el-icon><Picture /></el-icon>
+          {{ stats?.code ?? 0 }} 代码 / {{ stats?.images ?? 0 }} 图 / {{ stats?.tables ?? 0 }} 表
         </el-tag>
       </div>
     </el-card>
@@ -94,6 +100,14 @@ watchEffect(() => {
         >
           <strong>{{ topic.title }}</strong>
           <span>{{ topic.summary }}</span>
+          <small>{{ topicExcerpt(topic) }}</small>
+          <div class="topic-cards__meta">
+            <el-tag size="small" effect="plain">{{ topicContentStats(topic).blocks }} 块</el-tag>
+            <el-tag size="small" effect="plain">{{ topicContentStats(topic).code }} 代码</el-tag>
+            <el-tag size="small" effect="plain">
+              {{ topicContentStats(topic).images }} 图 / {{ topicContentStats(topic).tables }} 表
+            </el-tag>
+          </div>
         </router-link>
       </div>
     </section>

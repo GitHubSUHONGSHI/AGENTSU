@@ -102,33 +102,35 @@ const selectSuggestion = (suggestion: HeaderSearchSuggestion) => {
     </div>
 
     <div class="course-header__tools">
-      <el-autocomplete
-        v-model="searchValue"
-        class="course-header__search"
-        clearable
-        value-key="value"
-        placeholder="搜索模块、章节或知识点"
-        :prefix-icon="Search"
-        :fetch-suggestions="querySearch"
-        :trigger-on-focus="false"
-        popper-class="course-search-popper"
-        aria-label="搜索课程内容"
-        @select="selectSuggestion"
-      >
-        <template #default="{ item }">
-          <div
-            class="course-search-option"
-            :class="{ 'course-search-option--empty': item.isEmpty }"
-          >
-            <span class="course-search-option__type">{{ item.typeLabel }}</span>
-            <span class="course-search-option__body">
-              <strong>{{ item.title }}</strong>
-              <small>{{ item.subtitle }}</small>
-            </span>
-          </div>
-        </template>
-      </el-autocomplete>
-      <span class="course-header__search-summary" aria-live="polite">{{ searchSummary }}</span>
+      <div class="course-header__search-panel">
+        <el-autocomplete
+          v-model="searchValue"
+          class="course-header__search"
+          clearable
+          value-key="value"
+          placeholder="搜索模块、章节或知识点"
+          :prefix-icon="Search"
+          :fetch-suggestions="querySearch"
+          :trigger-on-focus="false"
+          popper-class="course-search-popper"
+          aria-label="搜索课程内容"
+          @select="selectSuggestion"
+        >
+          <template #default="{ item }">
+            <div
+              class="course-search-option"
+              :class="{ 'course-search-option--empty': item.isEmpty }"
+            >
+              <span class="course-search-option__type">{{ item.typeLabel }}</span>
+              <span class="course-search-option__body">
+                <strong>{{ item.title }}</strong>
+                <small>{{ item.subtitle }}</small>
+              </span>
+            </div>
+          </template>
+        </el-autocomplete>
+        <span class="course-header__search-summary" aria-live="polite">{{ searchSummary }}</span>
+      </div>
       <div class="course-header__progress" aria-label="整体学习进度">
         <span>{{ completedCount }}/{{ totalCount }} 已完成</span>
         <el-progress :percentage="progressPercent" :stroke-width="10" color="#0d9488" />
