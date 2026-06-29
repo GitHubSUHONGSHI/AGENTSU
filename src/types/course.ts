@@ -1,6 +1,14 @@
 export type Difficulty = "beginner" | "intermediate" | "advanced";
 export type ExerciseKind = "operation" | "reflection";
 export type ExerciseDifficulty = "easy" | "hard" | "deep";
+export type CourseGlossaryCategory =
+  | "syntax"
+  | "concept"
+  | "data"
+  | "function"
+  | "oop"
+  | "advanced"
+  | "runtime";
 
 export interface CourseTopic {
   id: string;
@@ -54,6 +62,22 @@ export interface CourseExerciseAnswer {
   result: string;
   counterExample: string;
   notes: string[];
+}
+
+export interface CourseGlossaryEntry {
+  term: string;
+  category: CourseGlossaryCategory;
+  description: string;
+  hint: string;
+  aliases?: string[];
+}
+
+export interface CourseGlossaryReference {
+  moduleTitle: string;
+  sectionTitle: string;
+  topicTitle: string;
+  path: string;
+  matchCount: number;
 }
 
 export type CourseContentBlock =
