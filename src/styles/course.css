@@ -143,7 +143,7 @@
   top: 104px;
   z-index: 4;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 16px;
   padding: 14px 16px;
@@ -153,12 +153,29 @@
   box-shadow: 0 14px 32px rgba(15, 58, 56, 0.07);
 }
 
+.learning-taskbar__content {
+  min-width: 0;
+}
+
 .learning-taskbar span {
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   color: var(--course-primary);
   font-size: 12px;
   font-weight: 900;
+}
+
+.learning-taskbar ul {
+  display: grid;
+  gap: 5px;
+  margin: 0;
+  padding-left: 18px;
+  color: var(--course-text);
+  line-height: 1.5;
+}
+
+.learning-taskbar li {
+  padding-left: 2px;
 }
 
 .learning-taskbar strong {
@@ -178,6 +195,7 @@
   .learning-taskbar {
     position: static;
     display: grid;
+    gap: 12px;
   }
 
   .learning-taskbar__actions,

@@ -5,6 +5,7 @@ import { courseProgressKey } from "../symbols/course-progress";
 import { useCourseRoute } from "../composables/use-course-route";
 import { useRecentLearning } from "../composables/use-recent-learning";
 import { sectionContentStats, topicContentStats, topicExcerpt } from "../utils/course-content-stats";
+import { sectionLearningPoints } from "../utils/course-learning-points";
 
 const { module, section } = useCourseRoute();
 const progress = inject(courseProgressKey);
@@ -13,6 +14,7 @@ const { writeRecentLearning } = useRecentLearning();
 const completed = computed(() => (module.value ? progress?.isCompleted(module.value.id) ?? false : false));
 const topicCount = computed(() => section.value?.topics.length ?? 0);
 const stats = computed(() => (section.value ? sectionContentStats(section.value) : null));
+const learningPoints = computed(() => (section.value ? sectionLearningPoints(section.value) : null));
 const firstTopicPath = computed(() =>
   module.value && section.value && section.value.topics[0]
     ? `/modules/${module.value.id}/sections/${section.value.id}/topics/${section.value.topics[0].id}`
@@ -69,9 +71,11 @@ watchEffect(() => {
     </el-card>
 
     <aside class="learning-taskbar" aria-label="本节学习操作">
-      <div>
-        <span>本节要点</span>
-        <strong>{{ topicCount }} 个知识点，建议按顺序阅读后进入练习。</strong>
+      <div class="learning-taskbar__content">
+        <span>{{ learningPoints?.title }}</span>
+        <ul>
+          <li v-for="point in learningPoints?.points" :key="point">{{ point }}</li>
+        </ul>
       </div>
       <div class="learning-taskbar__actions">
         <router-link :to="firstTopicPath">

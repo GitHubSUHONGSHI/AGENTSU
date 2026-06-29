@@ -5,15 +5,14 @@ import CourseContent from "../components/course-content.vue";
 import { useCourseRoute } from "../composables/use-course-route";
 import { courseProgressKey } from "../symbols/course-progress";
 import { useRecentLearning } from "../composables/use-recent-learning";
+import { topicLearningPoints } from "../utils/course-learning-points";
 
 const { module, section, topic } = useCourseRoute();
 const progress = inject(courseProgressKey);
 const { writeRecentLearning } = useRecentLearning();
 
 const completed = computed(() => (module.value ? progress?.isCompleted(module.value.id) ?? false : false));
-const headingCount = computed(() =>
-  topic.value?.contentBlocks.filter((block) => block.kind === "heading").length ?? 0,
-);
+const learningPoints = computed(() => (topic.value ? topicLearningPoints(topic.value) : null));
 const tableCount = computed(() =>
   topic.value?.contentBlocks.filter((block) => block.kind === "table").length ?? 0,
 );
@@ -75,9 +74,11 @@ watchEffect(() => {
     </el-card>
 
     <aside class="learning-taskbar" aria-label="当前知识点学习操作">
-      <div>
-        <span>本节要点</span>
-        <strong>{{ headingCount }} 个小节，{{ topic.contentBlocks.length }} 个内容块。</strong>
+      <div class="learning-taskbar__content">
+        <span>{{ learningPoints?.title }}</span>
+        <ul>
+          <li v-for="point in learningPoints?.points" :key="point">{{ point }}</li>
+        </ul>
       </div>
       <div class="learning-taskbar__actions">
         <router-link :to="`/practice/modules/${module.id}/sections/${section.id}/topics/${topic.id}`">
