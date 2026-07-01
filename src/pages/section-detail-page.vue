@@ -18,7 +18,7 @@ const learningPoints = computed(() => (section.value ? sectionLearningPoints(sec
 const firstTopicPath = computed(() =>
   module.value && section.value && section.value.topics[0]
     ? `/modules/${module.value.id}/sections/${section.value.id}/topics/${section.value.topics[0].id}`
-    : "/course",
+    : "/knowledge",
 );
 const toggleCompleted = () => {
   if (module.value) {

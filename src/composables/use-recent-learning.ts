@@ -45,7 +45,7 @@ const fallbackModule = computed(() => courseModules[0]);
 
 export const useRecentLearning = () => {
   const recentPath = computed(() => pathForRecentLearning(recentLearning.value));
-  const recentTitle = computed(() => recentLearning.value?.title ?? fallbackModule.value?.title ?? "课程首页");
+  const recentTitle = computed(() => recentLearning.value?.title ?? fallbackModule.value?.title ?? "知识章节");
 
   return {
     recentLearning,

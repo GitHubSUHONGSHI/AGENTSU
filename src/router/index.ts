@@ -1,7 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import CourseLayout from "../layouts/course-layout.vue";
 import GlossaryPage from "../pages/glossary-page.vue";
-import HomePage from "../pages/home-page.vue";
 import InterviewPage from "../pages/interview-page.vue";
 import KnowledgePage from "../pages/knowledge-page.vue";
 import ModuleOverviewPage from "../pages/module-overview-page.vue";
@@ -24,8 +23,7 @@ export const router = createRouter({
       children: [
         {
           path: "course",
-          name: "course-home",
-          component: HomePage,
+          redirect: "/knowledge",
         },
         {
           path: "knowledge",

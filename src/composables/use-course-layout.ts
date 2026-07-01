@@ -20,13 +20,12 @@ export const useCourseLayout = () => {
 
   provide(courseProgressKey, progress);
 
-  const isCourseHomeRoute = computed(() => route.name === "course-home");
   const isGlossaryRoute = computed(() => route.name === "glossary");
   const isInterviewRoute = computed(() => route.name === "interview");
   const isKnowledgeRoute = computed(() => route.name === "knowledge");
   const isPracticeRoute = computed(() => String(route.name ?? "").startsWith("practice"));
   const activeModuleId = computed(() =>
-    isCourseHomeRoute.value || isGlossaryRoute.value || isInterviewRoute.value || isKnowledgeRoute.value
+    isGlossaryRoute.value || isInterviewRoute.value || isKnowledgeRoute.value
       ? ""
       : String(route.params.moduleId ?? courseModules[0]?.id ?? ""),
   );
@@ -41,7 +40,7 @@ export const useCourseLayout = () => {
     activeModule.value?.sections.find((section) => section.id === activeSectionId.value),
   );
   const activeLocationLabel = computed(() =>
-    isGlossaryRoute.value ? "语法词典" : activeSection.value?.title ?? activeModule.value?.title ?? "课程首页",
+    isGlossaryRoute.value ? "语法词典" : activeSection.value?.title ?? activeModule.value?.title ?? "知识章节",
   );
   const searchResultCount = computed(() =>
     filteredModules.value.reduce(
@@ -77,7 +76,6 @@ export const useCourseLayout = () => {
     activeSectionId,
     closeNavigation,
     filteredModules,
-    isCourseHomeRoute,
     isGlossaryRoute,
     isInterviewRoute,
     isKnowledgeRoute,

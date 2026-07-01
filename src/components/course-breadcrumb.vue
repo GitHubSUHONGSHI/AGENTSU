@@ -8,7 +8,6 @@ const route = useRoute();
 const routeParam = (value: string | string[] | undefined) =>
   Array.isArray(value) ? value[0] : value;
 
-const isCourseHomeRoute = computed(() => route.name === "course-home");
 const isGlossaryRoute = computed(() => route.name === "glossary");
 const isInterviewRoute = computed(() => route.name === "interview");
 const isKnowledgeRoute = computed(() => route.name === "knowledge");
@@ -34,12 +33,8 @@ const sectionPath = computed(() => `${modulePath.value}/sections/${sectionId.val
 
 <template>
   <nav class="course-breadcrumb" aria-label="当前位置">
-    <el-breadcrumb :separator="isCourseHomeRoute ? '' : '/'">
-      <template v-if="isCourseHomeRoute">
-        <el-breadcrumb-item>课程首页</el-breadcrumb-item>
-      </template>
-
-      <template v-else-if="isKnowledgeRoute">
+    <el-breadcrumb separator="/">
+      <template v-if="isKnowledgeRoute">
         <el-breadcrumb-item>知识章节</el-breadcrumb-item>
       </template>
 
@@ -58,7 +53,7 @@ const sectionPath = computed(() => `${modulePath.value}/sections/${sectionId.val
         <el-breadcrumb-item v-if="topicId">{{ topicTitle }}</el-breadcrumb-item>
       </template>
 
-      <template v-else-if="!isCourseHomeRoute">
+      <template v-else>
         <el-breadcrumb-item :to="{ path: '/knowledge' }">知识章节</el-breadcrumb-item>
         <el-breadcrumb-item v-if="sectionId" :to="{ path: modulePath }">
           {{ moduleTitle }}

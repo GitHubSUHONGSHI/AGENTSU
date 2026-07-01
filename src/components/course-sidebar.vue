@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useRouter } from "vue-router";
-import { ChatLineRound, Check, Collection, Document, House, Reading, Tickets } from "@element-plus/icons-vue";
+import { ChatLineRound, Check, Collection, Document, Reading, Tickets } from "@element-plus/icons-vue";
 import type { CourseModule } from "../types/course";
 
 const props = defineProps<{
@@ -9,7 +9,6 @@ const props = defineProps<{
   selectedModuleId: string;
   selectedSectionId?: string;
   completedModuleIds: string[];
-  isHomeActive: boolean;
   isGlossaryActive: boolean;
   isInterviewActive: boolean;
   isKnowledgeActive: boolean;
@@ -34,8 +33,6 @@ const routeActiveMenuId = computed(() =>
       ? "glossary"
     : props.isInterviewActive
       ? "interview"
-    : props.isHomeActive
-      ? "home"
       : props.isKnowledgeActive
         ? knowledgeMenuId
         : props.selectedSectionId
@@ -87,21 +84,6 @@ const navigateToKnowledge = () => {
       :default-active="activeMenuId"
       :default-openeds="defaultOpeneds"
     >
-      <el-menu-item
-        index="home"
-        class="course-sidebar__shortcut"
-        :class="{ 'is-shortcut-active': activeMenuId === 'home' }"
-      >
-        <router-link
-          class="course-sidebar__home"
-          to="/course"
-          :aria-current="isHomeActive ? 'page' : undefined"
-          @click="emit('navigate')"
-        >
-          <el-icon><House /></el-icon>
-          <span>课程首页</span>
-        </router-link>
-      </el-menu-item>
 
       <el-menu-item
         index="practice"

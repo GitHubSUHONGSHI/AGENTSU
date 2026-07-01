@@ -14,10 +14,8 @@ import ReleaseStatusPanel from "../components/release-status-panel.vue";
 import { courseModules } from "../data/python-course";
 import { personalSiteUrl, repositoryUrl } from "../data/release-history";
 import { useCourseProgress } from "../composables/use-course-progress";
-import { useRecentLearning } from "../composables/use-recent-learning";
 
 const progress = useCourseProgress(courseModules.length);
-const { recentPath, recentTitle } = useRecentLearning();
 
 const completedCount = computed(() => progress.completedCount.value);
 const sectionCount = computed(() =>
@@ -30,13 +28,8 @@ const topicCount = computed(() =>
     0,
   ),
 );
-const nextModule = computed(
-  () =>
-    courseModules.find((module) => !progress.completedModuleIds.value.includes(module.id)) ??
-    courseModules[0],
-);
-const continuePath = computed(() => recentPath.value || `/modules/${nextModule.value?.id ?? "m01"}`);
-const continueLabel = computed(() => (recentPath.value ? recentTitle.value : nextModule.value?.title ?? "课程首页"));
+const continuePath = "/knowledge";
+const continueLabel = "知识章节";
 </script>
 
 <template>
@@ -49,7 +42,7 @@ const continueLabel = computed(() => (recentPath.value ? recentTitle.value : nex
           <h1>Python 课程学习站</h1>
         </div>
         <p class="portal-hero__summary">
-          面向 Python 初学者的课程工作台，把知识模块、章节、知识点、练习和本地学习进度整理成一条清晰的学习路径。
+          面向 Python 初学者的知识章节，把知识模块、章节、知识点、练习和本地学习进度整理成一条清晰的学习路径。
         </p>
 
         <div class="portal-hero__actions">
@@ -59,8 +52,8 @@ const continueLabel = computed(() => (recentPath.value ? recentTitle.value : nex
           <router-link class="portal-link-button" to="/practice">
             <el-button size="large" text :icon="Reading">进入练习</el-button>
           </router-link>
-          <router-link class="portal-link-button" to="/course">
-            <el-button size="large" text>课程工作台</el-button>
+          <router-link class="portal-link-button" to="/knowledge">
+            <el-button size="large" text>知识章节</el-button>
           </router-link>
         </div>
 
@@ -94,12 +87,12 @@ const continueLabel = computed(() => (recentPath.value ? recentTitle.value : nex
     </section>
 
     <section class="portal-grid" aria-label="学习入口面板">
-      <router-link class="portal-card portal-card--primary" to="/course">
+      <router-link class="portal-card portal-card--primary" to="/knowledge">
         <div class="portal-card__heading">
           <el-icon><Promotion /></el-icon>
           <div>
             <p>Course Workspace</p>
-            <h2>课程工作台</h2>
+            <h2>知识章节</h2>
           </div>
         </div>
         <span>查看完整课程路径、搜索知识点，并按模块记录学习进度。</span>
@@ -132,7 +125,7 @@ const continueLabel = computed(() => (recentPath.value ? recentTitle.value : nex
             <el-icon><Link /></el-icon>
             GitHub 仓库
           </a>
-          <router-link to="/course">进入课程首页</router-link>
+          <router-link to="/knowledge">进入知识章节</router-link>
         </div>
       </div>
     </section>

@@ -10,7 +10,6 @@ const {
   activeSectionId,
   closeNavigation,
   filteredModules,
-  isCourseHomeRoute,
   isGlossaryRoute,
   isInterviewRoute,
   isKnowledgeRoute,
@@ -34,7 +33,6 @@ const {
         :selected-module-id="activeModuleId"
         :selected-section-id="activeSectionId"
         :completed-module-ids="progress.completedModuleIds.value"
-        :is-home-active="isCourseHomeRoute"
         :is-glossary-active="isGlossaryRoute"
         :is-interview-active="isInterviewRoute"
         :is-knowledge-active="isKnowledgeRoute"
@@ -75,14 +73,13 @@ const {
       <div class="app-shell__drawer-status">
         <span>当前位置</span>
         <strong>{{ activeLocationLabel }}</strong>
-        <router-link to="/course" @click="closeNavigation">继续回到课程首页</router-link>
+        <router-link to="/knowledge" @click="closeNavigation">继续回到知识章节</router-link>
       </div>
       <CourseSidebar
         :modules="filteredModules"
         :selected-module-id="activeModuleId"
         :selected-section-id="activeSectionId"
         :completed-module-ids="progress.completedModuleIds.value"
-        :is-home-active="isCourseHomeRoute"
         :is-glossary-active="isGlossaryRoute"
         :is-interview-active="isInterviewRoute"
         :is-knowledge-active="isKnowledgeRoute"

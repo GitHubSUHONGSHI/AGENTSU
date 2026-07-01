@@ -20,7 +20,7 @@ const imageCount = computed(() =>
   topic.value?.contentBlocks.filter((block) => block.kind === "image").length ?? 0,
 );
 const sectionPath = computed(() =>
-  module.value && section.value ? `/modules/${module.value.id}/sections/${section.value.id}` : "/course",
+  module.value && section.value ? `/modules/${module.value.id}/sections/${section.value.id}` : "/knowledge",
 );
 const toggleCompleted = () => {
   if (module.value) {
