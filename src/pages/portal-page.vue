@@ -110,10 +110,10 @@ const continueLabel = computed(() => (recentPath.value ? recentTitle.value : nex
           <el-icon><Reading /></el-icon>
           <div>
             <p>Practice Studio</p>
-            <h2>知识点练习</h2>
+            <h2>练习题</h2>
           </div>
         </div>
-        <span>每个知识点提供操作式与思考式自检题，适合课后复盘。</span>
+        <span>每次刷新 2 道复合编码题，先简单再难度，适合课后复盘。</span>
       </router-link>
 
       <ReleaseStatusPanel />

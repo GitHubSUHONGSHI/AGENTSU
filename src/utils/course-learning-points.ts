@@ -44,7 +44,7 @@ const contentHint = (source: string, statsCode: number) => {
   if (/网络|http|request|socket/i.test(source)) return "先确认请求方法、参数和状态码，再处理响应数据。";
   if (statsCode > 0 || text.includes("python")) return "建议复制示例到本地运行，观察输入、输出和变量变化。";
 
-  return "先理解概念关系，再进入对应知识点练习巩固。";
+  return "先理解概念关系，再进入练习题模块巩固。";
 };
 
 export const sectionLearningPoints = (section: CourseSection): LearningPointSummary => {

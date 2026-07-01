@@ -1,6 +1,5 @@
 export type Difficulty = "beginner" | "intermediate" | "advanced";
-export type ExerciseKind = "operation" | "reflection";
-export type ExerciseDifficulty = "easy" | "hard" | "deep";
+export type ExerciseDifficulty = "easy" | "hard";
 export type CourseGlossaryCategory =
   | "syntax"
   | "concept"
@@ -49,19 +48,13 @@ export interface CourseSearchOption {
 
 export interface CourseExercise {
   id: string;
-  topicId: string;
-  kind: ExerciseKind;
   difficulty: ExerciseDifficulty;
-  prompt: string;
-  answer: CourseExerciseAnswer;
-}
-
-export interface CourseExerciseAnswer {
-  explanation: string;
-  example: string;
-  result: string;
-  counterExample: string;
-  notes: string[];
+  title: string;
+  description: string;
+  chapters: string[];
+  knowledgePoints: string[];
+  answerMarkdown: string;
+  analysisMarkdown: string;
 }
 
 export interface CourseGlossaryEntry {

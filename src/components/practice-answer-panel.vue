@@ -1,31 +1,22 @@
 <script setup lang="ts">
-import { CircleCheck, Document, EditPen, Warning } from "@element-plus/icons-vue";
-import type { CourseExerciseAnswer } from "../types/course";
+import { Document, EditPen } from "@element-plus/icons-vue";
+import MarkdownContent from "./markdown-content.vue";
+import type { CourseExercise } from "../types/course";
 
 defineProps<{
-  answer: CourseExerciseAnswer;
+  exercise: CourseExercise;
 }>();
 
 const answerSections = [
   {
-    key: "explanation",
+    key: "answerMarkdown",
     title: "参考答案",
     icon: EditPen,
   },
   {
-    key: "example",
-    title: "示例",
+    key: "analysisMarkdown",
+    title: "答案分析",
     icon: Document,
-  },
-  {
-    key: "result",
-    title: "预期结果",
-    icon: CircleCheck,
-  },
-  {
-    key: "counterExample",
-    title: "反例提醒",
-    icon: Warning,
   },
 ] as const;
 </script>
@@ -41,18 +32,7 @@ const answerSections = [
         <el-icon><component :is="section.icon" /></el-icon>
         {{ section.title }}
       </h5>
-      <pre v-if="section.key === 'example'">{{ answer[section.key] }}</pre>
-      <p v-else>{{ answer[section.key] }}</p>
-    </section>
-
-    <section class="practice-answer-panel__section">
-      <h5>
-        <el-icon><CircleCheck /></el-icon>
-        注意事项
-      </h5>
-      <ul>
-        <li v-for="note in answer.notes" :key="note">{{ note }}</li>
-      </ul>
+      <MarkdownContent :markdown="exercise[section.key]" />
     </section>
   </div>
 </template>

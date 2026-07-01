@@ -52,7 +52,7 @@ const sectionPath = computed(() => `${modulePath.value}/sections/${sectionId.val
       </template>
 
       <template v-else-if="isPracticeRoute">
-        <el-breadcrumb-item :to="{ path: '/practice' }">知识点练习</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/practice' }">练习题</el-breadcrumb-item>
         <el-breadcrumb-item v-if="moduleId">{{ moduleTitle }}</el-breadcrumb-item>
         <el-breadcrumb-item v-if="sectionId">{{ sectionTitle }}</el-breadcrumb-item>
         <el-breadcrumb-item v-if="topicId">{{ topicTitle }}</el-breadcrumb-item>

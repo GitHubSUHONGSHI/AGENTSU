@@ -15,7 +15,11 @@ function readStatusMap() {
 }
 
 const persist = () => {
-  localStorage.setItem(storageKey, JSON.stringify(practiceStatusMap.value));
+  try {
+    localStorage.setItem(storageKey, JSON.stringify(practiceStatusMap.value));
+  } catch {
+    // Practice must stay usable when private mode or browser policy blocks storage.
+  }
 };
 
 export const usePracticeProgress = () => {
@@ -28,12 +32,23 @@ export const usePracticeProgress = () => {
   };
 
   const statusFor = (exerciseId: string) => practiceStatusMap.value[exerciseId] ?? "unseen";
+  const resetMastered = () => {
+    practiceStatusMap.value = {};
+    persist();
+  };
+  const masteredIds = computed(() =>
+    Object.entries(practiceStatusMap.value)
+      .filter(([, status]) => status === "mastered")
+      .map(([exerciseId]) => exerciseId),
+  );
   const masteredCount = computed(
     () => Object.values(practiceStatusMap.value).filter((status) => status === "mastered").length,
   );
 
   return {
+    masteredIds,
     masteredCount,
+    resetMastered,
     setStatus,
     statusFor,
   };

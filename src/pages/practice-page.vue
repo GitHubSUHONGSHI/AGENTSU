@@ -1,77 +1,58 @@
 <script setup lang="ts">
 import { computed, ref, watch } from "vue";
-import { useRouter } from "vue-router";
-import { Check, Collection, Reading, View } from "@element-plus/icons-vue";
+import { Check, Delete, Refresh, Tickets, View } from "@element-plus/icons-vue";
+import PracticeAnswerPanel from "../components/practice-answer-panel.vue";
 import {
   exerciseDifficultyLabel,
-  exerciseKindLabel,
-  getExercisesForTopic,
-  getPracticeTopicContext,
+  pickExercise,
+  practiceExercises,
 } from "../data/practice-exercises";
-import PracticeAnswerPanel from "../components/practice-answer-panel.vue";
-import { courseModules } from "../data/python-course";
-import { useCourseRoute } from "../composables/use-course-route";
 import { usePracticeProgress, type PracticeStatus } from "../composables/use-practice-progress";
-import type { CourseSection, CourseTopic, ExerciseDifficulty, ExerciseKind } from "../types/course";
+import type { CourseExercise, ExerciseDifficulty } from "../types/course";
 
-const router = useRouter();
-const { moduleId, sectionId, topicId } = useCourseRoute();
-const { setStatus, statusFor } = usePracticeProgress();
+const { masteredCount, masteredIds, resetMastered, setStatus, statusFor } = usePracticeProgress();
 const activeAnswerNames = ref<string[]>([]);
+const currentExercises = ref<Array<CourseExercise | undefined>>([]);
 
-const selectedContext = computed(() =>
-  getPracticeTopicContext(moduleId.value, sectionId.value, topicId.value),
-);
-const selectedModuleId = computed(() => selectedContext.value.module.id);
-const selectedSectionId = computed(() => selectedContext.value.section.id);
-const selectedTopicId = computed(() => selectedContext.value.topic.id);
-const selectedTopicKey = computed(() => selectedContext.value.topicKey);
-const selectedSections = computed(() => selectedContext.value.module.sections);
-const selectedTopics = computed(() => selectedContext.value.section.topics);
-const exercises = computed(() => getExercisesForTopic(selectedTopicKey.value));
 const statusMeta: Record<PracticeStatus, { label: string; type: "info" | "warning" | "success" }> = {
-  unseen: { label: "未做", type: "info" },
+  unseen: { label: "未学习", type: "info" },
   viewedAnswer: { label: "已查看答案", type: "warning" },
-  mastered: { label: "已掌握", type: "success" },
-};
-const exerciseStatus = (exerciseId: string) => statusFor(exerciseId);
-const practicePath = (moduleIdValue: string, sectionIdValue: string, topicIdValue: string) =>
-  `/practice/modules/${moduleIdValue}/sections/${sectionIdValue}/topics/${topicIdValue}`;
-
-const navigateTo = (nextModuleId: string, nextSectionId: string, nextTopicId: string) => {
-  void router.push(practicePath(nextModuleId, nextSectionId, nextTopicId));
+  mastered: { label: "已学会", type: "success" },
 };
 
-const selectModule = (value: string) => {
-  const nextModule = courseModules.find((module) => module.id === value);
-  const nextSection = nextModule?.sections[0];
-  const nextTopic = nextSection?.topics[0];
+const totalCount = practiceExercises.length;
+const easyCount = computed(
+  () => practiceExercises.filter((exercise) => exercise.difficulty === "easy").length,
+);
+const hardCount = computed(
+  () => practiceExercises.filter((exercise) => exercise.difficulty === "hard").length,
+);
+const remainingCount = computed(() => totalCount - masteredCount.value);
 
-  if (nextModule && nextSection && nextTopic) {
-    navigateTo(nextModule.id, nextSection.id, nextTopic.id);
-  }
+const refreshExercises = () => {
+  const previousEasy = currentExercises.value.find((exercise) => exercise?.difficulty === "easy");
+  const previousHard = currentExercises.value.find((exercise) => exercise?.difficulty === "hard");
+
+  currentExercises.value = [
+    pickExercise("easy", masteredIds.value, previousEasy?.id),
+    pickExercise("hard", masteredIds.value, previousHard?.id),
+  ];
+  activeAnswerNames.value = [];
 };
 
-const selectSection = (value: string) => {
-  const nextSection = selectedSections.value.find((section) => section.id === value);
-  const nextTopic = nextSection?.topics[0];
-
-  if (nextSection && nextTopic) {
-    navigateTo(selectedModuleId.value, nextSection.id, nextTopic.id);
-  }
+const resetPractice = () => {
+  resetMastered();
+  refreshExercises();
 };
 
-const selectTopic = (value: string) => {
-  navigateTo(selectedModuleId.value, selectedSectionId.value, value);
-};
-
-const optionLabel = (item: CourseSection | CourseTopic) => item.title;
-const tagTypeForKind = (kind: ExerciseKind) => (kind === "operation" ? "primary" : "success");
-const tagTypeForDifficulty = (difficulty: ExerciseDifficulty) =>
-  difficulty === "easy" ? "info" : difficulty === "hard" ? "warning" : "danger";
 const markMastered = (exerciseId: string) => {
   setStatus(exerciseId, "mastered");
 };
+
+const exerciseStatus = (exerciseId: string) => statusFor(exerciseId);
+const difficultyType = (difficulty: ExerciseDifficulty) => (difficulty === "easy" ? "success" : "warning");
+const difficultyOrderLabel = (difficulty: ExerciseDifficulty) =>
+  difficulty === "easy" ? "第 1 题 · 简单" : "第 2 题 · 难度";
 
 watch(activeAnswerNames, (names) => {
   names.forEach((name) => {
@@ -81,128 +62,129 @@ watch(activeAnswerNames, (names) => {
   });
 });
 
-watch(selectedTopicKey, () => {
-  activeAnswerNames.value = [];
-});
+refreshExercises();
 </script>
 
 <template>
   <main class="course-main practice-page" id="main-content">
     <section class="practice-page__hero" aria-labelledby="practice-title">
       <p class="module-overview__eyebrow">Practice Studio</p>
-      <h2 id="practice-title">知识点练习</h2>
-      <p>
-        每个知识点固定提供 6 道自检题，覆盖操作式与思考式任务，并按简单、困难、深度逐层推进。
-      </p>
+      <div class="practice-page__hero-row">
+        <div>
+          <h2 id="practice-title">练习题</h2>
+          <p>
+            每次刷新给出 2 道复合型编码练习：先简单题，再难度题。所有题目都提示涉及章节与知识点，
+            答案和分析统一使用 Markdown 与 Python 代码块。
+          </p>
+        </div>
+        <div class="practice-page__actions" aria-label="练习题操作">
+          <el-button type="primary" :icon="Refresh" @click="refreshExercises">刷新题型</el-button>
+          <el-button :icon="Delete" @click="resetPractice">重置已学会</el-button>
+        </div>
+      </div>
     </section>
 
-    <section class="practice-page__layout" aria-label="知识点练习工作区">
-      <aside class="practice-page__nav" aria-label="选择练习知识点">
-        <div class="practice-page__nav-title">
-          <el-icon><Collection /></el-icon>
-          <div>
-            <strong>练习目录</strong>
-            <span>模块 → 章节 → 知识点</span>
-          </div>
-        </div>
+    <section class="practice-page__stats" aria-label="题库状态">
+      <div>
+        <span>题库总量</span>
+        <strong>{{ totalCount }}</strong>
+      </div>
+      <div>
+        <span>简单 / 难度</span>
+        <strong>{{ easyCount }} / {{ hardCount }}</strong>
+      </div>
+      <div>
+        <span>已学会</span>
+        <strong>{{ masteredCount }}</strong>
+      </div>
+      <div>
+        <span>剩余可练</span>
+        <strong>{{ remainingCount }}</strong>
+      </div>
+    </section>
 
-        <label class="practice-page__field">
-          <span>模块</span>
-          <el-select :model-value="selectedModuleId" filterable @change="selectModule">
-            <el-option
-              v-for="module in courseModules"
-              :key="module.id"
-              :label="module.title"
-              :value="module.id"
-            />
-          </el-select>
-        </label>
-
-        <label class="practice-page__field">
-          <span>章节</span>
-          <el-select :model-value="selectedSectionId" filterable @change="selectSection">
-            <el-option
-              v-for="section in selectedSections"
-              :key="section.id"
-              :label="optionLabel(section)"
-              :value="section.id"
-            />
-          </el-select>
-        </label>
-
-        <label class="practice-page__field">
-          <span>知识点</span>
-          <el-select :model-value="selectedTopicId" filterable @change="selectTopic">
-            <el-option
-              v-for="topic in selectedTopics"
-              :key="topic.id"
-              :label="optionLabel(topic)"
-              :value="topic.id"
-            />
-          </el-select>
-        </label>
-      </aside>
-
-      <article class="practice-page__content">
-        <header class="practice-page__topic">
-          <div>
-            <p class="module-overview__eyebrow">
-              {{ selectedContext.module.title }} / {{ selectedContext.section.title }}
-            </p>
-            <h3>{{ selectedContext.topic.title }}</h3>
-            <p>{{ selectedContext.topic.summary }}</p>
-          </div>
-          <el-tag effect="plain">
-            <el-icon><Reading /></el-icon>
-            {{ exercises.length }} 道题
-          </el-tag>
-        </header>
-
-        <div class="practice-page__exercise-list">
-          <section
-            v-for="exercise in exercises"
-            :key="exercise.id"
-            class="practice-page__exercise"
-            :aria-labelledby="`${exercise.id}-title`"
-          >
-            <div class="practice-page__exercise-head">
-              <h4 :id="`${exercise.id}-title`">{{ exercise.prompt }}</h4>
-              <div class="practice-page__tags">
-                <el-tag :type="statusMeta[exerciseStatus(exercise.id)].type" effect="dark">
-                  {{ statusMeta[exerciseStatus(exercise.id)].label }}
-                </el-tag>
-                <el-tag :type="tagTypeForKind(exercise.kind)" effect="plain">
-                  {{ exerciseKindLabel[exercise.kind] }}
-                </el-tag>
-                <el-tag :type="tagTypeForDifficulty(exercise.difficulty)" effect="plain">
-                  {{ exerciseDifficultyLabel[exercise.difficulty] }}
-                </el-tag>
-              </div>
+    <section class="practice-page__exercise-list" aria-label="当前练习题">
+      <template v-for="(exercise, index) in currentExercises" :key="exercise?.id ?? index">
+        <section
+          v-if="exercise"
+          class="practice-page__exercise"
+          :aria-labelledby="`${exercise.id}-title`"
+        >
+          <div class="practice-page__exercise-head">
+            <div>
+              <p class="practice-page__order">{{ difficultyOrderLabel(exercise.difficulty) }}</p>
+              <h3 :id="`${exercise.id}-title`">{{ exercise.title }}</h3>
             </div>
+            <div class="practice-page__tags">
+              <el-tag :type="statusMeta[exerciseStatus(exercise.id)].type" effect="dark">
+                {{ statusMeta[exerciseStatus(exercise.id)].label }}
+              </el-tag>
+              <el-tag :type="difficultyType(exercise.difficulty)" effect="plain">
+                {{ exerciseDifficultyLabel[exercise.difficulty] }}
+              </el-tag>
+            </div>
+          </div>
 
-            <el-collapse v-model="activeAnswerNames" class="practice-page__answer">
-              <el-collapse-item :name="exercise.id">
-                <template #title>
-                  <span class="practice-page__answer-title">
-                    <el-icon><View /></el-icon>
-                    先独立思考，再查看参考答案
-                  </span>
-                </template>
-                <PracticeAnswerPanel :answer="exercise.answer" />
-                <div class="practice-page__mastery">
-                  <el-button
-                    :type="exerciseStatus(exercise.id) === 'mastered' ? 'success' : 'primary'"
-                    :icon="Check"
-                    @click="markMastered(exercise.id)"
-                  >
-                    {{ exerciseStatus(exercise.id) === "mastered" ? "已掌握" : "标记为已掌握" }}
-                  </el-button>
-                </div>
-              </el-collapse-item>
-            </el-collapse>
-          </section>
-        </div>
-      </article>
+          <p class="practice-page__description">{{ exercise.description }}</p>
+
+          <div class="practice-page__hint-grid">
+            <section>
+              <h4>
+                <el-icon><Tickets /></el-icon>
+                涉及章节
+              </h4>
+              <span
+                v-for="chapter in exercise.chapters"
+                :key="chapter"
+                class="practice-page__hint-tag"
+              >
+                {{ chapter }}
+              </span>
+            </section>
+            <section>
+              <h4>
+                <el-icon><Tickets /></el-icon>
+                涉及知识点
+              </h4>
+              <span
+                v-for="point in exercise.knowledgePoints"
+                :key="point"
+                class="practice-page__hint-tag"
+              >
+                {{ point }}
+              </span>
+            </section>
+          </div>
+
+          <el-collapse v-model="activeAnswerNames" class="practice-page__answer">
+            <el-collapse-item :name="exercise.id">
+              <template #title>
+                <span class="practice-page__answer-title">
+                  <el-icon><View /></el-icon>
+                  查看 Markdown 答案与分析
+                </span>
+              </template>
+              <PracticeAnswerPanel :exercise="exercise" />
+              <div class="practice-page__mastery">
+                <el-button
+                  :type="exerciseStatus(exercise.id) === 'mastered' ? 'success' : 'primary'"
+                  :icon="Check"
+                  @click="markMastered(exercise.id)"
+                >
+                  {{ exerciseStatus(exercise.id) === "mastered" ? "已学会" : "标记为已学会" }}
+                </el-button>
+              </div>
+            </el-collapse-item>
+          </el-collapse>
+        </section>
+
+        <el-empty
+          v-else
+          class="practice-page__empty"
+          description="当前难度题库已全部学会，可点击重置恢复题库"
+          :image-size="96"
+        />
+      </template>
     </section>
   </main>
 </template>

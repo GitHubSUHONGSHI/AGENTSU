@@ -115,7 +115,7 @@ const navigateToKnowledge = () => {
           @click="emit('navigate')"
         >
           <el-icon><Collection /></el-icon>
-          <span>知识点练习</span>
+          <span>练习题</span>
         </router-link>
       </el-menu-item>
 

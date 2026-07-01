@@ -1,69 +1,94 @@
 import { readFileSync } from "node:fs";
 
 const course = JSON.parse(readFileSync("src/data/python-course.json", "utf8"));
-const expectedKinds = new Set(["operation", "reflection"]);
-const expectedDifficulties = new Set(["easy", "hard", "deep"]);
-const exercisePlan = [
-  ["operation", "easy"],
-  ["reflection", "easy"],
-  ["operation", "hard"],
-  ["reflection", "hard"],
-  ["operation", "deep"],
-  ["reflection", "deep"],
-];
+const targetPerDifficulty = 240;
+const expectedTotal = targetPerDifficulty * 2;
 
-const topics = course.flatMap((module) =>
+const topicRefs = course.flatMap((module) =>
   module.sections.flatMap((section) =>
     section.topics.map((topic) => ({
-      moduleId: module.id,
-      sectionId: section.id,
-      topicId: topic.id,
-      topicKey: `${module.id}:${section.id}:${topic.id}`,
+      module,
+      section,
+      topic,
     })),
   ),
 );
 
-const failures = [];
-const exercises = topics.flatMap((topic) =>
-  exercisePlan.map(([kind, difficulty]) => ({
-    id: `${topic.topicKey}-${kind}-${difficulty}`,
-    topicId: topic.topicKey,
-    kind,
+const chapterLabel = (ref) => `${ref.module.title} / ${ref.section.title}`;
+const unique = (values) => Array.from(new Set(values));
+
+const nextDifferentSection = (startIndex) => {
+  const base = topicRefs[startIndex % topicRefs.length];
+
+  for (let offset = 1; offset < topicRefs.length; offset += 1) {
+    const candidate = topicRefs[(startIndex + offset) % topicRefs.length];
+    if (candidate.section.id !== base.section.id || candidate.module.id !== base.module.id) {
+      return candidate;
+    }
+  }
+
+  return topicRefs[(startIndex + 1) % topicRefs.length];
+};
+
+const pickRefs = (index, difficulty) => {
+  const first = topicRefs[index % topicRefs.length];
+  const second = difficulty === "hard" ? nextDifferentSection(index) : topicRefs[(index + 1) % topicRefs.length];
+  const third = nextDifferentSection(index + 7);
+
+  return difficulty === "hard" ? [first, second, third] : [first, second];
+};
+
+const createExercise = (index, difficulty) => {
+  const refs = pickRefs(index, difficulty);
+  const knowledgePoints = refs.map((ref) => ref.topic.title);
+  const chapters = unique(refs.map(chapterLabel));
+  const id = `${difficulty}-${String(index + 1).padStart(3, "0")}`;
+
+  return {
+    id,
     difficulty,
-  })),
-);
+    title: `${difficulty === "easy" ? "简单" : "难度"}复合编码题 ${index + 1}`,
+    description: `综合使用 ${knowledgePoints.join("、")} 完成实际开发编码任务。`,
+    chapters,
+    knowledgePoints,
+    answerMarkdown: "```python\nprint(\"practice\")\n```",
+    analysisMarkdown: `涉及章节：${chapters.join("；")}\n\n涉及知识点：${knowledgePoints.join("、")}`,
+  };
+};
 
-for (const topic of topics) {
-  const topicExercises = exercises.filter((exercise) => exercise.topicId === topic.topicKey);
-  const kindSet = new Set(topicExercises.map((exercise) => exercise.kind));
-  const difficultySet = new Set(topicExercises.map((exercise) => exercise.difficulty));
+const exercises = [
+  ...Array.from({ length: targetPerDifficulty }, (_, index) => createExercise(index, "easy")),
+  ...Array.from({ length: targetPerDifficulty }, (_, index) => createExercise(index, "hard")),
+];
 
-  if (topicExercises.length !== 6) {
-    failures.push(`${topic.topicKey} expected 6 exercises, got ${topicExercises.length}`);
+const failures = [];
+const byDifficulty = (difficulty) => exercises.filter((exercise) => exercise.difficulty === difficulty);
+
+if (exercises.length !== expectedTotal) {
+  failures.push(`expected ${expectedTotal} exercises, got ${exercises.length}`);
+}
+
+for (const difficulty of ["easy", "hard"]) {
+  const count = byDifficulty(difficulty).length;
+  if (count !== targetPerDifficulty) {
+    failures.push(`${difficulty} expected ${targetPerDifficulty} exercises, got ${count}`);
   }
+}
 
-  for (const kind of kindSet) {
-    if (!expectedKinds.has(kind)) {
-      failures.push(`${topic.topicKey} has invalid kind ${kind}`);
-    }
+for (const exercise of exercises) {
+  if (!exercise.description.trim()) failures.push(`${exercise.id} is missing description`);
+  if (!exercise.answerMarkdown.includes("```python")) {
+    failures.push(`${exercise.id} answer must include a Python fenced code block`);
   }
-
-  for (const difficulty of difficultySet) {
-    if (!expectedDifficulties.has(difficulty)) {
-      failures.push(`${topic.topicKey} has invalid difficulty ${difficulty}`);
-    }
+  if (!exercise.analysisMarkdown.trim()) failures.push(`${exercise.id} is missing analysis markdown`);
+  if (exercise.knowledgePoints.length < 2) {
+    failures.push(`${exercise.id} must combine at least 2 knowledge points`);
   }
-
-  for (const expectedKind of expectedKinds) {
-    if (!kindSet.has(expectedKind)) {
-      failures.push(`${topic.topicKey} is missing kind ${expectedKind}`);
-    }
+  if (exercise.difficulty === "hard" && exercise.knowledgePoints.length < 3) {
+    failures.push(`${exercise.id} hard exercise must combine at least 3 knowledge points`);
   }
-
-  for (const expectedDifficulty of expectedDifficulties) {
-    if (!difficultySet.has(expectedDifficulty)) {
-      failures.push(`${topic.topicKey} is missing difficulty ${expectedDifficulty}`);
-    }
+  if (exercise.difficulty === "hard" && exercise.chapters.length < 2) {
+    failures.push(`${exercise.id} hard exercise must cross at least 2 chapters`);
   }
 }
 
@@ -72,5 +97,5 @@ if (failures.length > 0) {
 }
 
 console.info(
-  `Practice coverage OK: ${topics.length} topics, ${exercises.length} exercises.`,
+  `Practice coverage OK: ${exercises.length} exercises, ${byDifficulty("easy").length} easy, ${byDifficulty("hard").length} hard.`,
 );
