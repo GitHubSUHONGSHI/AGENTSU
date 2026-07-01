@@ -1,6 +1,5 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import CourseLayout from "../layouts/course-layout.vue";
-import GlossaryPage from "../pages/glossary-page.vue";
 import InterviewPage from "../pages/interview-page.vue";
 import KnowledgePage from "../pages/knowledge-page.vue";
 import ModuleOverviewPage from "../pages/module-overview-page.vue";
@@ -39,11 +38,6 @@ export const router = createRouter({
           path: "practice",
           name: "practice-home",
           component: PracticePage,
-        },
-        {
-          path: "glossary",
-          name: "glossary",
-          component: GlossaryPage,
         },
         {
           path: "practice/modules/:moduleId/sections/:sectionId/topics/:topicId",

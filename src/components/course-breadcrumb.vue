@@ -8,7 +8,6 @@ const route = useRoute();
 const routeParam = (value: string | string[] | undefined) =>
   Array.isArray(value) ? value[0] : value;
 
-const isGlossaryRoute = computed(() => route.name === "glossary");
 const isInterviewRoute = computed(() => route.name === "interview");
 const isKnowledgeRoute = computed(() => route.name === "knowledge");
 const isPracticeRoute = computed(() => String(route.name ?? "").startsWith("practice"));
@@ -36,10 +35,6 @@ const sectionPath = computed(() => `${modulePath.value}/sections/${sectionId.val
     <el-breadcrumb separator="/">
       <template v-if="isKnowledgeRoute">
         <el-breadcrumb-item>知识章节</el-breadcrumb-item>
-      </template>
-
-      <template v-else-if="isGlossaryRoute">
-        <el-breadcrumb-item>语法词典</el-breadcrumb-item>
       </template>
 
       <template v-else-if="isInterviewRoute">

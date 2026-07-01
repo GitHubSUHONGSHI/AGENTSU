@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useRouter } from "vue-router";
-import { ChatLineRound, Check, Collection, Document, Reading, Tickets } from "@element-plus/icons-vue";
+import { ChatLineRound, Check, Collection, Document, Reading } from "@element-plus/icons-vue";
 import type { CourseModule } from "../types/course";
 
 const props = defineProps<{
@@ -9,7 +9,6 @@ const props = defineProps<{
   selectedModuleId: string;
   selectedSectionId?: string;
   completedModuleIds: string[];
-  isGlossaryActive: boolean;
   isInterviewActive: boolean;
   isKnowledgeActive: boolean;
   isPracticeActive: boolean;
@@ -29,8 +28,6 @@ const sectionMenuId = (moduleId: string, sectionId: string) => `${moduleId}:${se
 const routeActiveMenuId = computed(() =>
   props.isPracticeActive
     ? "practice"
-    : props.isGlossaryActive
-      ? "glossary"
     : props.isInterviewActive
       ? "interview"
       : props.isKnowledgeActive
@@ -42,14 +39,12 @@ const routeActiveMenuId = computed(() =>
 const activeMenuId = computed(() => routeActiveMenuId.value);
 const isActiveSection = (moduleId: string, sectionId: string) =>
   !props.isPracticeActive &&
-  !props.isGlossaryActive &&
   !props.isInterviewActive &&
   !props.isKnowledgeActive &&
   props.selectedModuleId === moduleId &&
   props.selectedSectionId === sectionId;
 const isActiveModule = (moduleId: string) =>
   !props.isPracticeActive &&
-  !props.isGlossaryActive &&
   !props.isInterviewActive &&
   !props.isKnowledgeActive &&
   props.selectedModuleId === moduleId &&
@@ -84,7 +79,6 @@ const navigateToKnowledge = () => {
       :default-active="activeMenuId"
       :default-openeds="defaultOpeneds"
     >
-
       <el-menu-item
         index="practice"
         class="course-sidebar__shortcut"
@@ -114,22 +108,6 @@ const navigateToKnowledge = () => {
         >
           <el-icon><ChatLineRound /></el-icon>
           <span>面试八股</span>
-        </router-link>
-      </el-menu-item>
-
-      <el-menu-item
-        index="glossary"
-        class="course-sidebar__shortcut"
-        :class="{ 'is-shortcut-active': activeMenuId === 'glossary' }"
-      >
-        <router-link
-          class="course-sidebar__home"
-          to="/glossary"
-          :aria-current="isGlossaryActive ? 'page' : undefined"
-          @click="emit('navigate')"
-        >
-          <el-icon><Tickets /></el-icon>
-          <span>语法词典</span>
         </router-link>
       </el-menu-item>
 
